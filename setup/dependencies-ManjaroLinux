@@ -5,10 +5,10 @@ echo "Installing some essentials..."
 sudo pacman --noconfirm -S vim gcc make yaourt
 
 echo "Installing useful tools..."
-sudo pacman --noconfirm -S i3blocks-git i3lock gsimplecal scrot feh acpi xdotool dmenu pulseaudio-ctl network-manager-applet dhcpcd
+sudo pacman --noconfirm -S i3blocks-git i3lock gsimplecal scrot feh acpi xdotool dmenu pulseaudio-ctl network-manager-applet dhcpcd imagemagick dunst
 
 echo "Installing urxvt..."
-sudo pacman --noconfirm -S rxvt-unicode
+sudo pacman --noconfirm -S rxvt-unicode bash-completion
 
 echo "Installing dependencies to build i3..."
 sudo pacman --noconfirm -S xcb-util-keysyms xcb-util-wm xcb-util-cursor yajl startup-notification libev
@@ -17,4 +17,5 @@ echo "Installing python..."
 sudo pacman --noconfirm -S python3 python-pip
 
 
-yaourt compton-git ttf-font-icons packer
+yaourt packer
+packer -S compton-git ttf-font-icons bdf-tewi-git thunar numix-themes numix-icon-theme-git tk evince
