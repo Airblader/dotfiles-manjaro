@@ -1,0 +1,42 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+URxvt.depth: 32
+URxvt.internalBorder: 5
+URxvt.background: rgba:1111/1111/1111/efef
+URxvt.fading: 10
+
+URxvt.scrollBar: off
+
+URxvt.urgentOnBell: True
+URxvt.visualBell: False
+
+URxvt.perl-ext-common: default,selection-to-clipboard
+
+URxvt.font: xft:Tewi:pixelsize=12
+
+*cursorColor: #F3F3F3
+!*background: #2c2836
+*foreground: #e3dfed
+
+*color0: #2c2836
+*color8: #73707e
+*color1: #bb7473
+*color9: #cf9fa4
+*color2: #68b782
+*color10: #9acbad
+*color3: #abb773
+*color11: #c5cba4
+*color4: #7865c5
+*color12: #a396d9
+*color5: #bb65b6
+*color13: #cf96cf
+*color6: #68a8c5
+*color14: #9ac1d9
+*color7: #e3dfed
+*color15: #f1edfb

@@ -1,0 +1,243 @@
+# vim:filetype=i3
+set $mod Mod4
+
+set $black       #2c2836
+set $darkblack   #73707e
+set $red         #bb7473
+set $darkred     #cf9fa4
+set $green       #68b782
+set $darkgreen   #9acbad
+set $yellow      #abb773
+set $darkyellow  #c5cba4
+set $blue        #7865c5
+set $darkblue    #a396d9
+set $magenta     #bb65b6
+set $darkmagenta #cf96cf
+set $cyan        #68a8c5
+set $darkcyan    #9ac1d9
+set $white       #f1edfb
+set $darkwhite   #f1edfb
+set $background  #133B47
+
+set $ws1  "1:"
+set $ws2  "2:"
+set $ws3  "3:"
+set $ws4  "4:"
+set $ws5 "5:"
+set $ws6  "6: 6"
+set $ws7  "7: 7"
+set $ws8  "8: 8"
+set $ws9  "9:"
+set $ws10 "10:"
+
+set $default_gaps_inner 15
+set $default_gaps_outer 30
+gaps inner $default_gaps_inner
+gaps outer $default_gaps_outer
+
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 0 ms
+
+font pango:Tewi, Icons 8
+
+#                       BORDER     BACKGROUND TEXT   INDICATOR
+client.focused          $cyan      $cyan      $white $cyan
+client.unfocused        $darkcyan  $darkcyan  $white $darkcyan
+client.focused_inactive $darkcyan  $darkcyan  $white $darkcyan
+client.urgent           $red       $red       $white $red
+
+floating_modifier $mod
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+
+bindsym $mod+q kill
+
+bindsym $mod+d exec dmenu_run -i -y 20 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -dim 0.25
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 20 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -dim 0.25'
+
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+Control+Shift+Prior move container to output left
+bindsym $mod+Control+Shift+Next move container to output right
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
+bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
+bindsym $mod+Shift+v exec i3-input -l 3 -F 'exec--no-startup-id $HOME/scripts/volume_control.py set %s'
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# screenshot
+bindsym --release Print exec scrot $HOME/Pictures/screenshot-$(date +%Y-%m-%d).png
+bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y-%m-%d).png
+
+bindsym $mod+n exec --no-startup-id thunar
+
+# resize window (you can also use the mouse for that)
+set $mode_resize    resize
+bindsym $mod+r mode "$mode_resize"
+mode "$mode_resize" {
+        bindsym Left resize shrink width 1 px or 1 ppt
+        bindsym Down resize grow height 1 px or 1 ppt
+        bindsym Up resize shrink height 1 px or 1 ppt
+        bindsym Right resize grow width 1 px or 1 ppt
+
+        bindsym Shift+Left resize shrink width 5 px or 5 ppt
+        bindsym Shift+Down resize grow height 5 px or 5 ppt
+        bindsym Shift+Up resize shrink height 5 px or 5 ppt
+        bindsym Shift+Right resize grow width 5 px or 5 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+set $mode_power    (l)ock | (e)xit | (s)uspend | (h)ibernate | (r)eboot | (p)oweroff
+mode "$mode_power" {
+        bindsym l exec --no-startup-id $HOME/.i3/i3exit lock, mode "default"
+        bindsym e exec --no-startup-id $HOME/.i3/i3exit logout, mode "default"
+        bindsym s exec --no-startup-id $HOME/.i3/i3exit suspend, mode "default"
+        bindsym h exec --no-startup-id $HOME/.i3/i3exit hibernate, mode "default"
+        bindsym r exec --no-startup-id $HOME/.i3/i3exit reboot, mode "default"
+        bindsym p exec --no-startup-id $HOME/.i3/i3exit shutdown, mode "default"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Control+l mode "$mode_power"
+bindsym Mod1+Control+l mode "$mode_power"
+
+set $mode_gaps Gaps: (o) outer, (i) inner, d|0
+set $mode_gaps_outer Outer Gaps: +|-|d|0 (local), Shift + +|-|d|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|d|0 (local), Shift + +|-|d|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+
+        bindsym 0 exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
+        bindsym d exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+        bindsym d     gaps inner current set $default_gaps_inner
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+        bindsym Shift+d     gaps inner all set $default_gaps_inner
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+        bindsym d     gaps outer current set $default_gaps_outer
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+        bindsym Shift+d     gaps outer all set $default_gaps_outer
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# fix graphics glitch
+for_window [class="^.*"] border pixel 0
+for_window [class="(?i)urxvt"] border pixel 3
+
+# dialogs
+for_window [class="(?i)gsimplecal"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
+# other window specific settings
+for_window [class="(?i)pidgin" window_role="^conversation$"] resize grow width 0 px or 30 ppt
+
+# assign certain applications to a specific workspace
+assign [class="(?i)chrome"]      $ws1
+assign [class="(?i)eclipse"]     $ws3
+assign [class="(?i)thunderbird"] $ws9
+assign [class="(?i)pidgin"]      $ws10
+
+bar {
+        status_command i3blocks
+        position top
+        font pango:Tewi, Icons 8
+        strip_workspace_numbers yes
+        colors {
+                statusline         $white
+                background         $background
+                separator          $darkgreen
+
+#                                  BORDER      BACKGROUND  TEXT
+                focused_workspace  $background $background $darkgreen
+                inactive_workspace $background $background $white
+                active_workspace   $background $background $white
+                urgent_workspace   $red        $red        $background
+        }
+}
+
+# AUTOSTART
+
+exec --no-startup-id compton -b
+exec --no-startup-id dunst &
+exec --no-startup-id nm-applet &
+
+
+exec_always --no-startup-id feh --bg-center $HOME/.config/wallpapers/current

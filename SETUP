@@ -1,0 +1,36 @@
+Autologin
+=========
+
+vim /etc/systemd/system/getty.target.wants/getty\@tty1.service
+- ExecStart=-/sbin/agetty --autologin ingo --noclear %I $TERM
+
+
+NetworkManager
+==============
+
+sudo vim /etc/systemd/system/multi-user.target.wants/NetworkManager.service
+- Type=simple
+
+sudo vim /etc/dhcpcd.conf
+- noarp
+
+
+UDEV
+====
+
+sudo vim /etc/udev/rules.d/50-firmware.rules
+- ACTION!="remove",SUBSYSTEM=="firmware",ATTR{loading}="-1"
+
+
+SYSTEMD
+=======
+
+Mask:
+- exim4.service
+- bluetooth.service
+- ModemManager.service
+- nfs-common.service
+- rpcbind.service
+- rpcbind.target
+- network-online.target
+- binfmt-support.service

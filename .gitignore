@@ -1,0 +1,3 @@
+*.swp
+.vim/.netrwhist
+~/__pycache__
