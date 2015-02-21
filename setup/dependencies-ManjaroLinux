@@ -5,7 +5,7 @@ echo "Installing some essentials..."
 sudo pacman --noconfirm -S vim gcc make yaourt
 
 echo "Installing useful tools..."
-sudo pacman --noconfirm -S i3blocks-git i3lock gsimplecal scrot feh acpi xdotool dmenu pulseaudio-ctl network-manager-applet dhcpcd imagemagick dunst
+sudo pacman --noconfirm -S i3blocks-git i3lock gsimplecal scrot feh acpi xdotool pulseaudio-ctl network-manager-applet dhcpcd imagemagick dunst
 
 echo "Installing urxvt..."
 sudo pacman --noconfirm -S rxvt-unicode bash-completion
@@ -18,4 +18,4 @@ sudo pacman --noconfirm -S python3 python-pip
 
 
 yaourt packer
-packer -S compton-git ttf-font-icons bdf-tewi-git thunar numix-themes numix-icon-theme-git tk evince
+packer -S compton-git ttf-font-icons bdf-tewi-git thunar numix-themes numix-icon-theme-git tk evince dmenu2
