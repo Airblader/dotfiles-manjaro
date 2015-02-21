@@ -1,0 +1,15 @@
+[user]
+  name = Ingo Bürk
+  email = ingo.buerk@tngtech.com
+
+[alias]
+  co = checkout
+  up = pull --rebase
+  g = grep --break --heading --line-number
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[push]
+  default = simple
