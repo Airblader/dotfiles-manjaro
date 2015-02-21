@@ -1,0 +1,4 @@
+- Extract Xresources color information and use include
+- Switch to volumectl
+  - remove volume_control.py (i3 config, i3blocks)
+  - shortcut for sinkpicker
