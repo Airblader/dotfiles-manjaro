@@ -99,6 +99,9 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Control+Shift+Prior move container to output left
 bindsym $mod+Control+Shift+Next move container to output right
 
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+plus scratchpad show
+
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
