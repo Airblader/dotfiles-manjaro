@@ -3,7 +3,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 xhost +local:root > /dev/null 2>&1
-if [ -z "$DISPLAY" ]; then
+if [ -z "$DISPLAY" -a $XDG_VTNR -eq 1 ]; then
   startx -- -dpi 96
 fi
 
