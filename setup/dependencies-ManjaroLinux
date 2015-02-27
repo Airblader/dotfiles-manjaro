@@ -18,4 +18,4 @@ sudo pacman --noconfirm -S python3 python-pip
 
 
 yaourt packer
-packer -S compton-git ttf-font-icons bdf-tewi-git thunar numix-themes numix-icon-theme-git tk evince dmenu2
+packer -S compton-git ttf-font-icons bdf-tewi-git thunar numix-themes numix-icon-theme-git tk evince dmenu2 libmtp gvfs-mtp
