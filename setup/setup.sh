@@ -53,7 +53,6 @@ ask "Install python3 modules?" Y && {
 }
 
 ask "Install symlink for .gitconfig?" Y && ln -sfn ${dir}/.gitconfig ${HOME}/.gitconfig
-ask "Install symlink for .conkyrc?" Y && ln -sfn ${dir}/.conkyrc ${HOME}/.conkyrc
 ask "Install symlink for .bashrc?" Y && ln -sfn ${dir}/.bashrc ${HOME}/.bashrc
 ask "Install symlink for .vimrc?" Y && ln -sfn ${dir}/.vimrc ${HOME}/.vimrc
 ask "Install symlink for .Xresources?" Y && ln -sfn ${dir}/.Xresources ${HOME}/.Xresources
@@ -65,5 +64,3 @@ ask "Install symlink for .vim/?" Y && ln -sfn ${dir}/.vim ${HOME}/.vim
 ask "Install symlink for .bash.d/?" Y && ln -sfn ${dir}/.bash.d ${HOME}/.bash.d
 
 ask "Install symlink for scripts/?" Y && ln -sfn ${dir}/scripts ${HOME}/scripts
-
-ask "Copy file for /etc/sudoers.d/power-control?" Y && sudo cp ${dir}/etc/sudoers.d/power-control /etc/sudoers.d/power-control
