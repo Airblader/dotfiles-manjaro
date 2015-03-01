@@ -5,7 +5,7 @@ echo "Installing some essentials..."
 sudo pacman --noconfirm -S vim gcc make yaourt
 
 echo "Installing useful tools..."
-sudo pacman --noconfirm -S i3lock gsimplecal scrot feh acpi xdotool pulseaudio-ctl network-manager-applet dhcpcd imagemagick dunst
+sudo pacman --noconfirm -S i3lock gsimplecal scrot feh acpi xdotool pulseaudio-ctl network-manager-applet imagemagick dunst
 
 echo "Installing urxvt..."
 sudo pacman --noconfirm -S rxvt-unicode bash-completion

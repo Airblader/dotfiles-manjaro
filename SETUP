@@ -11,10 +11,6 @@ NetworkManager
 sudo vim /etc/systemd/system/multi-user.target.wants/NetworkManager.service
 - Type=simple
 
-sudo vim /etc/dhcpcd.conf
-- noarp
-
-
 UDEV
 ====
 
