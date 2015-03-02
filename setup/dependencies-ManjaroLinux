@@ -1,21 +1,56 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Installing some essentials..."
-sudo pacman --noconfirm -S vim gcc make yaourt
+echo "Installing packer..."
+mkdir /tmp/tmp-packer
+cd /tmp/tmp-packer
+wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD
+makepkg
+sudo pacman --noconfirm -U *.tar.gz
+cd -
 
-echo "Installing useful tools..."
-sudo pacman --noconfirm -S i3lock gsimplecal scrot feh acpi xdotool pulseaudio-ctl network-manager-applet imagemagick dunst
+echo "Installing base packages..."
+packer --noconfirm --noedit -S \
+  base-devel \
+  vim \
+  gcc \
+  make \
+  git \
+  rxvt-unicode \
+  bash-completion
 
-echo "Installing urxvt..."
-sudo pacman --noconfirm -S rxvt-unicode bash-completion
+echo "Installing window manager dependencies..."
+packer --noconfirm --noedit -S \
+  xcb-util-keysyms \
+  xcb-util-wm \
+  xcb-util-cursor \
+  yajl \
+  startup-notification \
+  libev
 
-echo "Installing dependencies to build i3..."
-sudo pacman --noconfirm -S xcb-util-keysyms xcb-util-wm xcb-util-cursor yajl startup-notification libev
-
-echo "Installing python..."
-sudo pacman --noconfirm -S python3 python-pip
-
-
-yaourt packer
-packer -S compton-git ttf-font-icons bdf-tewi-git thunar numix-themes numix-icon-theme-git tk evince dmenu2 libmtp gvfs-mtp i3blocks-git
+echo "Installing tools..."
+packer --noconfirm --noedit -S \
+  i3lock \
+  i3blocks-git \
+  gsimplecal \
+  scrot \
+  feh \
+  acpi \
+  xdotool \
+  pulseaudio-ctl \
+  network-manager-applet \
+  imagemagick \
+  dunst \
+  python3 \
+  python-pip \
+  compton-git \
+  ttf-font-icons \
+  bdf-tewi-git \
+  thunar \
+  numix-themes \
+  numix-icon-theme-git \
+  tk \
+  evince \
+  dmenu2 \
+  libmtp \
+  gvfs-mtp
