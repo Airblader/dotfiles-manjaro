@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+echo "Installing prerequisites for packer..."
+sudo pacman --noconfirm base-devel
+
 echo "Installing packer..."
 mkdir /tmp/tmp-packer
 cd /tmp/tmp-packer
@@ -11,7 +14,6 @@ cd -
 
 echo "Installing base packages..."
 packer --noconfirm --noedit -S \
-  base-devel \
   vim \
   gcc \
   make \
