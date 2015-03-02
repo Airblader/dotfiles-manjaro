@@ -42,7 +42,7 @@ packer --noconfirm --noedit -S \
   network-manager-applet \
   imagemagick \
   dunst \
-  python3 \
+  python \
   python-pip \
   compton-git \
   ttf-font-icons \
