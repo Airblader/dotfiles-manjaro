@@ -15,7 +15,6 @@ packer --noconfirm --noedit -S \
   vim \
   gcc \
   make \
-  git \
   rxvt-unicode \
   bash-completion
 
