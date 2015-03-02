@@ -2,7 +2,7 @@
 set -e
 
 echo "Installing prerequisites for packer..."
-sudo pacman --noconfirm base-devel
+sudo pacman --noconfirm -S base-devel
 
 echo "Installing packer..."
 mkdir /tmp/tmp-packer
