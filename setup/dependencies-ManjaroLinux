@@ -54,4 +54,5 @@ packer --noconfirm --noedit -S \
   evince \
   dmenu2 \
   libmtp \
-  gvfs-mtp
+  gvfs-mtp \
+  vim-airline
