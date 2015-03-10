@@ -1,0 +1,6 @@
+export PPIT_ROOT="${HOME}/repos/prepaid/repo"
+export PPIT_HOME="${HOME}/repos/prepaid/repo"
+
+export PPIT_VMS="${PPIT_ROOT}/../boxes"
+
+export PPIT_CHECK_TEST_DB_CLEANUP=1

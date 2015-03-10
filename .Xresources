@@ -20,6 +20,9 @@ URxvt.perl-ext-common: default,selection-to-clipboard
 
 URxvt.font: xft:Tewi:pixelsize=12
 
+*Menu.background: Black
+*Menu.foreground: White
+
 *cursorColor: #F3F3F3
 !*background: #2c2836
 *foreground: #e3dfed
