@@ -51,6 +51,7 @@ packer --noconfirm --noedit -S \
   numix-themes \
   numix-icon-theme-git \
   tk \
+  aspell-en \
   evince \
   dmenu2 \
   libmtp \
