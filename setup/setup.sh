@@ -49,7 +49,8 @@ fi
 ask "Install packages?" Y && bash ./dependencies-${distro}
 
 ask "Install python3 modules?" Y && {
-  sudo pip3 install basiciw netifaces jsonpath_rw
+  sudo pip3 install basiciw netifaces jsonpath_rw pyyaml
+  sudo pip2 install pyyaml
 }
 
 ask "Install symlink for .gitconfig?" Y && ln -sfn ${dir}/.gitconfig ${HOME}/.gitconfig
