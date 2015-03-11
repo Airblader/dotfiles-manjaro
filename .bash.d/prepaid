@@ -6,8 +6,13 @@ export PPIT_VMS="${PPIT_ROOT}/../boxes"
 export PPIT_CHECK_TEST_DB_CLEANUP=1
 export PPIT_CANCELLABLE_TEST_RULE=1
 
+alias bpp="ant clean-ivy && ./build.sh buildAll; bell"
+alias fbpp="ant clean-ivy && ./build.sh -DforceBuild=true buildAll; bell"
+
 alias cdppit="cd ${PPIT_ROOT}"
 alias cdtb="cd ${PPIT_ROOT}/../timebooking/`date +'%Y/%m'`"
+
+alias cdb="${PPIT_ROOT}/tools/bin/create_db_installer_script.py"
 
 if [ -e "${PPIT_VMS}/devimage.monitor" ]; then
   cd "${PPIT_ROOT}"
