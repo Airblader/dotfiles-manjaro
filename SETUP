@@ -11,11 +11,33 @@ NetworkManager
 sudo vim /etc/systemd/system/multi-user.target.wants/NetworkManager.service
 - Type=simple
 
+
 UDEV
 ====
 
 sudo vim /etc/udev/rules.d/50-firmware.rules
 - ACTION!="remove",SUBSYSTEM=="firmware",ATTR{loading}="-1"
+
+
+GRUB2
+=====
+
+sudo vim /etc/default/grub
+sudo update-grub
+
+GRUB_CMDLINE_LINUX_DEFAULT
+- quiet nosplash
+- loglevel=3 systemd.log_level=err systemd.show_status=false
+- nox2apic
+
+GRUB_HIDDEN_TIMEOUT=1
+
+
+MKINITCPIO
+==========
+
+COMPRESSION="cat"
+https://wiki.archlinux.org/index.php/Silent_boot
 
 
 SYSTEMD
