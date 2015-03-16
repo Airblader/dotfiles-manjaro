@@ -123,8 +123,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # screenshot
-bindsym --release Print exec scrot $HOME/Pictures/screenshot-$(date +%Y-%m-%d).png
-bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y-%m-%d).png
+bindsym --release Print exec scrot $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 
 bindsym $mod+n exec --no-startup-id thunar
 
