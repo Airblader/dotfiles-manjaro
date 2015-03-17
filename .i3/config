@@ -22,9 +22,9 @@ set $background  #133B47
 set $ws1  "1:"
 set $ws2  "2:"
 set $ws3  "3:"
-set $ws4  "4:"
+set $ws4 "4:"
 set $ws5 "5:"
-set $ws6  "6: 6"
+set $ws6  "6:"
 set $ws7  "7: 7"
 set $ws8  "8: 8"
 set $ws9  "9:"
@@ -214,6 +214,7 @@ for_window [class="(?i)urxvt"] border pixel 3
 for_window [class="(?i)gsimplecal"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
 
 # other window specific settings
