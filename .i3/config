@@ -207,8 +207,8 @@ mode "$mode_gaps_outer" {
 }
 
 # fix graphics glitch
-for_window [class="^.*"] border pixel 0
-for_window [class="(?i)urxvt"] border pixel 3
+new_window none
+#for_window [class="(?i)urxvt"] border pixel 3
 
 # dialogs
 for_window [class="(?i)gsimplecal"] floating enable
@@ -216,9 +216,6 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
-
-# other window specific settings
-for_window [class="(?i)pidgin" window_role="^conversation$"] resize grow width 0 px or 30 ppt
 
 # assign certain applications to a specific workspace
 assign [class="(?i)chrome"]      $ws1
