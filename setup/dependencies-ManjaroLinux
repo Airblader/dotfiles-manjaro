@@ -58,3 +58,13 @@ packer --noconfirm --noedit -S \
   libmtp \
   gvfs-mtp \
   vim-airline
+
+echo "Installing some python stuff..."
+packer --noconfirm --noedit -S \
+  python-pillow \
+  python-urllib3
+
+echo "Installing some perl stuff..."
+packer --noconfirm --noedit -S \
+  perl-anyevent-i3 \
+  perl-json-xs \
