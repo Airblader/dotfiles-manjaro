@@ -228,6 +228,7 @@ bar {
         position top
         font pango:Tewi, Icons 8
         strip_workspace_numbers yes
+        separator_symbol ":"
         colors {
                 statusline         $white
                 background         $background
