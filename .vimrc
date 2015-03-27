@@ -29,6 +29,12 @@ set softtabstop=4
 
 set noswapfile
 
+" toggle search highlights with F4
+:noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" toggle number lines with F3
+:noremap <F3> :set nonumber! nonumber?<CR>
+
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
 highlight ColorColumn  ctermbg=237
