@@ -56,8 +56,8 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 20 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -dim 0.25
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 20 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -dim 0.25'
+bindsym $mod+d exec dmenu_run -i -y 20 -o 0.8 -l 3 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 20 -o 0.8 -l 3 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"'
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
