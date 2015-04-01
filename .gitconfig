@@ -3,6 +3,7 @@
   email = ingo.buerk@tngtech.com
 
 [alias]
+  st = status
   co = checkout
   up = pull --rebase
   g = grep --break --heading --line-number
@@ -14,4 +15,4 @@
 [push]
   default = simple
 [merge]
-	tool = vimdiff
+  tool = vimdiff
