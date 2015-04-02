@@ -27,6 +27,8 @@ set smarttab
 set shiftwidth=4
 set softtabstop=4
 
+set mouse=ar
+
 set noswapfile
 
 " toggle search highlights with F4
