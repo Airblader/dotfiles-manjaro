@@ -22,13 +22,15 @@ syn match   i3QuotedString '"[^"]\+"' contained
 syn cluster i3String contains=i3SimpleString,i3QuotedString
 
 " Config commands
-syn keyword i3ConfigCommand bind bindcode bindsym assign new_window popup_during_fullscreen font floating_modifier default_orientation workspace_layout for_window focus_follows_mouse bar position colors output tray_output workspace_buttons workspace_auto_back_and_forth binding_mode_indicator debuglog floating_minimum_size floating_maximum_size force_focus_wrapping force_xinerama force_display_urgency_hint hidden_state modifier new_float shmlog socket_path verbose mouse_warping strip_workspace_numbers gaps inner outer plus minus set smart_borders no_gaps separator_symbol
+syn keyword i3ConfigCommand bind bindcode bindsym assign new_window popup_during_fullscreen font floating_modifier default_orientation workspace_layout for_window focus_follows_mouse bar position colors output tray_output workspace_buttons workspace_auto_back_and_forth binding_mode_indicator debuglog floating_minimum_size floating_maximum_size force_focus_wrapping force_xinerama force_display_urgency_hint hidden_state modifier new_float shmlog socket_path verbose mouse_warping strip_workspace_numbers gaps inner outer plus minus set smart_borders no_gaps separator_symbol no_focus focus_on_window_activation
 syn match   i3IpcSocket "ipc[-_]socket" nextgroup=@i3String skipwhite
 
 " Command keywords
 syn keyword i3Command exit reload restart kill fullscreen global layout border focus move open split append_layout mark unmark resize grow shrink show nop rename
-syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical auto up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client hide primary yes all active window container to absolute center on off x ms h v smart ignore pixel splith splitv output true
+syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical auto up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client hide primary yes all active window container to absolute center on off x ms h v smart ignore pixel splith splitv output true urgent focused unfocused focused_inactive
 syn match   i3DashedParam '--release' skipwhite
+syn match   i3DashedParam '--whole-window' skipwhite
+syn match   i3DashedParam '--border' skipwhite
 syn match   i3NoStartupId '--no-startup-id' contained
 syn keyword i3WsSpecialParam next prev next_on_output prev_on_output back_and_forth current number
 syn keyword i3BordersSpecialParam none vertical horizontal both
