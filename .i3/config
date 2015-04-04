@@ -218,6 +218,8 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
 
+for_window [instance="__scratchpad"] floating enable
+
 # assign certain applications to a specific workspace
 assign [class="(?i)chrome"]      $ws1
 assign [class="(?i)eclipse"]     $ws3
