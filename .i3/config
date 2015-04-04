@@ -22,8 +22,8 @@ set $background  #133B47
 set $ws1  "1:"
 set $ws2  "2:"
 set $ws3  "3:"
-set $ws4 "4:"
-set $ws5 "5:"
+set $ws4  "4:"
+set $ws5  "5:"
 set $ws6  "6:"
 set $ws7  "7: 7"
 set $ws8  "8: 8"
@@ -209,7 +209,6 @@ mode "$mode_gaps_outer" {
 
 # fix graphics glitch
 new_window none
-#for_window [class="(?i)urxvt"] border pixel 3
 
 # dialogs
 for_window [class="(?i)gsimplecal"] floating enable
@@ -231,14 +230,14 @@ bar {
         position top
         font pango:Tewi, Icons 8
         strip_workspace_numbers yes
-        separator_symbol ":"
+        separator_symbol "]━["
         colors {
                 statusline         $white
                 background         $background
-                separator          $darkgreen
+                separator          $cyan
 
 #                                  BORDER      BACKGROUND  TEXT
-                focused_workspace  $background $background $darkgreen
+                focused_workspace  $background $background $cyan
                 inactive_workspace $background $background $white
                 active_workspace   $background $background $white
                 urgent_workspace   $red        $red        $white
