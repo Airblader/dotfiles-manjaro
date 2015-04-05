@@ -118,7 +118,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-bindsym $mod+Shift+v exec i3-input -l 3 -F 'exec--no-startup-id $HOME/scripts/volume_control.py set %s'
+bindsym $mod+Shift+v exec dmenu -noinput -i -y 20 -o 0.8 -w 300 -p "%" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" | xargs $HOME/scripts/volume_control.py set
+#bindsym $mod+Shift+v exec i3-input -l 3 -F 'exec --no-startup-id $HOME/scripts/volume_control.py set %s'
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -216,6 +217,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
+for_window [class="(?i)VirtualBox"] floating enable
 
 for_window [instance="__scratchpad"] floating enable
 
