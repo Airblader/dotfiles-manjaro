@@ -6,7 +6,7 @@
 
 
 lock() {
-  $HOME/.i3/i3lock-wrapper
+  $HOME/.config/i3lock/i3lock.sh
 }
 
 case "$1" in
