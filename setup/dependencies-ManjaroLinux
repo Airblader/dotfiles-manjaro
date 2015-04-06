@@ -49,6 +49,8 @@ packer --noconfirm --noedit -S \
   ttf-font-icons \
   bdf-tewi-git \
   thunar \
+  tumbler \
+  eog \
   numix-themes \
   numix-icon-theme-git \
   tk \
