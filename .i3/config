@@ -150,12 +150,12 @@ mode "$mode_resize" {
 
 set $mode_power    (l)ock | (e)xit | (s)uspend | (h)ibernate | (r)eboot | (p)oweroff
 mode "$mode_power" {
-        bindsym l exec --no-startup-id $HOME/.i3/i3exit lock, mode "default"
-        bindsym e exec --no-startup-id $HOME/.i3/i3exit logout, mode "default"
-        bindsym s exec --no-startup-id $HOME/.i3/i3exit suspend, mode "default"
-        bindsym h exec --no-startup-id $HOME/.i3/i3exit hibernate, mode "default"
-        bindsym r exec --no-startup-id $HOME/.i3/i3exit reboot, mode "default"
-        bindsym p exec --no-startup-id $HOME/.i3/i3exit shutdown, mode "default"
+        bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
+        bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
+        bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
+        bindsym h mode "default", exec --no-startup-id $HOME/.i3/i3exit hibernate
+        bindsym r mode "default", exec --no-startup-id $HOME/.i3/i3exit reboot
+        bindsym p mode "default", exec --no-startup-id $HOME/.i3/i3exit shutdown
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
