@@ -29,6 +29,13 @@ set softtabstop=4
 
 set noswapfile
 
+set scrolloff=5
+set sidescrolloff=5
+
+set cursorline
+
+nnoremap / :set hlsearch<CR>/
+
 " toggle search highlights with F4
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
