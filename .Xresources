@@ -9,7 +9,7 @@ Xft.lcdfilter: lcddefault
 URxvt.geometry: 120x50
 URxvt.depth: 32
 URxvt.internalBorder: 5
-URxvt.background: rgba:1111/1111/1111/efef
+URxvt.background: #111111
 URxvt.fading: 10
 
 URxvt.scrollBar: off
