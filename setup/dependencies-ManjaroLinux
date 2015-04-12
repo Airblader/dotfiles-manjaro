@@ -59,7 +59,8 @@ packer --noconfirm --noedit -S \
   dmenu2 \
   libmtp \
   gvfs-mtp \
-  vim-airline
+  vim-airline \
+  xtitle
 
 echo "Installing some python stuff..."
 packer --noconfirm --noedit -S \
