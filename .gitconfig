@@ -7,6 +7,7 @@
   co = checkout
   up = pull --rebase
   g = grep --break --heading --line-number
+  fa = fetch --all
 
 [color]
   diff = auto
