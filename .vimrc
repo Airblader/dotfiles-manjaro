@@ -1,8 +1,5 @@
 set t_Co=256
 
-set hlsearch
-set number
-
 filetype on
 filetype plugin on
 syntax on
@@ -15,32 +12,31 @@ set laststatus=2
 set noshowmode
 
 set nocompatible
-
 set showcmd
-
 set ignorecase
 set smartcase
-
 set expandtab
 set smarttab
+set hlsearch
+set number
+set noswapfile
+set cursorline
 
 set shiftwidth=4
 set softtabstop=4
-
-set noswapfile
-
 set scrolloff=5
 set sidescrolloff=5
 
-set cursorline
+:noremap / :set hlsearch<CR>/
 
-nnoremap / :set hlsearch<CR>/
+" toggle paste mode
+:noremap <F2> :set paste! nopaste?<CR>
 
-" toggle search highlights with F4
-:noremap <F4> :set hlsearch! hlsearch?<CR>
-
-" toggle number lines with F3
+" toggle number lines
 :noremap <F3> :set nonumber! nonumber?<CR>
+
+" toggle search highlights
+:noremap <F4> :set hlsearch! hlsearch?<CR>
 
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
