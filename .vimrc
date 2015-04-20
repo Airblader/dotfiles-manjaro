@@ -1,6 +1,7 @@
 set t_Co=256
 
 filetype on
+filetype plugin indent on
 filetype plugin on
 syntax on
 colorscheme jellybeans
@@ -21,11 +22,12 @@ set hlsearch
 set number
 set noswapfile
 set cursorline
+set autoindent
 
 set shiftwidth=4
 set softtabstop=4
-set scrolloff=5
-set sidescrolloff=5
+set scrolloff=8
+set sidescrolloff=10
 
 :noremap / :set hlsearch<CR>/
 
