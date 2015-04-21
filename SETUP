@@ -39,6 +39,10 @@ MKINITCPIO
 COMPRESSION="cat"
 https://wiki.archlinux.org/index.php/Silent_boot
 
+THUNDERBIRD
+===========
+
+Plugins: "Disable reply-list", "Seturgent", "Lightning"
 
 SYSTEMD
 =======
