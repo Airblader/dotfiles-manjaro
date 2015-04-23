@@ -53,7 +53,8 @@ client.focused_inactive $darkcyan  $darkcyan  $white $darkcyan
 client.urgent           $red       $red       $white $red
 
 floating_modifier $mod
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
 
 bindsym $mod+q kill
 
