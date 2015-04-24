@@ -226,10 +226,11 @@ for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 
 # assign certain applications to a specific workspace
-assign [class="(?i)chrome"]      $ws1
-assign [class="(?i)eclipse"]     $ws3
-assign [class="(?i)thunderbird"] $ws9
-assign [class="(?i)pidgin"]      $ws10
+assign [class="(?i)chrome"]                       $ws1
+assign [class="(?i)eclipse" window_type="splash"] $ws3
+assign [class="(?i)eclipse" window_type="normal"] $ws3
+assign [class="(?i)thunderbird"]                  $ws9
+assign [class="(?i)pidgin"]                       $ws10
 
 bar {
 #        verbose yes
