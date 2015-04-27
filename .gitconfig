@@ -1,21 +1,23 @@
 [user]
-  name = Ingo Bürk
-  email = ingo.buerk@tngtech.com
+    name = Ingo Bürk
+    email = ingo.buerk@tngtech.com
 
 [alias]
-  st = status
-  co = checkout
-  up = pull --rebase
-  g = grep --break --heading --line-number
-  fa = fetch --all
+    a = add --all
+    c = commit
+    st = status
+    co = checkout
+    up = pull --rebase
+    g = grep --break --heading --line-number
+    fa = fetch --all
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 [push]
-  default = simple
+    default = simple
 [merge]
-  tool = vimdiff
+    tool = vimdiff
 [mergetool]
-	keepBackup = false
+    keepBackup = false
