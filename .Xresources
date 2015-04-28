@@ -17,9 +17,13 @@ URxvt.scrollBar: off
 URxvt.urgentOnBell: True
 URxvt.visualBell: False
 
-URxvt.perl-ext-common: default,selection-to-clipboard
+URxvt.perl-ext-common: default,selection-to-clipboard,font-size
 
-URxvt.font: xft:Tewi:pixelsize=12
+URxvt.font: xft:Tewi:pixelsize=11
+URxvt.font-size.zoomfont: xft:Terminus:size=11
+URxvt.keysym.C-Up:   perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt.keysym.C-Left: perl:font-size:reset
 
 *Menu.background: Black
 *Menu.foreground: White
