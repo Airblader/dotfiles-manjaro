@@ -48,6 +48,7 @@ packer --noconfirm --noedit -S \
   compton-git \
   ttf-font-icons \
   bdf-tewi-git \
+  powerline-fonts-git \
   thunar \
   tumbler \
   eog \
