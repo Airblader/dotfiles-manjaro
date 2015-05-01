@@ -65,5 +65,7 @@ if __name__ == '__main__':
       output = '<s>' + output + '</s>'
       output += '\n\n#bb7473'
     write(output)
+  elif command == 'signal':
+    emit_signal()
   else:
     write('Usage: ' + sys.argv[0] + ' [set|up|down|toggle|read|status] [value]\n')

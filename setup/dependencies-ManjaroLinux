@@ -39,6 +39,7 @@ packer --noconfirm --noedit -S \
   acpi \
   xdotool \
   pulseaudio-ctl \
+  pavucontrol \
   network-manager-applet \
   imagemagick \
   dunst \
