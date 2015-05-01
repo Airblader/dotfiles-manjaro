@@ -239,6 +239,9 @@ bar {
         font pango:Tewi, Icons 8
         strip_workspace_numbers yes
         separator_symbol "]━["
+        wheel_up_cmd nop
+        wheel_down_cmd nop
+        tray_output primary
         colors {
                 statusline         $white
                 background         $background
