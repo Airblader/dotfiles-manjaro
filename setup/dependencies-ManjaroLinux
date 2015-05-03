@@ -62,6 +62,7 @@ packer --noconfirm --noedit -S \
   libmtp \
   gvfs-mtp \
   vim-airline \
+  vim-fugitive \
   xtitle
 
 echo "Installing some python stuff..."
