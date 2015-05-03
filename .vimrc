@@ -7,8 +7,9 @@ syntax on
 colorscheme jellybeans
 
 execute pathogen#infect()
-:let g:airline_theme='base16'
+let g:airline_theme='airblader'
 let g:airline_powerline_fonts = 1
+
 set laststatus=2
 set noshowmode
 
@@ -40,17 +41,6 @@ set sidescrolloff=10
 " toggle search highlights
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
-highlight clear SignColumn
-highlight VertSplit    ctermbg=236
-highlight ColorColumn  ctermbg=237
-highlight LineNr       ctermbg=236 ctermfg=240
-highlight CursorLineNr ctermbg=236 ctermfg=240
-highlight CursorLine   ctermbg=236
-highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=240 ctermfg=12
-highlight IncSearch    ctermbg=3   ctermfg=1
-highlight Search       ctermbg=1   ctermfg=3
-highlight Visual       ctermbg=3   ctermfg=0
-highlight Pmenu        ctermbg=240 ctermfg=12
-highlight PmenuSel     ctermbg=3   ctermfg=1
-highlight SpellBad     ctermbg=0   ctermfg=1
+" for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
+highlight Search ctermbg=1 ctermfg=255
+highlight Visual ctermbg=1 ctermfg=255
