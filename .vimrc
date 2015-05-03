@@ -42,5 +42,5 @@ set sidescrolloff=10
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
-highlight Search ctermbg=1 ctermfg=255
+highlight Search ctermbg=1 ctermfg=255 cterm=NONE
 highlight Visual ctermbg=1 ctermfg=255
