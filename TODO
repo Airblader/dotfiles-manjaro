@@ -1,9 +1,4 @@
-- Scratchpad: open term if scratchpad is empty
-- New image viewer
 - Extract Xresources color information and use include
-- Switch to volumectl
-  - remove volume_control.py (i3 config, i3blocks)
-  - shortcut for sinkpicker
 - copy .config
 - missing symlinks
 - are python packages still needed?
