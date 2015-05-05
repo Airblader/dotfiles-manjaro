@@ -63,7 +63,9 @@ packer --noconfirm --noedit -S \
   gvfs-mtp \
   vim-airline \
   vim-fugitive \
-  xtitle
+  xtitle \
+  openssh \
+  arandr
 
 echo "Installing some python stuff..."
 packer --noconfirm --noedit -S \
