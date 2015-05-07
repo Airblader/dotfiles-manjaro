@@ -30,6 +30,9 @@ set softtabstop=4
 set scrolloff=8
 set sidescrolloff=10
 
+set timeoutlen=1000
+set ttimeoutlen=0
+
 :noremap / :set hlsearch<CR>/
 
 " toggle paste mode
