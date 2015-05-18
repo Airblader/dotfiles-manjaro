@@ -15,8 +15,7 @@ cd -
 echo "Installing base packages..."
 packer --noconfirm --noedit -S \
   vim \
-  gcc \
-  make \
+  base-devel \
   rxvt-unicode \
   bash-completion
 
