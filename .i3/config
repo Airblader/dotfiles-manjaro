@@ -1,4 +1,5 @@
 # vim:filetype=i3
+# i3 config file (v4)
 set $mod Mod4
 
 set $black       #2c2836
