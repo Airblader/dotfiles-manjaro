@@ -1,4 +1,5 @@
 # vim:filetype=i3
+# i3 config file (v4)
 set $mod Mod4
 
 set $black       #2c2836
@@ -22,8 +23,8 @@ set $background  #133B47
 set $ws1  "1:"
 set $ws2  "2:"
 set $ws3  "3:"
-set $ws4 "4:"
-set $ws5 "5:"
+set $ws4  "4:"
+set $ws5  "5:"
 set $ws6  "6:"
 set $ws7  "7: 7"
 set $ws8  "8: 8"
@@ -32,6 +33,7 @@ set $ws10 "10:"
 
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
+focus_on_window_activation urgent
 
 font pango:Tewi, Icons 8
 
@@ -42,22 +44,23 @@ client.focused_inactive $darkcyan  $darkcyan  $white $darkcyan
 client.urgent           $red       $red       $white $red
 
 floating_modifier $mod
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 20 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -dim 0.25
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 20 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -dim 0.25'
+bindsym $mod+d exec dmenu_run -i -y 20 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 20 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"'
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
 bindsym $mod+Up focus up
 bindsym $mod+Down focus down
 
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left 35px
+bindsym $mod+Shift+Down move down 35px
+bindsym $mod+Shift+Up move up 35px
+bindsym $mod+Shift+Right move right 35px
 
 bindsym $mod+h split h
 bindsym $mod+v split v
@@ -107,7 +110,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-bindsym $mod+Shift+v exec i3-input -l 3 -F 'exec--no-startup-id $HOME/scripts/volume_control.py set %s'
+bindsym $mod+Shift+v exec dmenu -noinput -i -y 20 -o 0.8 -w 300 -p "%" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" | xargs $HOME/scripts/volume_control.py set
+#bindsym $mod+Shift+v exec i3-input -l 3 -F 'exec --no-startup-id $HOME/scripts/volume_control.py set %s'
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -138,12 +142,12 @@ mode "$mode_resize" {
 
 set $mode_power    (l)ock | (e)xit | (s)uspend | (h)ibernate | (r)eboot | (p)oweroff
 mode "$mode_power" {
-        bindsym l exec --no-startup-id $HOME/.i3/i3exit lock, mode "default"
-        bindsym e exec --no-startup-id $HOME/.i3/i3exit logout, mode "default"
-        bindsym s exec --no-startup-id $HOME/.i3/i3exit suspend, mode "default"
-        bindsym h exec --no-startup-id $HOME/.i3/i3exit hibernate, mode "default"
-        bindsym r exec --no-startup-id $HOME/.i3/i3exit reboot, mode "default"
-        bindsym p exec --no-startup-id $HOME/.i3/i3exit shutdown, mode "default"
+        bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
+        bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
+        bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
+        bindsym h mode "default", exec --no-startup-id $HOME/.i3/i3exit hibernate
+        bindsym r mode "default", exec --no-startup-id $HOME/.i3/i3exit reboot
+        bindsym p mode "default", exec --no-startup-id $HOME/.i3/i3exit shutdown
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -151,35 +155,47 @@ mode "$mode_power" {
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
 
-# fix graphics glitch
-new_window none
-
 # dialogs
 for_window [class="(?i)gsimplecal"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
+for_window [class="(?i)VirtualBox"] floating enable
+for_window [instance="sun-awt-X11-XFramePeer"] floating enable
+
+for_window [instance="__scratchpad"] floating enable
+
+# race condition (#1444) :(
+#for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+for_window [class="(?i)pavucontrol"] floating enable, exec --no-startup-id "sleep 0.05 && i3-msg '[class=(?i)pavucontrol] move position mouse'"
 
 # assign certain applications to a specific workspace
-assign [class="(?i)chrome"]      $ws1
-assign [class="(?i)eclipse"]     $ws3
-assign [class="(?i)thunderbird"] $ws9
-assign [class="(?i)pidgin"]      $ws10
+assign [class="(?i)chrome"]                       $ws1
+assign [class="(?i)eclipse" window_type="splash"] $ws3
+assign [class="(?i)eclipse" window_type="normal"] $ws3
+assign [class="(?i)thunderbird"]                  $ws9
+assign [class="(?i)pidgin"]                       $ws10
 
 bar {
+#        verbose yes
         status_command i3blocks
         position top
         font pango:Tewi, Icons 8
         strip_workspace_numbers yes
-        separator_symbol ":"
+        separator_symbol "]━["
+        wheel_up_cmd nop
+        wheel_down_cmd nop
+        tray_output primary
         colors {
                 statusline         $white
                 background         $background
-                separator          $darkgreen
+                separator          $cyan
 
 #                                  BORDER      BACKGROUND  TEXT
-                focused_workspace  $background $background $darkgreen
+                focused_workspace  $background $background $cyan
                 inactive_workspace $background $background $white
                 active_workspace   $background $background $white
                 urgent_workspace   $red        $red        $white
