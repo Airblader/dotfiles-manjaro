@@ -226,8 +226,8 @@ for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 
 # race condition (#1444) :(
-#for_window [class="(?i)pavucontrol"] floating enable, move position mouse
-for_window [class="(?i)pavucontrol"] floating enable, exec --no-startup-id "sleep 0.05 && i3-msg '[class=(?i)pavucontrol] move position mouse'"
+for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+#for_window [class="(?i)pavucontrol"] floating enable, exec --no-startup-id "sleep 0.05 && i3-msg '[class=(?i)pavucontrol] move position mouse'"
 
 # assign certain applications to a specific workspace
 assign [class="(?i)chrome"]                       $ws1
