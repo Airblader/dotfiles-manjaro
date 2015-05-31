@@ -254,7 +254,8 @@ bar {
                 focused_workspace  $background $background $cyan
                 inactive_workspace $background $background $white
                 active_workspace   $background $background $white
-                urgent_workspace   $red        $red        $white
+                urgent_workspace   $cyan       $cyan       $background
+#                binding_mode       $cyan       $cyan       $white
         }
 }
 
