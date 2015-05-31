@@ -26,8 +26,8 @@ set $ws3  "3:"
 set $ws4  "4:"
 set $ws5  "5:"
 set $ws6  "6:"
-set $ws7  "7: 7"
-set $ws8  "8: 8"
+set $ws7  "7:"
+set $ws8  "8:"
 set $ws9  "9:"
 set $ws10 "10:"
 
@@ -131,7 +131,7 @@ bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y
 
 bindsym $mod+n exec --no-startup-id thunar
 
-set $mode_resize resize
+set $mode_resize  [resize]
 bindsym $mod+r mode "$mode_resize"
 mode "$mode_resize" {
         bindsym Left resize shrink width 1 px or 1 ppt
@@ -148,7 +148,7 @@ mode "$mode_resize" {
         bindsym Escape mode "default"
 }
 
-set $mode_power (l)ock | (e)xit | (s)uspend | (h)ibernate | (r)eboot | (p)oweroff
+set $mode_power  [lock]   [reboot]   [shutdown]
 mode "$mode_power" {
         bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
         bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
@@ -163,9 +163,9 @@ mode "$mode_power" {
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
 
-set $mode_gaps Gaps: (o) outer, (i) inner, d|0
-set $mode_gaps_outer Outer Gaps: +|-|d|0 (local), Shift + +|-|d|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|d|0 (local), Shift + +|-|d|0 (global)
+set $mode_gaps  [gaps]
+set $mode_gaps_outer  [gaps outer]
+set $mode_gaps_inner  [gaps inner]
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
@@ -255,7 +255,7 @@ bar {
                 inactive_workspace $background $background $white
                 active_workspace   $background $background $white
                 urgent_workspace   $cyan       $cyan       $background
-#                binding_mode       $cyan       $cyan       $white
+#                binding_mode       $background $background $cyan
         }
 }
 
