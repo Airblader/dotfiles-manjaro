@@ -18,7 +18,7 @@ set $cyan        #68a8c5
 set $darkcyan    #9ac1d9
 set $white       #f1edfb
 set $darkwhite   #f1edfb
-set $background  #133B47
+set $background  #283D48
 
 set $ws1  "1:"
 set $ws2  "2:"
@@ -251,11 +251,11 @@ bar {
                 separator          $cyan
 
 #                                  BORDER      BACKGROUND  TEXT
-                focused_workspace  $background $background $cyan
+                focused_workspace  $background $background $darkcyan
                 inactive_workspace $background $background $white
                 active_workspace   $background $background $white
-                urgent_workspace   $cyan       $cyan       $background
-#                binding_mode       $background $background $cyan
+                urgent_workspace   $darkcyan   $darkcyan   $background
+                binding_mode       $background $background $darkcyan
         }
 }
 
