@@ -131,7 +131,7 @@ bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y
 
 bindsym $mod+n exec --no-startup-id thunar
 
-set $mode_resize  [resize]
+set $mode_resize <span>        </span><span background='#bb7473' foreground='white'> resize </span> <span foreground='white'>l</span>eft <span foreground='white'>r</span>ight <span foreground='white'>u</span>p <span foreground='white'>d</span>own
 bindsym $mod+r mode "$mode_resize"
 mode "$mode_resize" {
         bindsym Left resize shrink width 1 px or 1 ppt
@@ -148,7 +148,7 @@ mode "$mode_resize" {
         bindsym Escape mode "default"
 }
 
-set $mode_power  [lock]   [reboot]   [shutdown]
+set $mode_power <span>        </span><span background='#bb7473' foreground='white'> power </span> <span foreground='white'>l</span>ock <span foreground='white'>e</span>xit <span foreground='white'>s</span>uspend <span foreground='white'>r</span>eboot <span foreground='white'>p</span>oweroff
 mode "$mode_power" {
         bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
         bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
@@ -163,9 +163,9 @@ mode "$mode_power" {
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
 
-set $mode_gaps  [gaps]
-set $mode_gaps_outer  [gaps outer]
-set $mode_gaps_inner  [gaps inner]
+set $mode_gaps <span>        </span><span background='#bb7473' foreground='white'> gaps </span> <span foreground='white'>i</span>nner <span foreground='white'>o</span>uter
+set $mode_gaps_outer <span>        </span><span background='#bb7473' foreground='white'> outer gaps </span> <span foreground='white'>+ - 0 d</span>
+set $mode_gaps_inner <span>        </span><span background='#bb7473' foreground='white'> inner gaps </span> <span foreground='white'>+ - 0 d</span>
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
