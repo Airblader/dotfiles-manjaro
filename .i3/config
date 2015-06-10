@@ -166,7 +166,7 @@ mode "$mode_power" {
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
 
-set $mode_gaps <span>        </span><span background='#bb7473' foreground='white'> gaps </span> <span foreground='white'>i</span>nner <span foreground='white'>o</span>uter
+set $mode_gaps <span>        </span><span background='#bb7473' foreground='white'> gaps </span> <span foreground='white'>i</span>nner <span foreground='white'>o</span>uter <span foreground='white'>0 d</span>
 set $mode_gaps_outer <span>        </span><span background='#bb7473' foreground='white'> outer gaps </span> <span foreground='white'>+ - 0 d</span>
 set $mode_gaps_inner <span>        </span><span background='#bb7473' foreground='white'> inner gaps </span> <span foreground='white'>+ - 0 d</span>
 bindsym $mod+Shift+g mode "$mode_gaps"
