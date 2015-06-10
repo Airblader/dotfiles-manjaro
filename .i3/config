@@ -137,15 +137,15 @@ bindsym $mod+n exec --no-startup-id thunar
 set $mode_resize <span>        </span><span background='#bb7473' foreground='white'> resize </span> <span foreground='white'>l</span>eft <span foreground='white'>r</span>ight <span foreground='white'>u</span>p <span foreground='white'>d</span>own
 bindsym $mod+r mode "$mode_resize"
 mode "$mode_resize" {
-        bindsym Left resize shrink width 1 px or 1 ppt
-        bindsym Down resize grow height 1 px or 1 ppt
-        bindsym Up resize shrink height 1 px or 1 ppt
-        bindsym Right resize grow width 1 px or 1 ppt
+        bindsym Left resize shrink width 10 px or 1 ppt
+        bindsym Down resize grow height 10 px or 1 ppt
+        bindsym Up resize shrink height 10 px or 1 ppt
+        bindsym Right resize grow width 10 px or 1 ppt
 
-        bindsym Shift+Left resize shrink width 5 px or 5 ppt
-        bindsym Shift+Down resize grow height 5 px or 5 ppt
-        bindsym Shift+Up resize shrink height 5 px or 5 ppt
-        bindsym Shift+Right resize grow width 5 px or 5 ppt
+        bindsym Shift+Left resize shrink width 20 px or 5 ppt
+        bindsym Shift+Down resize grow height 20 px or 5 ppt
+        bindsym Shift+Up resize shrink height 20 px or 5 ppt
+        bindsym Shift+Right resize grow width 20 px or 5 ppt
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
