@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-function branch-diff() {
-  git diff origin/$1:$3..origin/$2:$3
-}
