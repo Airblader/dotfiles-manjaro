@@ -211,6 +211,26 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+set $mode_brightness <span>        </span><span background='#bb7473' foreground='white'> brightness </span> <span foreground='white'>+</span> increase <span foreground='white'>-</span> decrease
+bindsym $mod+Shift+b mode "$mode_brightness"
+mode "$mode_brightness" {
+        bindsym plus  exec --no-startup-id xbacklight -time 50 -inc 10
+        bindsym minus exec --no-startup-id xbacklight -time 50 -dec 10
+        bindsym 0     mode "default", exec --no-startup-id xbacklight -time 50 -set 100
+        bindsym 1     mode "default", exec --no-startup-id xbacklight -time 50 -set 10
+        bindsym 2     mode "default", exec --no-startup-id xbacklight -time 50 -set 20
+        bindsym 3     mode "default", exec --no-startup-id xbacklight -time 50 -set 30
+        bindsym 4     mode "default", exec --no-startup-id xbacklight -time 50 -set 40
+        bindsym 5     mode "default", exec --no-startup-id xbacklight -time 50 -set 50
+        bindsym 6     mode "default", exec --no-startup-id xbacklight -time 50 -set 60
+        bindsym 7     mode "default", exec --no-startup-id xbacklight -time 50 -set 70
+        bindsym 8     mode "default", exec --no-startup-id xbacklight -time 50 -set 80
+        bindsym 9     mode "default", exec --no-startup-id xbacklight -time 50 -set 90
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 # fix graphics glitch
 new_window none
 
