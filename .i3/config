@@ -137,31 +137,31 @@ bindsym $mod+n exec --no-startup-id thunar
 set $mode_resize <span>        </span><span background='#bb7473' foreground='white'> resize </span> <span foreground='white'>l</span>eft <span foreground='white'>r</span>ight <span foreground='white'>u</span>p <span foreground='white'>d</span>own
 bindsym $mod+r mode "$mode_resize"
 mode "$mode_resize" {
-        bindsym Left resize shrink width 10 px or 1 ppt
-        bindsym Down resize grow height 10 px or 1 ppt
-        bindsym Up resize shrink height 10 px or 1 ppt
-        bindsym Right resize grow width 10 px or 1 ppt
+    bindsym Left resize shrink width 10 px or 1 ppt
+    bindsym Down resize grow height 10 px or 1 ppt
+    bindsym Up resize shrink height 10 px or 1 ppt
+    bindsym Right resize grow width 10 px or 1 ppt
 
-        bindsym Shift+Left resize shrink width 20 px or 5 ppt
-        bindsym Shift+Down resize grow height 20 px or 5 ppt
-        bindsym Shift+Up resize shrink height 20 px or 5 ppt
-        bindsym Shift+Right resize grow width 20 px or 5 ppt
+    bindsym Shift+Left resize shrink width 20 px or 5 ppt
+    bindsym Shift+Down resize grow height 20 px or 5 ppt
+    bindsym Shift+Up resize shrink height 20 px or 5 ppt
+    bindsym Shift+Right resize grow width 20 px or 5 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 set $mode_power <span>        </span><span background='#bb7473' foreground='white'> power </span> <span foreground='white'>l</span>ock <span foreground='white'>e</span>xit <span foreground='white'>s</span>uspend <span foreground='white'>r</span>eboot <span foreground='white'>p</span>oweroff
 mode "$mode_power" {
-        bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
-        bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
-        bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
-        bindsym h mode "default", exec --no-startup-id $HOME/.i3/i3exit hibernate
-        bindsym r mode "default", exec --no-startup-id $HOME/.i3/i3exit reboot
-        bindsym p mode "default", exec --no-startup-id $HOME/.i3/i3exit shutdown
+    bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
+    bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
+    bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
+    bindsym h mode "default", exec --no-startup-id $HOME/.i3/i3exit hibernate
+    bindsym r mode "default", exec --no-startup-id $HOME/.i3/i3exit reboot
+    bindsym p mode "default", exec --no-startup-id $HOME/.i3/i3exit shutdown
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
@@ -172,114 +172,112 @@ set $mode_gaps_inner <span>        </span><span background='#bb7473' foreground=
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
 
-        bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
-        bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
+    bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
+    bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     mode "default", gaps inner current set 0
-        bindsym d     mode "default", gaps inner current set $default_gaps_inner
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     mode "default", gaps inner current set 0
+    bindsym d     mode "default", gaps inner current set $default_gaps_inner
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     mode "default", gaps inner all set 0
-        bindsym Shift+d     mode "default", gaps inner all set $default_gaps_inner
+    bindsym Shift+plus  gaps inner all plus 5
+    bindsym Shift+minus gaps inner all minus 5
+    bindsym Shift+0     mode "default", gaps inner all set 0
+    bindsym Shift+d     mode "default", gaps inner all set $default_gaps_inner
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     mode "default", gaps outer current set 0
-        bindsym d     mode "default", gaps outer current set $default_gaps_outer
+    bindsym plus  gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0     mode "default", gaps outer current set 0
+    bindsym d     mode "default", gaps outer current set $default_gaps_outer
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     mode "default", gaps outer all set 0
-        bindsym Shift+d     mode "default", gaps outer all set $default_gaps_outer
+    bindsym Shift+plus  gaps outer all plus 5
+    bindsym Shift+minus gaps outer all minus 5
+    bindsym Shift+0     mode "default", gaps outer all set 0
+    bindsym Shift+d     mode "default", gaps outer all set $default_gaps_outer
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 set $mode_brightness <span>        </span><span background='#bb7473' foreground='white'> brightness </span> <span foreground='white'>+</span> increase <span foreground='white'>-</span> decrease
 bindsym $mod+Shift+b mode "$mode_brightness"
 mode "$mode_brightness" {
-        bindsym plus  exec --no-startup-id xbacklight -time 50 -inc 10
-        bindsym minus exec --no-startup-id xbacklight -time 50 -dec 10
-        bindsym 0     mode "default", exec --no-startup-id xbacklight -time 50 -set 100
-        bindsym 1     mode "default", exec --no-startup-id xbacklight -time 50 -set 10
-        bindsym 2     mode "default", exec --no-startup-id xbacklight -time 50 -set 20
-        bindsym 3     mode "default", exec --no-startup-id xbacklight -time 50 -set 30
-        bindsym 4     mode "default", exec --no-startup-id xbacklight -time 50 -set 40
-        bindsym 5     mode "default", exec --no-startup-id xbacklight -time 50 -set 50
-        bindsym 6     mode "default", exec --no-startup-id xbacklight -time 50 -set 60
-        bindsym 7     mode "default", exec --no-startup-id xbacklight -time 50 -set 70
-        bindsym 8     mode "default", exec --no-startup-id xbacklight -time 50 -set 80
-        bindsym 9     mode "default", exec --no-startup-id xbacklight -time 50 -set 90
+    bindsym plus  exec --no-startup-id xbacklight -time 50 -inc 10
+    bindsym minus exec --no-startup-id xbacklight -time 50 -dec 10
+    bindsym 0     mode "default", exec --no-startup-id xbacklight -time 50 -set 100
+    bindsym 1     mode "default", exec --no-startup-id xbacklight -time 50 -set 10
+    bindsym 2     mode "default", exec --no-startup-id xbacklight -time 50 -set 20
+    bindsym 3     mode "default", exec --no-startup-id xbacklight -time 50 -set 30
+    bindsym 4     mode "default", exec --no-startup-id xbacklight -time 50 -set 40
+    bindsym 5     mode "default", exec --no-startup-id xbacklight -time 50 -set 50
+    bindsym 6     mode "default", exec --no-startup-id xbacklight -time 50 -set 60
+    bindsym 7     mode "default", exec --no-startup-id xbacklight -time 50 -set 70
+    bindsym 8     mode "default", exec --no-startup-id xbacklight -time 50 -set 80
+    bindsym 9     mode "default", exec --no-startup-id xbacklight -time 50 -set 90
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 # fix graphics glitch
 new_window none
 
-# dialogs
-for_window [class="(?i)gsimplecal"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-for_window [window_role="Preferences"] floating enable
+
+for_window [class="(?i)gsimplecal"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox"] floating enable
-for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 
+for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 
-# race condition (#1444) :(
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
-#for_window [class="(?i)pavucontrol"] floating enable, exec --no-startup-id "sleep 0.05 && i3-msg '[class=(?i)pavucontrol] move position mouse'"
 
-# assign certain applications to a specific workspace
 assign [class="(?i)chrome"]                       $ws1
 assign [class="(?i)eclipse" window_type="splash"] $ws3
 assign [class="(?i)eclipse" window_type="normal"] $ws3
 assign [class="(?i)thunderbird"]                  $ws9
 
 bar {
-#        verbose yes
-        status_command i3blocks
-        position top
-        font pango:Tewi, Icons 8
-        strip_workspace_numbers yes
-        separator_symbol "]━["
-        bindsym button4 nop
-        bindsym button5 nop
-        tray_output primary
-        colors {
-                statusline         $white
-                background         $background
-                separator          $cyan
+#    verbose yes
+    status_command i3blocks
+    position top
+    font pango:Tewi, Icons 8
+    strip_workspace_numbers yes
+    separator_symbol "]━["
+    bindsym button4 nop
+    bindsym button5 nop
+    tray_output primary
+    colors {
+        statusline         $white
+        background         $background
+        separator          $cyan
 
-#                                  BORDER      BACKGROUND  TEXT
-                focused_workspace  $background $background $darkcyan
-                inactive_workspace $background $background $white
-                active_workspace   $background $background $white
-                urgent_workspace   $darkcyan   $darkcyan   $background
-                binding_mode       $background $background $darkcyan
-        }
+#                          BORDER      BACKGROUND  TEXT
+        focused_workspace  $background $background $darkcyan
+        inactive_workspace $background $background $white
+        active_workspace   $background $background $white
+        urgent_workspace   $darkcyan   $darkcyan   $background
+        binding_mode       $background $background $darkcyan
+    }
 }
 
 # AUTOSTART
