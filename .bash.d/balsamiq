@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+alias balsamiq="cd $HOME/.wine/drive_c/Program\ Files\ \(x86\)/Balsamiq\ Mockups\ 3/ && wine Balsamiq\ Mockups\ 3.exe &"
