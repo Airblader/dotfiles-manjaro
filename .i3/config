@@ -267,7 +267,6 @@ bar {
     bindsym button5 nop
     tray_output primary
     tray_padding 0
-    height 14
     colors {
         statusline         $white
         background         $background
