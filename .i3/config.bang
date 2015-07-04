@@ -157,7 +157,7 @@ bar {
     position top
     strip_workspace_numbers yes
     separator_symbol "]━["
-    tray_output primary
+    tray_output LVDS-0
     bindsym button!!4,5 nop
     colors {
         statusline         $white
