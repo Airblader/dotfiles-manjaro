@@ -24,9 +24,6 @@ set $background  #283D48
 set $ws!!1..10 "!!<1..10>:!!<,,,,,,,,,>"
 set $default_gaps_!!<inner,outer> !!<15,30>
 
-set $dmenucommon -i -y 20 -o 0.8 -w 300 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"
-set $dmenuextra -l 100 -p "\$"
-
 font pango:Tewi, Icons 8
 floating_modifier $mod
 
@@ -53,7 +50,7 @@ bindsym $mod!!<,+Shift>+a focus !!parent,child
 bindsym $mod+Shift+!!Left,Right,Up,Down move !!left,right,up,down 35px
 bindsym $mod+!!h,v split !!h,v
 bindsym $mod+!!s,w,e layout !!<stacking,tabbed,toggle split>
-bindsym $mod+!!f,g fullscreen !!<,global>
+bindsym $mod+!!f,g fullscreen!!<, global>
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
@@ -65,13 +62,13 @@ bindsym $mod+Shift+!!1..9,0 move container to workspace number $ws!!1..10
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+plus scratchpad show
 
-bindsym $mod!!<,+Shift>+Return exec --no-startup-id urxvt !!<,-name __scratchpad>
+bindsym $mod!!<,+Shift>+Return exec --no-startup-id urxvt!!<, -name __scratchpad>
 bindsym $mod+n exec --no-startup-id thunar
-bindsym $mod!!<,+Shift>+d exec --no-startup-id !!<dmenu_run,i3-dmenu-desktop --dmenu= '>$dmenucommon $dmenuextra!!<,'>
+bindsym $mod!!<,+Shift>+d exec --no-startup-id !!<dmenu_run,i3-dmenu-desktop --dmenu='dmenu> -i -y 20 -o 0.8 -w 300 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -l 100 -p "\$"!!<,'>
 bindsym --release !!<,Shift+>Print exec scrot!!<, -s> $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym !!XF86AudioLowerVolume,XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py !!down,up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-bindsym $mod+Shift+v exec dmenu -noinput -p "%" $dmenucommon | xargs $HOME/scripts/volume_control.py set
+bindsym $mod+Shift+v exec dmenu -noinput -p "%" -i -y 20 -o 0.8 -w 300 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" | xargs $HOME/scripts/volume_control.py set
 
 bindsym $mod+r mode "$mode_resize"
 bindsym Mod1+Control+l mode "$mode_power"
