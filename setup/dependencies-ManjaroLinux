@@ -65,7 +65,8 @@ packer --noconfirm --noedit -S \
   xtitle \
   openssh \
   arandr \
-  xclip
+  xclip \
+  i3bang-git
 
 echo "Installing some python stuff..."
 packer --noconfirm --noedit -S \

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -eu
+
+i3bang ${HOME}/.i3/config.bang ${HOME}/.i3/config
+i3 -C
