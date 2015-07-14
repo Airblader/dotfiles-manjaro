@@ -19,6 +19,16 @@ packer --noconfirm --noedit -S \
   rxvt-unicode \
   bash-completion
 
+echo "Installing Python dependencies..."
+packer --noconfirm --noedit -S \
+  python-basiciw \
+  python-netifaces \
+  python-jsonpath-rw \
+  python-pyyaml \
+  python-pillow \
+  python-urllib3 \
+  python2-suds
+
 echo "Installing window manager dependencies..."
 packer --noconfirm --noedit -S \
   xcb-util-keysyms \
@@ -66,7 +76,10 @@ packer --noconfirm --noedit -S \
   openssh \
   arandr \
   xclip \
-  i3bang-git
+  i3bang-git \
+  xedgewarp-git \
+  unclutter-xfixes-git \
+  thefuck
 
 echo "Installing some python stuff..."
 packer --noconfirm --noedit -S \

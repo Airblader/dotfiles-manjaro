@@ -48,8 +48,7 @@ fi
 
 ask "Install packages?" Y && bash ./dependencies-${distro}
 
-ask "Install python3 modules?" Y && {
-  sudo pip3 install basiciw netifaces jsonpath_rw pyyaml
+ask "Install python2 modules?" Y && {
   sudo pip2 install pyyaml
 }
 
