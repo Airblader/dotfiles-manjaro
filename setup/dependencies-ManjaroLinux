@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Installing prerequisites for packer..."
+echo "Installing prerequisites for apacman..."
 sudo pacman -S base-devel fakeroot jshon expac
 
-echo "Installing packer..."
-mkdir /tmp/tmp-packer
-cd /tmp/tmp-packer
-wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD
+echo "Installing apacman..."
+mkdir /tmp/tmp-apacman
+cd /tmp/tmp-apacman
+wget https://aur.archlinux.org/packages/ap/apacman/PKGBUILD
 makepkg
 sudo pacman --noconfirm -U *.tar.xz
 cd -
 
 echo "Installing base packages..."
-packer --noconfirm --noedit -S \
+apacman --noconfirm --noedit -S \
   vim \
   base-devel \
   rxvt-unicode \
   bash-completion
 
 echo "Installing Python dependencies..."
-packer --noconfirm --noedit -S \
+apacman --noconfirm --noedit -S \
   python-basiciw \
   python-netifaces \
   python-jsonpath-rw \
@@ -30,7 +30,7 @@ packer --noconfirm --noedit -S \
   python2-suds
 
 echo "Installing window manager dependencies..."
-packer --noconfirm --noedit -S \
+apacman --noconfirm --noedit -S \
   xcb-util-keysyms \
   xcb-util-wm \
   xcb-util-cursor \
@@ -39,7 +39,7 @@ packer --noconfirm --noedit -S \
   libev
 
 echo "Installing tools..."
-packer --noconfirm --noedit -S \
+apacman --noconfirm --noedit -S \
   i3lock \
   i3blocks-git \
   gsimplecal \
@@ -82,11 +82,11 @@ packer --noconfirm --noedit -S \
   thefuck
 
 echo "Installing some python stuff..."
-packer --noconfirm --noedit -S \
+apacman --noconfirm --noedit -S \
   python-pillow \
   python-urllib3
 
 echo "Installing some perl stuff..."
-packer --noconfirm --noedit -S \
+apacman --noconfirm --noedit -S \
   perl-anyevent-i3 \
   perl-json-xs \
