@@ -1,0 +1,1 @@
+export EDITOR=$(which vim)
