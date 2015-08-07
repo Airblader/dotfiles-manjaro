@@ -33,7 +33,7 @@ focus_on_window_activation urgent
 floating_!!<minimum,maximum>_size -1 x -1
 
 gaps !!inner,outer $default_gaps_!!inner,outer
-workspace $ws!!<2!1,9> gaps !!<inner,outer> !!<5,0>
+workspace $ws!!<2!1,9> gaps !!<inner,outer> !!<0,0>
 
 #                       BORDER     BACKGROUND TEXT   INDICATOR
 client.focused          $cyan      $cyan      $white $cyan
@@ -64,7 +64,7 @@ bindsym $mod+Shift+plus scratchpad show
 
 bindsym $mod!!<,+Shift>+Return exec --no-startup-id urxvt!!<, -name __scratchpad>
 bindsym $mod+n exec --no-startup-id thunar
-bindsym $mod!!<,+Shift>+d exec --no-startup-id !!<dmenu_run,i3-dmenu-desktop --dmenu='dmenu> -i -y 20 -o 0.8 -w 300 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -l 100 -p "\$"!!<,'>
+bindsym $mod!!<,+Shift>+d exec --no-startup-id !!<dmenu_run,i3-dmenu-desktop --dmenu='dmenu> -i -y 18 -o 0.8 -w 300 -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" -l 100 -p "\$"!!<,'>
 bindsym --release !!<,Shift+>Print exec scrot!!<, -s> $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym !!XF86AudioLowerVolume,XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py !!down,up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
