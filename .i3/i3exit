@@ -6,7 +6,9 @@
 
 
 lock() {
+  killall compton
   $HOME/.config/i3lock/i3lock.sh
+  compton -b
 }
 
 case "$1" in

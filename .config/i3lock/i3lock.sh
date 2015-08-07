@@ -10,6 +10,7 @@ convert ${screenshot} -blur 0x5 -modulate 100,40 \
     -gravity center ${overlay} -composite \
     ${lock}
 
-i3lock -u -i ${lock}
+i3lock -n -u -i ${lock}
 
-trap "rm '${screenshot}' '${lock}'" EXIT
+#trap "rm '${screenshot}' '${lock}'" EXIT
+rm '${screenshot}' '${lock}'
