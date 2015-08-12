@@ -171,4 +171,4 @@ bar {
 }
 
 exec --no-startup-id !!<compton -b,dunst &,nm-applet &>
-exec_always --no-startup-id feh --bg-center $HOME/.config/wallpapers/current
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/current
