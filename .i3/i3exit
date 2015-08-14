@@ -19,19 +19,17 @@ case "$1" in
     i3-msg exit
     ;;
   suspend)
-#     lock && sudo pm-suspend
-    lock && systemctl suspend
+    lock &
+    systemctl suspend
     ;;
   hibernate)
-#     lock && sudo pm-hibernate
-    lock && systemctl hibernate
+    lock &
+    systemctl hibernate
     ;;
   reboot)
-#     sudo reboot
     systemctl reboot
     ;;
   shutdown)
-#     sudo poweroff
     systemctl poweroff
     ;;
   *)
