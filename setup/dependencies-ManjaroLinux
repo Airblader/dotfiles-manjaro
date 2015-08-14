@@ -24,7 +24,7 @@ apacman --noconfirm --noedit -S \
   python-basiciw \
   python-netifaces \
   python-jsonpath-rw \
-  python-pyyaml \
+  python-yaml \
   python-pillow \
   python-urllib3 \
   python2-suds
