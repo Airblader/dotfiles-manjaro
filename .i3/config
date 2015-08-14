@@ -36,9 +36,9 @@ set $default_gaps_outer 30
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
-workspace $ws1 gaps inner 5
+workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
-workspace $ws9 gaps inner 5
+workspace $ws9 gaps inner 0
 workspace $ws9 gaps outer 0
 
 workspace_auto_back_and_forth yes
@@ -62,8 +62,8 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 20 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 20 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"'
+bindsym $mod+d exec dmenu_run -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"'
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
@@ -287,4 +287,4 @@ exec --no-startup-id compton -b
 exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
 
-exec_always --no-startup-id feh --bg-center $HOME/.config/wallpapers/current
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/current

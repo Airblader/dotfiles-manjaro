@@ -76,7 +76,6 @@ apacman --noconfirm --noedit -S \
   openssh \
   arandr \
   xclip \
-  i3bang-git \
   xedgewarp-git \
   unclutter-xfixes-git \
   thefuck
