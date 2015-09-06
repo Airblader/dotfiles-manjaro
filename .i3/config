@@ -103,9 +103,6 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+Tab workspace back_and_forth
 
-bindsym $mod+Control+Shift+Prior move container to output left
-bindsym $mod+Control+Shift+Next move container to output right
-
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+plus scratchpad show
 
