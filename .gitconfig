@@ -10,6 +10,8 @@
     up = pull --rebase
     g = grep --break --heading --line-number
     fa = fetch --all
+    p = push
+    pf = push -f
 
 [color]
     diff = auto
