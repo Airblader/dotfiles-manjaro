@@ -1,4 +1,4 @@
-set t_Co=256
+
 
 filetype on
 filetype plugin indent on
@@ -47,3 +47,9 @@ set ttimeoutlen=0
 " for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
 highlight Search ctermbg=1 ctermfg=255 cterm=NONE
 highlight Visual ctermbg=1 ctermfg=255
+
+function TrimWhitespace()
+  %s/\s*$//
+  ''
+:endfunction
+command! Trim call TrimWhitespace()
