@@ -72,7 +72,7 @@ apacman --noconfirm --noedit -S \
   gvfs-mtp \
   vim-airline \
   vim-fugitive \
-  xtitle \
+  xtitle-git \
   openssh \
   arandr \
   xclip \
