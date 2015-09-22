@@ -1,1 +1,1 @@
-alias beerme="apacman -Syyu"
+alias beerme="apacman --noedit -Syyu"
