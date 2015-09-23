@@ -2,23 +2,23 @@
 # i3 config file (v4)
 set $mod Mod4
 
-set $black       #2c2836
-set $darkblack   #73707e
-set $red         #bb7473
-set $darkred     #cf9fa4
-set $green       #68b782
-set $darkgreen   #9acbad
-set $yellow      #abb773
-set $darkyellow  #c5cba4
-set $blue        #7865c5
-set $darkblue    #a396d9
-set $magenta     #bb65b6
-set $darkmagenta #cf96cf
-set $cyan        #68a8c5
-set $darkcyan    #9ac1d9
-set $white       #f1edfb
-set $darkwhite   #f1edfb
-set $background  #283D48
+set $black       #212121
+set $darkblack   #000000
+set $red         #C62828
+set $darkred     #B71C1C
+set $green       #2E7D32
+set $darkgreen   #1B5E20
+set $yellow      #F9A825
+set $darkyellow  #F57F17
+set $blue        #1E88E5
+set $darkblue    #1976D2
+set $magenta     #6A1B9A
+set $darkmagenta #4A148C
+set $cyan        #00ACC1
+set $darkcyan    #0097A7
+set $white       #FFFFFF
+set $darkwhite   #FAFAFA
+set $background  #000000
 
 set $ws1  "1:"
 set $ws2  "2:"
@@ -40,6 +40,8 @@ workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
 workspace $ws9 gaps inner 0
 workspace $ws9 gaps outer 0
+workspace $ws10 gaps inner 0
+workspace $ws10 gaps outer 0
 
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
@@ -50,11 +52,11 @@ floating_maximum_size -1 x -1
 
 font pango:Tewi, Icons 8
 
-#                       BORDER     BACKGROUND TEXT   INDICATOR
-client.focused          $cyan      $cyan      $white $cyan
-client.unfocused        $darkcyan  $darkcyan  $white $darkcyan
-client.focused_inactive $darkcyan  $darkcyan  $white $darkcyan
-client.urgent           $red       $red       $white $red
+#                       BORDER      BACKGROUND  TEXT   INDICATOR
+client.focused          $darkyellow $darkyellow $black $darkyellow
+client.unfocused        $black      $black      $white $black
+client.focused_inactive $black      $black      $white $black
+client.urgent           $red        $red        $white $red
 
 floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id urxvt
@@ -62,8 +64,8 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan"'
+bindsym $mod+d exec dmenu_run -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow"
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow"'
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
@@ -124,7 +126,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-bindsym $mod+Shift+v exec dmenu -noinput -i -y 20 -o 0.8 -w 300 -p "%" -nb "$background" -nf "$white" -sb "$background" -sf "$cyan" | xargs $HOME/scripts/volume_control.py set
+bindsym $mod+Shift+v exec dmenu -noinput -i -y 18 -o 0.8 -w 300 -p "%" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" | xargs $HOME/scripts/volume_control.py set
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -135,7 +137,7 @@ bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y
 
 bindsym $mod+n exec --no-startup-id thunar
 
-set $mode_resize <span>        </span><span background='#bb7473' foreground='white'> resize </span> <span foreground='white'>l</span>eft <span foreground='white'>r</span>ight <span foreground='white'>u</span>p <span foreground='white'>d</span>own
+set $mode_resize <span>        </span><span background='#F57F17' foreground='black'> resize </span> <span foreground='white'>l</span>eft <span foreground='white'>r</span>ight <span foreground='white'>u</span>p <span foreground='white'>d</span>own
 bindsym $mod+r mode "$mode_resize"
 mode "$mode_resize" {
     bindsym Left resize shrink width 10 px or 1 ppt
@@ -152,7 +154,7 @@ mode "$mode_resize" {
     bindsym Escape mode "default"
 }
 
-set $mode_power <span>        </span><span background='#bb7473' foreground='white'> power </span> <span foreground='white'>l</span>ock <span foreground='white'>e</span>xit <span foreground='white'>s</span>uspend <span foreground='white'>r</span>eboot <span foreground='white'>p</span>oweroff
+set $mode_power <span>        </span><span background='#F57F17' foreground='black'> power </span> <span foreground='white'>l</span>ock <span foreground='white'>e</span>xit <span foreground='white'>s</span>uspend <span foreground='white'>r</span>eboot <span foreground='white'>p</span>oweroff
 mode "$mode_power" {
     bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
     bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
@@ -167,9 +169,9 @@ mode "$mode_power" {
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
 
-set $mode_gaps <span>        </span><span background='#bb7473' foreground='white'> gaps </span> <span foreground='white'>i</span>nner <span foreground='white'>o</span>uter <span foreground='white'>0 d</span>
-set $mode_gaps_outer <span>        </span><span background='#bb7473' foreground='white'> outer gaps </span> <span foreground='white'>+ - 0 d</span>
-set $mode_gaps_inner <span>        </span><span background='#bb7473' foreground='white'> inner gaps </span> <span foreground='white'>+ - 0 d</span>
+set $mode_gaps <span>        </span><span background='#F57F17' foreground='black'> gaps </span> <span foreground='white'>i</span>nner <span foreground='white'>o</span>uter <span foreground='white'>0 d</span>
+set $mode_gaps_outer <span>        </span><span background='#F57F17' foreground='black'> outer gaps </span> <span foreground='white'>+ - 0 d</span>
+set $mode_gaps_inner <span>        </span><span background='#F57F17' foreground='black'> inner gaps </span> <span foreground='white'>+ - 0 d</span>
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
@@ -212,7 +214,7 @@ mode "$mode_gaps_outer" {
     bindsym Escape mode "default"
 }
 
-set $mode_brightness <span>        </span><span background='#bb7473' foreground='white'> brightness </span> <span foreground='white'>+</span> increase <span foreground='white'>-</span> decrease
+set $mode_brightness <span>        </span><span background='#F57F17' foreground='black'> brightness </span> <span foreground='white'>+</span> increase <span foreground='white'>-</span> decrease
 bindsym $mod+Shift+b mode "$mode_brightness"
 mode "$mode_brightness" {
     bindsym plus  exec --no-startup-id xbacklight -time 50 -inc 10
@@ -234,6 +236,7 @@ mode "$mode_brightness" {
 
 # fix graphics glitch
 new_window none
+for_window [class="(?i)urxvt"] border pixel 3
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -263,7 +266,7 @@ bar {
     position top
     font pango:Tewi, Icons 8
     strip_workspace_numbers yes
-    separator_symbol "]━["
+    separator_symbol " / "
     bindsym button4 nop
     bindsym button5 nop
     tray_output LVDS-0
@@ -271,14 +274,14 @@ bar {
     colors {
         statusline         $white
         background         $background
-        separator          $cyan
+        separator          $yellow
 
 #                          BORDER      BACKGROUND  TEXT
-        focused_workspace  $background $background $darkcyan
+        focused_workspace  $background $background $darkyellow
         inactive_workspace $background $background $white
         active_workspace   $background $background $white
-        urgent_workspace   $darkcyan   $darkcyan   $background
-        binding_mode       $background $background $darkcyan
+        urgent_workspace   $darkyellow $darkyellow $background
+        binding_mode       $background $background $darkyellow
     }
 }
 

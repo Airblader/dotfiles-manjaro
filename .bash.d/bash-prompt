@@ -1,10 +1,23 @@
+ESC="$(echo -en '\e')"
+BLACK="${ESC}[30m"
+RED="${ESC}[31m"
+GREEN="${ESC}[32m"
+YELLOW="${ESC}[33m"
+BLUE="${ESC}[34m"
+PURPLE="${ESC}[35m"
+CYAN="${ESC}[36m"
+WHITE="${ESC}[37m"
+NORMAL="${ESC}[0m"
+BOLD="${ESC}[1m"
+RESET="\e[0m"
+
 # get current branch in git repo
 function parse_git_branch() {
     BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
     if [ ! "${BRANCH}" == "" ]
     then
         STAT=`parse_git_dirty`
-        echo "━[  ${BRANCH}${STAT} ]"
+        echo "${YELLOW}━[ ${WHITE} ${BRANCH}${BOLD}${RED}${STAT} ${NORMAL}${YELLOW}]"
     else
         echo ""
     fi
@@ -21,22 +34,22 @@ function parse_git_dirty {
     deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
     bits=''
     if [ "${renamed}" == "0" ]; then
-        bits=">${bits}"
+        bits="${YELLOW}>${bits}"
     fi
     if [ "${ahead}" == "0" ]; then
-        bits="*${bits}"
+        bits="${RED}*${bits}"
     fi
     if [ "${newfile}" == "0" ]; then
-        bits="+${bits}"
+        bits="${GREEN}+${bits}"
     fi
     if [ "${untracked}" == "0" ]; then
-        bits="?${bits}"
+        bits="${YELLOW}?${bits}"
     fi
     if [ "${deleted}" == "0" ]; then
-        bits="x${bits}"
+        bits="${RED}x${bits}"
     fi
     if [ "${dirty}" == "0" ]; then
-        bits="!${bits}"
+        bits="${RED}!${bits}"
     fi
     if [ ! "${bits}" == "" ]; then
         echo " ${bits}"
@@ -45,5 +58,5 @@ function parse_git_dirty {
     fi
 }
 
-export PS1="\[\e[36m\]┏━[\[\e[m\] \u\[\e[36m\]@\[\e[m\]\h \[\e[36m\]|\[\e[m\] \A\[\e[36m\] ]━[ \[\e[m\]\w \[\e[36m\]]\[\e[m\]\[\e[36m\]\`parse_git_branch\`\[\e[m\]
-\[\e[36m\]┗━━━[\[\e[m\] "
+export PS1="\[${YELLOW}\]┏━[ \[${WHITE}\]\u\[${YELLOW}\]@\[${WHITE}\]\h \[${YELLOW}\]]━[ \[${WHITE}\]\w \[${YELLOW}\]]\`parse_git_branch\`
+\[${YELLOW}\]┗━━━[\[${RESET}\] "

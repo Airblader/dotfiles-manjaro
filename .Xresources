@@ -8,8 +8,8 @@ Xft.lcdfilter: lcddefault
 
 URxvt.geometry: 120x50
 URxvt.depth: 32
-URxvt.internalBorder: 5
-URxvt.background: #111111
+URxvt.internalBorder: 10
+URxvt.background: #050505
 URxvt.fading: 10
 
 URxvt.scrollBar: off
@@ -30,22 +30,30 @@ URxvt.keysym.C-Left: perl:font-size:reset
 *Menu.foreground: White
 
 *cursorColor: #F3F3F3
-!*background: #2c2836
-*foreground: #e3dfed
+*background: #000000
+*foreground: #FFFFFF
 
-*color0: #2c2836
-*color8: #73707e
-*color1: #bb7473
-*color9: #cf9fa4
-*color2: #68b782
-*color10: #9acbad
-*color3: #abb773
-*color11: #c5cba4
-*color4: #7865c5
-*color12: #a396d9
-*color5: #bb65b6
-*color13: #cf96cf
-*color6: #68a8c5
-*color14: #9ac1d9
-*color7: #e3dfed
-*color15: #f1edfb
+! Black + Dark Gray
+*color0: #000000
+*color8: #212121
+! Dark Red + Red
+*color1: #b71c1c
+*color9: #c62828
+! Dark Green + Green
+*color2: #1B5E20
+*color10: #2E7D32
+! Dark Yellow + Yellow
+*color3: #F57F17
+*color11: #F9A825
+! Dark Blue + Blue
+*color4: #1976D2
+*color12: #1E88E5
+! Dark Magenta + Magenta
+*color5: #4A148C
+*color13: #6A1B9A
+! Dark Cyan + Cyan
+*color6: #0097A7
+*color14: #00ACC1
+! Light Gray + White
+*color7: #FAFAFA
+*color15: #FFFFFF

@@ -1,19 +1,19 @@
 let g:airline#themes#airblader#palette = {}
 
 " Normal mode
-let s:N1 = [ '', '', 232,  11 ]
+let s:N1 = [ '', '', 232, 3 ]
 let s:N2 = [ '', '', 255, 233 ]
 let s:N3 = [ '', '', 255, 235 ]
 let g:airline#themes#airblader#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
 " Insert mode
-let s:I1 = [ '', '', 232, 108 ]
+let s:I1 = [ '', '', 232, 11 ]
 let s:I2 = [ '', '', 255, 233 ]
 let s:I3 = [ '', '', 255, 235 ]
 let g:airline#themes#airblader#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 
 " Replace mode
-let s:R1 = [ '', '', 232, 108 ]
+let s:R1 = [ '', '', 232, 11 ]
 let s:R2 = [ '', '', 255, 233 ]
 let s:R3 = [ '', '', 255, 235 ]
 let g:airline#themes#airblader#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
