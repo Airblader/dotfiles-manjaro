@@ -63,7 +63,7 @@ if __name__ == '__main__':
     output = 'VOL ' + get_volume()
     if is_muted():
       output = '<s>' + output + '</s>'
-      output += '\n\n#bb7473'
+      output += '\n\n#b71c1c'
     write(output)
   elif command == 'signal':
     emit_signal()
