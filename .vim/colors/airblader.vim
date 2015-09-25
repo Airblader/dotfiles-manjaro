@@ -41,5 +41,5 @@ hi Directory    ctermfg=1   ctermbg=1   cterm=NONE
 hi LineNr       ctermfg=242 ctermbg=232 cterm=NONE
 hi NonText      ctermfg=252 ctermbg=0   cterm=NONE
 hi SpecialKey   ctermfg=1   ctermbg=1   cterm=NONE
-hi Title        ctermfg=1   ctermbg=1   cterm=NONE
+hi Title        ctermfg=35  ctermbg=0   cterm=NONE
 hi Visual       ctermfg=0   ctermbg=3   cterm=NONE
