@@ -30,6 +30,9 @@ set sidescrolloff=10
 set timeoutlen=1000
 set ttimeoutlen=0
 
+" for cross-terminal clipboard support
+set clipboard=unnamed
+
 :noremap / :set hlsearch<CR>/
 
 " toggle paste mode

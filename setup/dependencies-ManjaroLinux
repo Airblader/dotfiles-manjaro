@@ -14,7 +14,7 @@ cd -
 
 echo "Installing base packages..."
 apacman --noconfirm --noedit -S \
-  vim \
+  gvim \
   base-devel \
   rxvt-unicode \
   bash-completion
