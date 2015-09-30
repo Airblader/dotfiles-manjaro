@@ -37,7 +37,7 @@ hi Conditional  ctermfg=60  ctermbg=0   cterm=NONE
 hi String       ctermfg=35  ctermbg=0   cterm=NONE
 
 " Other
-hi Directory    ctermfg=1   ctermbg=1   cterm=NONE
+hi Directory    ctermfg=252 ctermbg=0   cterm=NONE
 hi LineNr       ctermfg=242 ctermbg=232 cterm=NONE
 hi NonText      ctermfg=252 ctermbg=0   cterm=NONE
 hi SpecialKey   ctermfg=252 ctermbg=0   cterm=NONE
