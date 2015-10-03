@@ -13,6 +13,8 @@ URxvt.background: #050505
 URxvt.fading: 10
 
 URxvt.scrollBar: off
+URxvt.saveLines: 60000
+URxvt.scrollTtyOutput: False
 
 URxvt.urgentOnBell: True
 URxvt.visualBell: False
