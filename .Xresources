@@ -15,6 +15,7 @@ URxvt.fading: 10
 URxvt.scrollBar: off
 URxvt.saveLines: 60000
 URxvt.scrollTtyOutput: False
+URxvt.scrollTtyKeypress: True
 
 URxvt.urgentOnBell: True
 URxvt.visualBell: False
