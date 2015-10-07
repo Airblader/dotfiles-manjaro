@@ -266,7 +266,7 @@ bar {
     position top
     font pango:Tewi, Icons 8
     strip_workspace_numbers yes
-    separator_symbol " / "
+    separator_symbol "/"
     bindsym button4 nop
     bindsym button5 nop
     tray_output LVDS-0
