@@ -72,9 +72,9 @@ syn match   i3Comment "^\s*#.*$" contains=i3Todo
 syn match i3Error ".*$" contained
 
 " Hex color code
-syn match i3ColorLast "#[0-9a-fA-F]\{6\}" contained nextgroup=i3Error skipwhite
-syn match i3Color2nd "#[0-9a-fA-F]\{6\}" contained nextgroup=i3ColorLast skipwhite
-syn match i3Color1st "#[0-9a-fA-F]\{6\}" contained nextgroup=i3Color2nd skipwhite
+syn match i3ColorLast "#[0-9a-fA-F]\{6,8\}" contained nextgroup=i3Error skipwhite
+syn match i3Color2nd "#[0-9a-fA-F]\{6,8\}" contained nextgroup=i3ColorLast skipwhite
+syn match i3Color1st "#[0-9a-fA-F]\{6,8\}" contained nextgroup=i3Color2nd skipwhite
 
 syn match i3ColorDef1 "client\.background\|statusline\|background\|separator\|statusline" nextgroup=i3ColorLast skipwhite
 syn match i3ColorDef3 "client\.\(focused_inactive\|focused\|unfocused\|urgent\)\|inactive_workspace\|urgent_workspace\|focused_workspace\|active_workspace\|binding_mode" nextgroup=i3Color1st skipwhite
