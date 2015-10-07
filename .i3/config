@@ -150,6 +150,8 @@ mode "$mode_resize" {
     bindsym Shift+Up resize shrink height 20 px or 5 ppt
     bindsym Shift+Right resize grow width 20 px or 5 ppt
 
+    bindsym s mode "default", exec --no-startup-id $HOME/scripts/slopsize.sh
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
