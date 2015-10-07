@@ -47,5 +47,7 @@ hi Visual       ctermfg=0   ctermbg=3   cterm=NONE
 " Diff
 hi DiffAdd      ctermfg=0   ctermbg=113 cterm=NONE
 hi DiffDelete   ctermfg=0   ctermbg=52  cterm=NONE
-hi DiffChange   ctermfg=255 ctermbg=4   cterm=NONE
+hi DiffChange   ctermfg=0   ctermbg=4   cterm=NONE
 hi DiffText     ctermfg=0   ctermbg=37  cterm=NONE
+hi diffAdded    ctermfg=113 ctermbg=0   cterm=NONE
+hi diffRemoved  ctermfg=1   ctermbg=0   cterm=NONE
