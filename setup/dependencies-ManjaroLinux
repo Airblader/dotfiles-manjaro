@@ -41,7 +41,7 @@ apacman --noconfirm --noedit -S \
 echo "Installing tools..."
 apacman --noconfirm --noedit -S \
   i3lock \
-  i3blocks-git \
+  i3blocks-gaps-git \
   gsimplecal \
   scrot \
   feh \
