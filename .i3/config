@@ -140,7 +140,7 @@ bindsym $mod+n exec --no-startup-id thunar
 
 set $mode_resize <span>        </span><span background='#F57F17' foreground='black'> resize </span> <span foreground='white'>l</span>eft <span foreground='white'>r</span>ight <span foreground='white'>u</span>p <span foreground='white'>d</span>own
 bindsym $mod+r mode "$mode_resize"
-mode "$mode_resize" {
+mode --pango_markup "$mode_resize" {
     bindsym Left resize shrink width 10 px or 1 ppt
     bindsym Down resize grow height 10 px or 1 ppt
     bindsym Up resize shrink height 10 px or 1 ppt
@@ -158,7 +158,7 @@ mode "$mode_resize" {
 }
 
 set $mode_power <span>        </span><span background='#F57F17' foreground='black'> power </span> <span foreground='white'>l</span>ock <span foreground='white'>e</span>xit <span foreground='white'>s</span>uspend <span foreground='white'>r</span>eboot <span foreground='white'>p</span>oweroff
-mode "$mode_power" {
+mode --pango_markup "$mode_power" {
     bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
     bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
     bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
@@ -177,7 +177,7 @@ set $mode_gaps_outer <span>        </span><span background='#F57F17' foreground=
 set $mode_gaps_inner <span>        </span><span background='#F57F17' foreground='black'> inner gaps </span> <span foreground='white'>+ - 0 d</span>
 bindsym $mod+Shift+g mode "$mode_gaps"
 
-mode "$mode_gaps" {
+mode --pango_markup "$mode_gaps" {
     bindsym o      mode "$mode_gaps_outer"
     bindsym i      mode "$mode_gaps_inner"
 
@@ -188,7 +188,7 @@ mode "$mode_gaps" {
     bindsym Escape mode "default"
 }
 
-mode "$mode_gaps_inner" {
+mode --pango_markup "$mode_gaps_inner" {
     bindsym plus  gaps inner current plus 5
     bindsym minus gaps inner current minus 5
     bindsym 0     mode "default", gaps inner current set 0
@@ -202,7 +202,7 @@ mode "$mode_gaps_inner" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-mode "$mode_gaps_outer" {
+mode --pango_markup "$mode_gaps_outer" {
     bindsym plus  gaps outer current plus 5
     bindsym minus gaps outer current minus 5
     bindsym 0     mode "default", gaps outer current set 0
@@ -219,7 +219,7 @@ mode "$mode_gaps_outer" {
 
 set $mode_brightness <span>        </span><span background='#F57F17' foreground='black'> brightness </span> <span foreground='white'>+</span> increase <span foreground='white'>-</span> decrease
 bindsym $mod+Shift+b mode "$mode_brightness"
-mode "$mode_brightness" {
+mode --pango_markup "$mode_brightness" {
     bindsym plus  exec --no-startup-id xbacklight -time 50 -inc 10
     bindsym minus exec --no-startup-id xbacklight -time 50 -dec 10
     bindsym 0     mode "default", exec --no-startup-id xbacklight -time 50 -set 100
