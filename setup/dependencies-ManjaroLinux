@@ -78,7 +78,8 @@ apacman --noconfirm --noedit -S \
   xclip \
   xedgewarp-git \
   unclutter-xfixes-git \
-  thefuck
+  thefuck \
+  youtube-dl
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
