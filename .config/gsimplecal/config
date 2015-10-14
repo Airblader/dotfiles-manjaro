@@ -1,5 +1,6 @@
 show_calendar=1
 mark_today=1
+show_week_numbers=1
 close_on_unfocus=1
 mainwindow_position=mouse
 mainwindow_xoffset=-0
