@@ -45,7 +45,7 @@ set clipboard=unnamed
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+:noremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.o$']
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
