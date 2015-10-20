@@ -9,7 +9,6 @@ Xft.lcdfilter: lcddefault
 URxvt.geometry: 120x50
 URxvt.depth: 32
 URxvt.internalBorder: 10
-URxvt.background: #050505
 URxvt.fading: 10
 
 URxvt.scrollBar: off
@@ -35,6 +34,8 @@ URxvt.keysym.C-Left: perl:font-size:reset
 *cursorColor: #F3F3F3
 *background: #000000
 *foreground: #FFFFFF
+
+URxvt.background: #050505
 
 ! Black + Dark Gray
 *color0: #000000
