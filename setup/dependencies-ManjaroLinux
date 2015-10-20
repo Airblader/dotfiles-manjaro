@@ -73,6 +73,8 @@ apacman --noconfirm --noedit -S \
   vim-airline \
   vim-fugitive \
   vim-nerdtree \
+  vim-gruvbox-git \
+  vim-airline-gruvbox-git \
   xtitle-git \
   openssh \
   arandr \

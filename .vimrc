@@ -4,7 +4,8 @@ filetype plugin on
 syntax on
 
 execute pathogen#infect()
-let g:airline_theme='airblader'
+" let g:airline_theme='airblader'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 
 set laststatus=2
@@ -50,19 +51,11 @@ let NERDTreeIgnore = ['\.pyc$', '\.o$']
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
-augroup ColorOverride
-    au!
-"    autocmd ColorScheme * highlight Normal       ctermbg=0
-"    autocmd ColorScheme * highlight NonText      ctermbg=0
-"    autocmd ColorScheme * highlight Search       ctermbg=1   ctermfg=255 cterm=NONE
-"    autocmd ColorScheme * highlight Visual       ctermbg=3   ctermfg=0
-"    autocmd ColorScheme * highlight LineNr       ctermbg=0   ctermfg=15
-"    autocmd ColorScheme * highlight Cursor       ctermbg=1
-"    autocmd ColorScheme * highlight CursorLine   ctermbg=0
-"    autocmd ColorScheme * highlight CursorLineNr ctermbg=3   ctermfg=0
-augroup END
-" colorscheme jellybeans
-colorscheme airblader
+" colorscheme airblader
+
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+set background=dark
 
 function TrimWhitespace()
   %s/\s*$//
