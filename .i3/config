@@ -129,6 +129,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.p
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
 bindsym $mod+Shift+v exec dmenu -noinput -i -y 18 -o 0.8 -w 300 -p "%" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" | xargs $HOME/scripts/volume_control.py set
 
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
