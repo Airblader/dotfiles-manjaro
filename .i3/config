@@ -19,7 +19,7 @@ set $darkcyan    #0097A7
 set $white       #FFFFFF
 set $darkwhite   #FAFAFA
 set $background  #000000
-set $transparent #00000055
+set $transparent #000000BB
 
 set $ws1  "1:"
 set $ws2  "2:"
