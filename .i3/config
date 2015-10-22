@@ -51,7 +51,7 @@ focus_on_window_activation urgent
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
-font pango:Tewi, Icons 8
+font pango:Tewi, FontAwesome 8
 
 #                       BORDER      BACKGROUND  TEXT   INDICATOR
 client.focused          $darkyellow $darkyellow $black $darkyellow
@@ -271,7 +271,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango:Tewi, Icons 8
+    font pango:Tewi, FontAwesome 8
     strip_workspace_numbers yes
     separator_symbol "/"
     bindsym button4 nop

@@ -58,7 +58,7 @@ apacman --noconfirm --noedit -S \
   python-pip \
   python2-pip \
   compton-git \
-  ttf-font-icons \
+  ttf-font-awesome \
   bdf-tewi-git \
   powerline-fonts-git \
   thunar \
