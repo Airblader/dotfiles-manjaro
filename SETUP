@@ -56,3 +56,24 @@ Mask:
 - rpcbind.target
 - network-online.target
 - binfmt-support.service
+
+## Suspend
+
+1. Create /etc/systemd/system/suspend@.service with below content.
+2. sudo systemctl enable suspend@ingo.service
+
+---------------------------------------
+[Unit]
+Description=Suspend
+Before=sleep.target
+
+[Service]
+User=%I
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/home/ingo/.i3/i3exit lock
+ExecStartPost=/usr/bin/sleep 1
+
+[Install]
+WantedBy=sleep.target
+---------------------------------------
