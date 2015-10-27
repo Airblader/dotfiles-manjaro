@@ -19,4 +19,6 @@ xset s noblank
 
 xset r rate 200 20
 
+setxkbmap de
+
 exec i3
