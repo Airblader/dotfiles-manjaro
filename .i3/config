@@ -64,6 +64,7 @@ bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
 
 bindsym $mod+q kill
+bindsym button2 kill
 
 bindsym $mod+d exec dmenu_run -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow"
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow"'
@@ -259,7 +260,7 @@ for_window [class="(?i)VirtualBox"] floating enable
 for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 
-for_window [class="(?i)pavucontrol"] floating enable, move position mouse
+for_window [class="(?i)pavucontrol"] floating enable, border normal, move position mouse
 
 assign [class="(?i)chrome"]                       $ws1
 assign [class="(?i)eclipse" window_type="splash"] $ws3
