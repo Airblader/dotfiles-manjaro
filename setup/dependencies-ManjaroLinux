@@ -62,6 +62,8 @@ apacman --noconfirm --noedit -S \
   bdf-tewi-git \
   powerline-fonts-git \
   thunar \
+  thunar-archive-plugin \
+  file-roller \
   tumbler \
   eog \
   numix-themes \
