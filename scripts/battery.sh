@@ -14,7 +14,8 @@ fi
 LEVEL=$(( (CHARGE - 1) / 20 ))
 ICON="f$(( 244 - LEVEL ))"
 
-echo -e "\u${ICON}  ${CHARGE}%${STATE}"
+#echo -e "\u${ICON}  ${CHARGE}%${STATE}"
+echo -e "\u${ICON}  ${CHARGE}${STATE}"
 
 [[ "${LEVEL}" = "0" ]] && exit 33
 exit 0
