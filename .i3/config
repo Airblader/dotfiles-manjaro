@@ -278,7 +278,8 @@ bar {
     bindsym button5 nop
     tray_output eDP1
     tray_output LVDS-0
-    tray_padding 0
+    tray_padding 5
+    height 30
     colors {
         statusline         $white
         background         $transparent
