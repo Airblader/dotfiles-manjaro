@@ -60,6 +60,8 @@ apacman --noconfirm --noedit -S \
   compton-git \
   ttf-font-awesome \
   bdf-tewi-git \
+  ohsnap \
+  ttf-hack \
   powerline-fonts-git \
   thunar \
   thunar-archive-plugin \
