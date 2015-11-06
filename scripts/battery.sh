@@ -18,7 +18,7 @@ ICON="f$(( 244 - LEVEL ))"
 echo -e "\u${ICON}  ${CHARGE}${STATE}"
 
 [[ "${LEVEL}" = "0" ]] && {
-    i3-msg "fullscreen disable"
+    [[ -z "${STATE}" ]] || i3-msg "fullscreen disable"
     exit 33
 }
 
