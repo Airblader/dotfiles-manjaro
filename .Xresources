@@ -32,32 +32,31 @@ URxvt.keysym.C-Left: perl:font-size:reset
 *Menu.foreground: White
 
 *cursorColor: #F3F3F3
-*background: #000000
-*foreground: #FFFFFF
 
-URxvt.background: #050505
-
-! Black + Dark Gray
-*color0: #000000
-*color8: #212121
-! Dark Red + Red
-*color1: #b71c1c
-*color9: #c62828
-! Dark Green + Green
-*color2: #1B5E20
-*color10: #2E7D32
-! Dark Yellow + Yellow
-*color3: #F57F17
-*color11: #F9A825
-! Dark Blue + Blue
-*color4: #1976D2
-*color12: #1E88E5
-! Dark Magenta + Magenta
-*color5: #4A148C
-*color13: #6A1B9A
-! Dark Cyan + Cyan
-*color6: #0097A7
-*color14: #00ACC1
-! Light Gray + White
-*color7: #FAFAFA
-*color15: #FFFFFF
+! === gruvbox color scheme ===
+*background: #1d2021
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2

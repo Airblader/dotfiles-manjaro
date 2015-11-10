@@ -4,22 +4,22 @@ set $mod Mod4
 
 set $black       #212121
 set $darkblack   #000000
-set $red         #C62828
-set $darkred     #B71C1C
-set $green       #2E7D32
-set $darkgreen   #1B5E20
-set $yellow      #F9A825
-set $darkyellow  #F57F17
-set $blue        #1E88E5
-set $darkblue    #1976D2
-set $magenta     #6A1B9A
-set $darkmagenta #4A148C
-set $cyan        #00ACC1
-set $darkcyan    #0097A7
-set $white       #FFFFFF
-set $darkwhite   #FAFAFA
+set $red         #fb4934
+set $darkred     #cc241d
+set $green       #b8bb26
+set $darkgreen   #98971a
+set $yellow      #fabd2f
+set $darkyellow  #d79921
+set $blue        #83a598
+set $darkblue    #458588
+set $magenta     #d3869b
+set $darkmagenta #b16286
+set $cyan        #8ec07c
+set $darkcyan    #689d6a
+set $white       #ebdbb2
+set $darkwhite   #a89984
 set $background  #000000
-set $transparent #000000BB
+set $transparent #000000FF
 
 set $ws1  "1:  "
 set $ws2  "2:  "
@@ -54,7 +54,7 @@ floating_maximum_size -1 x -1
 font pango:Hack, FontAwesome 9
 
 #                       BORDER      BACKGROUND  TEXT   INDICATOR
-client.focused          $darkyellow $darkyellow $black $darkyellow
+client.focused          $green      $green      $black $green
 client.unfocused        $black      $black      $white $black
 client.focused_inactive $black      $black      $white $black
 client.urgent           $red        $red        $white $red
@@ -65,8 +65,8 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow"
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 18 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow"'
+bindsym $mod+d exec dmenu_run -i -y 30 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$green"
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 30 -o 0.8 -l 100 -w 300 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$green"'
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
@@ -128,7 +128,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.p
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
 bindsym $mod+Shift+v fullscreen disable, exec --no-startup-id pgrep pavucontrol || (pavucontrol -t 3 &) && i3-msg "[class=(?i)pavucontrol] focus"
-#bindsym $mod+Shift+v exec dmenu -noinput -i -y 18 -o 0.8 -w 300 -p "%" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" | xargs $HOME/scripts/volume_control.py set
 
 bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 10
@@ -269,7 +268,7 @@ assign [class="(?i)thunderbird"]                  $ws9
 bar {
 #    verbose yes
     status_command i3blocks
-    i3bar_command i3bar -t
+#    i3bar_command i3bar -t
     position top
     font pango:Hack, FontAwesome 9
     strip_workspace_numbers yes
@@ -278,19 +277,19 @@ bar {
     bindsym button5 nop
     tray_output eDP1
     tray_output LVDS-0
-    tray_padding 3
+    tray_padding 0
     height 30
     colors {
         statusline         $white
         background         $transparent
-        separator          $yellow
+        separator          $green
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $darkyellow
+        focused_workspace  $transparent $transparent $green
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
-        urgent_workspace   $darkyellow  $darkyellow  $transparent
-        binding_mode       $transparent $transparent $darkyellow
+        urgent_workspace   $green       $green       $transparent
+        binding_mode       $transparent $transparent $green
     }
 }
 
@@ -300,4 +299,5 @@ exec --no-startup-id compton -b
 exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
 
-exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/current
+#exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/current
+exec_always --no-startup-id feh --bg-fill $HOME/Downloads/material1.jpg

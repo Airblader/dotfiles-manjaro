@@ -7,9 +7,20 @@ BLUE="${ESC}[34m"
 PURPLE="${ESC}[35m"
 CYAN="${ESC}[36m"
 WHITE="${ESC}[37m"
+BG_BLACK="${ESC}[1;30m"
+BG_RED="${ESC}[1;31m"
+BG_GREEN="${ESC}[1;32m"
+BG_YELLOW="${ESC}[1;33m"
+BG_BLUE="${ESC}[1;34m"
+BG_PURPLE="${ESC}[1;35m"
+BG_CYAN="${ESC}[1;36m"
+BG_WHITE="${ESC}[1;37m"
 NORMAL="${ESC}[0m"
 BOLD="${ESC}[1m"
 RESET="\e[0m"
+
+DECORATION=${GREEN}
+TEXT=${BG_WHITE}
 
 # get current branch in git repo
 function parse_git_branch() {
@@ -17,7 +28,7 @@ function parse_git_branch() {
     if [ ! "${BRANCH}" == "" ]
     then
         STAT=`parse_git_dirty`
-        echo "${YELLOW}━[ ${WHITE} ${BRANCH}${BOLD}${RED}${STAT} ${NORMAL}${YELLOW}]"
+        echo "${DECORATION}━[ ${TEXT} ${BRANCH}${BOLD}${RED}${STAT} ${NORMAL}${DECORATION}]"
     else
         echo ""
     fi
@@ -58,5 +69,5 @@ function parse_git_dirty {
     fi
 }
 
-export PS1="\[${YELLOW}\]┏━[ \[${WHITE}\]\u\[${YELLOW}\]@\[${WHITE}\]\h \[${YELLOW}\]]━[ \[${WHITE}\]\w \[${YELLOW}\]]\`parse_git_branch\`
-\[${YELLOW}\]┗━━━[\[${RESET}\] "
+export PS1="\[${DECORATION}\]┏━[ \[${TEXT}\]\u\[${DECORATION}\]@\[${TEXT}\]\h \[${DECORATION}\]]━[ \[${TEXT}\]\w \[${DECORATION}\]]\`parse_git_branch\`
+\[${DECORATION}\]┗━━━[\[${RESET}\] "
