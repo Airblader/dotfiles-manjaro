@@ -62,7 +62,7 @@ if __name__ == '__main__':
   elif command == 'i3blocks':
     output = get_volume()
     if is_muted():
-      output = '<s>' + output + '</s>'
+      #output = '<s>' + output + '</s>'
       output += '\n\n#fb4934'
     write(output)
   elif command == 'signal':
