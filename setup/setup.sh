@@ -68,4 +68,5 @@ ask "Install symlink for .bash.d/?" Y && ln -sfn ${dir}/.bash.d ${HOME}/.bash.d
 
 ask "Install symlink for scripts/?" Y && ln -sfn ${dir}/scripts ${HOME}/scripts
 
-ask "Copy config files?" Y && cp -ur ${dir}/.config/* ${HOME}/.config/
+# use /bin/cp to avoid an alias like "cp -i"
+ask "Copy config files?" Y && /bin/cp -ur ${dir}/.config/* ${HOME}/.config/
