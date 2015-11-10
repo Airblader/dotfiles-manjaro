@@ -4,7 +4,7 @@
 include "/home/ingo/.gtkrc-2.0.mine"
 gtk-theme-name="Numix"
 gtk-icon-theme-name="Numix"
-gtk-font-name="Terminess Powerline 12"
+gtk-font-name="Tewi 8"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
