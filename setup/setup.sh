@@ -54,13 +54,18 @@ ask "Install python2 modules?" Y && {
 
 ask "Install symlink for .gitconfig?" Y && ln -sfn ${dir}/.gitconfig ${HOME}/.gitconfig
 ask "Install symlink for .bashrc?" Y && ln -sfn ${dir}/.bashrc ${HOME}/.bashrc
+ask "Install symlink for .bash_profile?" Y && ln -sfn ${dir}/.bash_profile ${HOME}/.bash_profile
 ask "Install symlink for .vimrc?" Y && ln -sfn ${dir}/.vimrc ${HOME}/.vimrc
 ask "Install symlink for .Xresources?" Y && ln -sfn ${dir}/.Xresources ${HOME}/.Xresources
 ask "Install symlink for .xinitrc?" Y && ln -sfn ${dir}/.xinitrc ${HOME}/.xinitrc
 ask "Install symlink for .compton.conf?" Y && ln -sfn ${dir}/.compton.conf ${HOME}/.compton.conf
+ask "Install symlink for .gtkrc-2.0?" Y && ln -sfn ${dir}/.gtkrc-2.0 ${HOME}/.gtkrc-2.0
+ask "Install symlink for .i3blocks.conf?" Y && ln -sfn ${dir}/.i3blocks.conf ${HOME}/.i3blocks.conf
 
 ask "Install symlink for .i3/?" Y && ln -sfn ${dir}/.i3 ${HOME}/.i3
 ask "Install symlink for .vim/?" Y && ln -sfn ${dir}/.vim ${HOME}/.vim
 ask "Install symlink for .bash.d/?" Y && ln -sfn ${dir}/.bash.d ${HOME}/.bash.d
 
 ask "Install symlink for scripts/?" Y && ln -sfn ${dir}/scripts ${HOME}/scripts
+
+ask "Copy config files?" Y && cp -ur ${dir}/.config/* ${HOME}/.config/
