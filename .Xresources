@@ -6,7 +6,7 @@ Xft.autohint: false
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
-URxvt.geometry: 120x50
+URxvt.geometry: 100x40
 URxvt.depth: 32
 URxvt.internalBorder: 10
 URxvt.fading: 10
