@@ -1,13 +1,10 @@
 # vim:filetype=sh
-DECORATION=${GREEN}
-TEXT=${ALT_WHITE}
-
 function __parse_git_branch() {
     local branch stat
 
     if branch=$( { git symbolic-ref --quiet HEAD || git rev-parse --short HEAD; } 2>/dev/null ); then
         stat="$(__parse_git_dirty)"
-        printf "%s" "${DECORATION}━[ ${TEXT} ${branch##*/}${BOLD}${RED}${stat} ${NORMAL}${DECORATION}]"
+        printf "%s" " ${branch##*/}${stat}"
         return
     fi
 
@@ -26,22 +23,22 @@ function __parse_git_dirty {
     deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
     bits=''
     if [ "${renamed}" == "0" ]; then
-        bits="${YELLOW}>${bits}"
+        bits=">${bits}"
     fi
     if [ "${ahead}" == "0" ]; then
-        bits="${RED}*${bits}"
+        bits="*${bits}"
     fi
     if [ "${newfile}" == "0" ]; then
-        bits="${GREEN}+${bits}"
+        bits="+${bits}"
     fi
     if [ "${untracked}" == "0" ]; then
-        bits="${YELLOW}?${bits}"
+        bits="?${bits}"
     fi
     if [ "${deleted}" == "0" ]; then
-        bits="${RED}x${bits}"
+        bits="x${bits}"
     fi
     if [ "${dirty}" == "0" ]; then
-        bits="${RED}!${bits}"
+        bits="!${bits}"
     fi
 
     if [ ! "${bits}" == "" ]; then
@@ -50,11 +47,19 @@ function __parse_git_dirty {
 }
 
 function __prompt_ps1 {
-    printf "%s" "${DECORATION}┏━[ ${TEXT}\u${DECORATION}@${TEXT}\h ${DECORATION}]━[ ${TEXT}\w ${DECORATION}]"
-    printf "%s" "$(__parse_git_branch)"
-    printf "%s" "\n${DECORATION}┗━━━[ "
+    local sep=""
+    local alt_sep=""
 
-    printf "%s" "${RESET}${RESET_BG}"
+    printf "%s" "${ALT_GREEN_BG}${BLACK} \u@\h $(__bg_color 236)${ALT_GREEN}${sep}${WHITE} \w "
+
+    local stat
+    if stat=$(__parse_git_branch); then
+        printf "%s" "${ALT_BLUE_BG}${BLACK} $(__parse_git_branch) ${RESET_BG}${ALT_BLUE}${sep}"
+    else
+        printf "%s" "${RESET_BG}$(__fg_color 236)${sep}"
+    fi
+
+    printf "%s" "${RESET}${RESET_BG}\n"
 }
 
 function __prompt {
