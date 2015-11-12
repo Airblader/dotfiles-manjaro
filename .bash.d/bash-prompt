@@ -67,5 +67,10 @@ function __prompt {
 }
 
 if [[ ! "$PROMPT_COMMAND" == *__prompt* ]]; then
-    PROMPT_COMMAND='__prompt;'$'\n'"$PROMPT_COMMAND"
+    case $(tty) in
+        /dev/tty[0-9]*)
+            ;;
+        *)
+            PROMPT_COMMAND='__prompt;'$'\n'"$PROMPT_COMMAND" ;;
+    esac
 fi
