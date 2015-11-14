@@ -27,7 +27,7 @@ syn match   i3IpcSocket "ipc[-_]socket" nextgroup=@i3String skipwhite
 
 " Command keywords
 syn keyword i3Command exit reload restart kill fullscreen global layout border focus move open split append_layout mark unmark resize grow shrink show nop rename
-syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical auto up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client hide primary yes all active window container to absolute center on off x ms h v smart ignore pixel splith splitv output true urgent focused unfocused focused_inactive
+syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical auto up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client hide primary yes all active window container to absolute center on off x ms h v smart ignore pixel splith splitv output true urgent focused unfocused focused_inactive background
 syn match   i3DashedParam '--release' skipwhite
 syn match   i3DashedParam '--whole-window' skipwhite
 syn match   i3DashedParam '--border' skipwhite

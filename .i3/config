@@ -58,6 +58,7 @@ client.focused          $green      $green      $black $green
 client.unfocused        $black      $black      $white $black
 client.focused_inactive $black      $black      $white $black
 client.urgent           $red        $red        $black $red
+client.background       $black
 
 floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id urxvt
