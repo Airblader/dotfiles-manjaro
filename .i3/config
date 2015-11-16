@@ -127,7 +127,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-bindsym $mod+Shift+v fullscreen disable, exec --no-startup-id pgrep pavucontrol || (pavucontrol -t 3 &) && i3-msg "[class=(?i)pavucontrol] focus"
+bindsym $mod+Shift+v exec --no-startup-id pgrep pavucontrol || ($HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3 &) && i3-msg "[class=(?i)pavucontrol] focus"
 
 bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 10
