@@ -299,5 +299,6 @@ bar {
 exec --no-startup-id compton -b
 exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
+exec --no-startup-id xedgewarp -b
 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/material.jpg
