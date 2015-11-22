@@ -254,7 +254,7 @@ for_window [window_type="menu"] floating enable
 
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse
 for_window [class="(?i)qemu-system"] floating enable
-for_window [class="(?i)VirtualBox"] floating enable
+for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 
 for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
