@@ -1,5 +1,5 @@
 [global]
-    font = Hack 8
+    font = Hack 10
     
     allow_markup = yes
     
@@ -41,7 +41,7 @@
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [frame]
-    width = 3
+    width = 5
     color = "#b8bb26"
 
 [shortcuts]
