@@ -21,7 +21,7 @@ URxvt.visualBell: False
 
 URxvt.perl-ext-common: default,selection-to-clipboard,font-size
 
-URxvt.font: xft:Terminess Powerline:size=12
+URxvt.font: xft:Hack:size=10
 URxvt.keysym.C-Up:   perl:font-size:increase
 URxvt.keysym.C-Down: perl:font-size:decrease
 URxvt.keysym.C-Left: perl:font-size:reset
