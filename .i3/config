@@ -142,7 +142,7 @@ bindsym --release Shift+Print exec scrot -s $HOME/Pictures/screenshot-$(date +%Y
 
 bindsym $mod+n exec --no-startup-id thunar
 
-set $mode_resize <span>        </span><span background='#b8bb26' foreground='#000000'> resize </span> <span foreground='#ebdbb2'>l</span>eft <span foreground='#ebdbb2'>r</span>ight <span foreground='#ebdbb2'>u</span>p <span foreground='#ebdbb2'>d</span>own
+set $mode_resize <span>        </span><span background='#83a598' foreground='#000000'> resize </span> <span foreground='#ebdbb2'>l</span>eft <span foreground='#ebdbb2'>r</span>ight <span foreground='#ebdbb2'>u</span>p <span foreground='#ebdbb2'>d</span>own
 bindsym $mod+r mode "$mode_resize"
 mode --pango_markup "$mode_resize" {
     bindsym Left resize shrink width 10 px or 1 ppt
@@ -161,7 +161,7 @@ mode --pango_markup "$mode_resize" {
     bindsym Escape mode "default"
 }
 
-set $mode_power <span>        </span><span background='#b8bb26' foreground='#000000'> power </span> <span foreground='#ebdbb2'>l</span>ock <span foreground='#ebdbb2'>e</span>xit <span foreground='#ebdbb2'>s</span>uspend <span foreground='#ebdbb2'>r</span>eboot <span foreground='#ebdbb2'>p</span>oweroff
+set $mode_power <span>        </span><span background='#83a598' foreground='#000000'> power </span> <span foreground='#ebdbb2'>l</span>ock <span foreground='#ebdbb2'>e</span>xit <span foreground='#ebdbb2'>s</span>uspend <span foreground='#ebdbb2'>r</span>eboot <span foreground='#ebdbb2'>p</span>oweroff
 mode --pango_markup "$mode_power" {
     bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
     bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
@@ -176,9 +176,9 @@ mode --pango_markup "$mode_power" {
 bindsym $mod+Control+l mode "$mode_power"
 bindsym Mod1+Control+l mode "$mode_power"
 
-set $mode_gaps <span>        </span><span background='#b8bb26' foreground='#000000'> gaps </span> <span foreground='#ebdbb2'>i</span>nner <span foreground='#ebdbb2'>o</span>uter <span foreground='#ebdbb2'>0 d</span>
-set $mode_gaps_outer <span>        </span><span background='#b8bb26' foreground='#000000'> outer gaps </span> <span foreground='#ebdbb2'>+ - 0 d</span>
-set $mode_gaps_inner <span>        </span><span background='#b8bb26' foreground='#000000'> inner gaps </span> <span foreground='#ebdbb2'>+ - 0 d</span>
+set $mode_gaps <span>        </span><span background='#83a598' foreground='#000000'> gaps </span> <span foreground='#ebdbb2'>i</span>nner <span foreground='#ebdbb2'>o</span>uter <span foreground='#ebdbb2'>0 d</span>
+set $mode_gaps_outer <span>        </span><span background='#83a598' foreground='#000000'> outer gaps </span> <span foreground='#ebdbb2'>+ - 0 d</span>
+set $mode_gaps_inner <span>        </span><span background='#83a598' foreground='#000000'> inner gaps </span> <span foreground='#ebdbb2'>+ - 0 d</span>
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode --pango_markup "$mode_gaps" {
@@ -221,7 +221,7 @@ mode --pango_markup "$mode_gaps_outer" {
     bindsym Escape mode "default"
 }
 
-set $mode_brightness <span>        </span><span background='#b8bb26' foreground='#000000'> brightness </span> <span foreground='#ebdbb2'>+</span> increase <span foreground='#ebdbb2'>-</span> decrease
+set $mode_brightness <span>        </span><span background='#83a598' foreground='#000000'> brightness </span> <span foreground='#ebdbb2'>+</span> increase <span foreground='#ebdbb2'>-</span> decrease
 bindsym $mod+Shift+b mode "$mode_brightness"
 mode --pango_markup "$mode_brightness" {
     bindsym plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 10
@@ -286,11 +286,11 @@ bar {
         separator          $green
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $green
+        focused_workspace  $transparent $transparent $blue
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
         urgent_workspace   $red         $red         $transparent
-        binding_mode       $transparent $transparent $green
+        binding_mode       $transparent $transparent $blue
     }
 }
 
