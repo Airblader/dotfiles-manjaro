@@ -133,6 +133,8 @@ bindsym $mod+Shift+v exec --no-startup-id pgrep pavucontrol || ($HOME/scripts/fu
 bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 10
 
+bindsym $mod+Shift+w exec --no-startup-id urxvt -name "__nmtui" -e "nmtui"
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
@@ -258,6 +260,7 @@ for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 
 for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
+for_window [instance="__nmtui"] floating enable
 
 for_window [class="(?i)pavucontrol"] floating enable, border normal, move position mouse
 
