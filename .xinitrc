@@ -20,5 +20,6 @@ xset s noblank
 xset r rate 200 20
 
 setxkbmap de
+setxkbmap -option ctrl:nocaps
 
 exec i3
