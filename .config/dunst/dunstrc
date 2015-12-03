@@ -30,9 +30,9 @@
     history_length = 20
     show_indicators = yes
     line_height = 0
-    separator_height = 2
-    padding = 8
-    horizontal_padding = 8
+    separator_height = 5
+    padding = 20
+    horizontal_padding = 20
     separator_color = frame
     startup_notification = false
     dmenu = /usr/bin/dmenu -p dunst:
