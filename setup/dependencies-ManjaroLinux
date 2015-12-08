@@ -16,7 +16,7 @@ echo "Installing base packages..."
 apacman --noconfirm --noedit -S \
   gvim \
   base-devel \
-  rxvt-unicode \
+  termite \
   bash-completion
 
 echo "Installing Python dependencies..."

@@ -6,26 +6,6 @@ Xft.autohint: false
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
-URxvt.geometry: 100x40
-URxvt.depth: 32
-URxvt.internalBorder: 10
-URxvt.fading: 10
-
-URxvt.scrollBar: off
-URxvt.saveLines: 60000
-URxvt.scrollTtyOutput: False
-URxvt.scrollTtyKeypress: True
-
-URxvt.urgentOnBell: True
-URxvt.visualBell: False
-
-URxvt.perl-ext-common: default,selection-to-clipboard,font-size
-
-URxvt.font: xft:Hack:size=10
-URxvt.keysym.C-Up:   perl:font-size:increase
-URxvt.keysym.C-Down: perl:font-size:decrease
-URxvt.keysym.C-Left: perl:font-size:reset
-
 *Menu.background: Black
 *Menu.foreground: White
 

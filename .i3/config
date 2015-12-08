@@ -1,6 +1,7 @@
 # vim:filetype=i3
 # i3 config file (v4)
 set $mod Mod4
+set $editor termite
 
 set $black       #212121
 set $darkblack   #000000
@@ -61,8 +62,8 @@ client.urgent           $red        $red        $black $red
 client.background       $black
 
 floating_modifier $mod
-bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+Shift+Return exec --no-startup-id urxvt -name __scratchpad
+bindsym $mod+Return exec --no-startup-id $editor
+bindsym $mod+Shift+Return exec --no-startup-id $editor --name __scratchpad
 
 bindsym $mod+q kill
 
@@ -133,7 +134,7 @@ bindsym $mod+Shift+v exec --no-startup-id pgrep pavucontrol || ($HOME/scripts/fu
 bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 10
 
-bindsym $mod+Shift+w exec --no-startup-id urxvt -name "__nmtui" -e "nmtui"
+bindsym $mod+Shift+w exec --no-startup-id $editor --name "__nmtui" -e "nmtui"
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
