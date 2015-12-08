@@ -1,3 +1,4 @@
 *.swp
 .vim/.netrwhist
+.i3/config.vanilla
 */__pycache__
