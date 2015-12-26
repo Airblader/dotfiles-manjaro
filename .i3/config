@@ -277,7 +277,7 @@ bar {
     position top
     font pango:Hack, FontAwesome 9
     strip_workspace_numbers yes
-    separator_symbol "/"
+    separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
     tray_output eDP1
@@ -287,7 +287,7 @@ bar {
     colors {
         statusline         $white
         background         $transparent
-        separator          $green
+        separator          $blue
 
 #                          BORDER       BACKGROUND   TEXT
         focused_workspace  $transparent $transparent $blue
