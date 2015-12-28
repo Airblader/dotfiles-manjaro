@@ -229,6 +229,9 @@ bindsym $mod+Shift+b mode "$mode_brightness"
 mode --pango_markup "$mode_brightness" {
     bindsym plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 10
     bindsym minus exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -dec 10
+    bindsym Shift+plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 1
+    bindsym Shift+minus exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -dec 1
+
     bindsym 0     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 100
     bindsym 1     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 10
     bindsym 2     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 20
