@@ -2,3 +2,12 @@
 .vim/.netrwhist
 .i3/config.vanilla
 */__pycache__
+
+.config/*
+!.config/dunst
+!.config/gsimplecal
+!.config/gtk-2.0
+!.config/gtk-3.0
+!.config/i3lock
+!.config/termite
+!.config/wallpapers
