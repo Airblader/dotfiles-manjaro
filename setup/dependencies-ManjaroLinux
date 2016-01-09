@@ -45,7 +45,6 @@ apacman --noconfirm --noedit -S \
   gsimplecal \
   thunderbird \
   thunderbird-enigmail \
-  scrot \
   feh \
   acpi \
   xdotool \
@@ -88,7 +87,9 @@ apacman --noconfirm --noedit -S \
   xedgewarp-git \
   unclutter-xfixes-git \
   thefuck \
-  youtube-dl
+  youtube-dl \
+  slop \
+  maim
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
