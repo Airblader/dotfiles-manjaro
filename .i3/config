@@ -54,11 +54,11 @@ floating_maximum_size -1 x -1
 
 font pango:Hack, FontAwesome 9
 
-#                       BORDER      BACKGROUND  TEXT   INDICATOR
-client.focused          $green      $green      $black $green
-client.unfocused        $black      $black      $white $black
-client.focused_inactive $black      $black      $white $black
-client.urgent           $red        $red        $black $red
+#                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
+client.focused          $yellow     $yellow     $black $yellow     $yellow
+client.unfocused        $black      $black      $white $black      $black
+client.focused_inactive $black      $black      $white $black      $black
+client.urgent           $red        $red        $black $red        $red
 client.background       $black
 
 floating_modifier $mod
