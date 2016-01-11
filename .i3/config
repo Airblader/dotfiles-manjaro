@@ -56,8 +56,8 @@ font pango:Hack, FontAwesome 9
 
 #                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
 client.focused          $yellow     $yellow     $black $yellow     $yellow
-client.unfocused        $black      $black      $white $black      $yellow
-client.focused_inactive $black      $black      $white $black      $yellow
+client.unfocused        $black      $black      $white $black      $darkyellow
+client.focused_inactive $black      $black      $white $black      $darkyellow
 client.urgent           $red        $red        $black $red        $red
 client.background       $black
 
@@ -67,8 +67,8 @@ bindsym $mod+Shift+Return exec --no-startup-id $editor --name __scratchpad
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$green" -fn "Hack-9:normal"
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$green" -fn "Hack-9:normal"'
+bindsym $mod+d exec dmenu_run -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" -fn "Hack-9:normal"
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" -fn "Hack-9:normal"'
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
