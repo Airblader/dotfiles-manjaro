@@ -2,6 +2,7 @@
 .vim/.netrwhist
 .i3/config.vanilla
 */__pycache__
+*.pyc
 
 .config/*
 !.config/dunst
