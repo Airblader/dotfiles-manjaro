@@ -80,6 +80,7 @@ apacman --noconfirm --noedit -S \
   vim-nerdtree \
   vim-gruvbox-git \
   vim-airline-gruvbox-git \
+  vim-youcompleteme-git \
   xtitle-git \
   openssh \
   arandr \
