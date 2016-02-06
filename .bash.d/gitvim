@@ -1,5 +1,0 @@
-t_vim_find() {
-  file=`git ls-files | dmenu -l 10` 
-  [[ ! -z "$file" ]] && vim $file
-}
-alias git-vim=git_vim_find
