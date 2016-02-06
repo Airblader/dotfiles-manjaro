@@ -67,8 +67,7 @@ bindsym $mod+Shift+Return exec --no-startup-id $editor --name __scratchpad
 
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" -fn "Hack-9:normal"
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$yellow" -fn "Hack-9:normal"'
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right

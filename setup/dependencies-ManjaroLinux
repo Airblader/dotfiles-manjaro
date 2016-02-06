@@ -72,7 +72,7 @@ apacman --noconfirm --noedit -S \
   tk \
   aspell-en \
   evince \
-  dmenu2 \
+  rofi \
   libmtp \
   gvfs-mtp \
   vim-airline \

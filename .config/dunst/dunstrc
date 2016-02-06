@@ -35,7 +35,7 @@
     horizontal_padding = 20
     separator_color = frame
     startup_notification = false
-    dmenu = /usr/bin/dmenu -p dunst:
+    # dmenu = /usr/bin/dmenu -p dunst:
     browser = /usr/bin/google-chrome-beta
     icon_position = off
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/

@@ -11,6 +11,22 @@ Xft.lcdfilter: lcddefault
 
 *cursorColor: #F3F3F3
 
+! rofi
+rofi.modi: run
+rofi.font: Hack 15
+rofi.width: 100
+rofi.lines: 5
+rofi.columns: 1
+rofi.opacity: 80
+rofi.fg: #ebdbb2
+rofi.bg: #1d2021
+rofi.hlfg: #1d2021
+rofi.hlbg: #ebdbb2
+rofi.bw: 0
+rofi.location: 2
+rofi.padding: 100
+rofi.fuzzy: true
+
 ! === gruvbox color scheme ===
 *background: #1d2021
 *foreground: #ebdbb2
