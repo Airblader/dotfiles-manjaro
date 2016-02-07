@@ -25,7 +25,7 @@ rofi.hlbg: #ebdbb2
 rofi.bw: 0
 rofi.location: 2
 rofi.padding: 100
-rofi.fuzzy: true
+rofi.fuzzy: false
 
 ! === gruvbox color scheme ===
 *background: #1d2021
