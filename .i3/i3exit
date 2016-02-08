@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-#
-#  Note: this script requires passwordless access to
-#        poweroff, reboot, pm-suspend and pm-hibernate
-#
-
 
 lock() {
     #  killall compton

@@ -19,8 +19,8 @@ set $cyan        #8ec07c
 set $darkcyan    #689d6a
 set $white       #ebdbb2
 set $darkwhite   #a89984
-set $background  #000000
-set $transparent #000000FF
+# set $background  #000000
+set $transparent #1d2021A0
 
 set $ws1  "1:  "
 set $ws2  "2:  "
@@ -275,7 +275,7 @@ assign [class="(?i)thunderbird"]                  $ws9
 bar {
 #    verbose yes
     status_command i3blocks
-#    i3bar_command i3bar -t
+    i3bar_command i3bar -t
     position top
     font pango:Hack, FontAwesome 11
     strip_workspace_numbers yes
@@ -307,4 +307,4 @@ exec --no-startup-id dunst &
 exec --no-startup-id nm-applet &
 exec --no-startup-id xedgewarp -b
 
-exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/material.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
