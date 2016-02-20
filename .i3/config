@@ -22,7 +22,7 @@ set $darkcyan    #689d6a
 set $white       #ebdbb2
 set $darkwhite   #a89984
 # set $background  #000000
-set $transparent #1d2021A0
+set $transparent #1d202100
 
 set $ws1  "1:  "
 set $ws2  "2:  "
@@ -60,7 +60,7 @@ font pango:Hack, FontAwesome 12
 client.focused          $yellow     $yellow     $black $yellow     $yellow
 client.unfocused        $black      $black      $white $black      $darkyellow
 client.focused_inactive $black      $black      $white $black      $darkyellow
-client.urgent           $red        $red        $black $red        $red
+client.urgent           $darkred    $darkred    $black $darkred    $darkred
 client.background       $black
 
 floating_modifier $mod
@@ -297,7 +297,7 @@ bar {
         focused_workspace  $transparent $transparent $yellow
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
-        urgent_workspace   $red         $red         $transparent
+        urgent_workspace   $darkred     $darkred     $transparent
         binding_mode       $transparent $transparent $yellow
     }
 }

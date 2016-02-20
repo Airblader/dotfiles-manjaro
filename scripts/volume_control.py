@@ -62,7 +62,7 @@ if __name__ == '__main__':
   elif command == 'i3blocks':
     output = get_volume() + ' '
     if is_muted():
-      output += '\n\n#fb4934'
+      output += '\n\n#cc241d'
     write(output)
   elif command == 'signal':
     emit_signal()
