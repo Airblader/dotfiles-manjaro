@@ -1,7 +1,7 @@
 [options]
 font = Hack 12
 browser = google-chrome-stable
-clickable_url = true
+clickable_url = false
 dynamic_title = true
 geometry = 800x600
 scrollback_lines = 999999
