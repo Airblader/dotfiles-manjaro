@@ -63,6 +63,7 @@ apacman --noconfirm --noedit -S \
   ttf-hack \
   powerline-fonts-git \
   thunar \
+  weechat \
   thunar-archive-plugin \
   file-roller \
   tumbler \
@@ -90,7 +91,9 @@ apacman --noconfirm --noedit -S \
   thefuck \
   youtube-dl \
   slop \
-  maim
+  maim \
+  fetch-git \
+  w3m
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
