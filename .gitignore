@@ -12,3 +12,8 @@
 !.config/i3lock
 !.config/termite
 !.config/wallpapers
+
+.weechat/*
+!.weechat/weechat.conf
+!.weechat/plugins.conf
+!.weechat/perl/beep.pl
