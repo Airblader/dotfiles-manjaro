@@ -13,17 +13,3 @@ alias cdppit="cd ${PPIT_ROOT}"
 alias cdtb="cd ${PPIT_ROOT}/../timebooking/`date +'%Y/%m'`"
 
 alias cdb="${PPIT_ROOT}/tools/bin/create_db_installer_script.py"
-
-if [ -e "${PPIT_VMS}/devimage.monitor" ]; then
-  cd "${PPIT_ROOT}"
-  clear
-
-  modified_files=`git status | grep modified | wc -l`
-  untracked_files=`git status | grep Untracked | wc -l`
-
-  if [ "${modified_files}" != "0" ] || [ "${untracked_files}" != "0" ]; then
-    git status --short
-  fi
-
-  echo -e "\n"
-fi
