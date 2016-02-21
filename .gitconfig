@@ -23,3 +23,6 @@
     tool = vimdiff
 [mergetool]
     keepBackup = false
+[gui]
+	fontui = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0
