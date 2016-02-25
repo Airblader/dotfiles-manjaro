@@ -13,6 +13,9 @@
 !.config/termite
 !.config/wallpapers
 
+!.config/htop
+!.config/htop/htoprc
+
 .weechat/*
 !.weechat/weechat.conf
 !.weechat/plugins.conf

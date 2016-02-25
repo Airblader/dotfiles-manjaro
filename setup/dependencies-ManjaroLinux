@@ -93,7 +93,8 @@ apacman --noconfirm --noedit -S \
   slop \
   maim \
   fetch-git \
-  w3m
+  w3m \
+  htop
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
