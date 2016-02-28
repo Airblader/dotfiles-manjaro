@@ -58,7 +58,6 @@ apacman --noconfirm --noedit -S \
   python2-pip \
   compton-git \
   ttf-font-awesome \
-  bdf-tewi-git \
   ohsnap \
   ttf-hack \
   powerline-fonts-git \
