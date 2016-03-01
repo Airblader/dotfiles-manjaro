@@ -5,6 +5,12 @@ border_left=0
 border_right=0
 border_bottom=4
 
+[updates]
+command=$HOME/scripts/updates.sh
+interval=60
+signal=2
+urgent=true
+
 #[window]
 #command=xtitle -s
 #interval=persist

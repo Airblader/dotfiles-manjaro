@@ -1,1 +1,1 @@
-alias beerme="apacman --noedit -Syyu"
+alias beerme="apacman --noedit -Syyu ; pkill -RTMIN+2 i3blocks"
