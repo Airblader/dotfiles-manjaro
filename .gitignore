@@ -16,6 +16,9 @@
 !.config/htop
 !.config/htop/htoprc
 
+!.config/i3blocks
+!.config/i3blocks/config
+
 .weechat/*
 !.weechat/weechat.conf
 !.weechat/plugins.conf
