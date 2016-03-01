@@ -91,7 +91,7 @@ apacman --noconfirm --noedit -S \
   youtube-dl \
   slop \
   maim \
-  fetch-git \
+  neofetch-git \
   w3m \
   htop
 
