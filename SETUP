@@ -49,7 +49,6 @@ SYSTEMD
 
 Mask:
 - exim4.service
-- bluetooth.service
 - ModemManager.service
 - nfs-common.service
 - rpcbind.service

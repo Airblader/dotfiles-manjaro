@@ -93,7 +93,11 @@ apacman --noconfirm --noedit -S \
   maim \
   neofetch-git \
   w3m \
-  htop
+  htop \
+  bluez \
+  bluez-utils \
+  pulseaudio-bluetooth \
+  blueman
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
