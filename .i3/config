@@ -64,8 +64,8 @@ client.urgent           $darkred    $darkred    $black $darkred    $darkred
 client.background       $black
 
 floating_modifier $mod
-bindsym $mod+Return exec --no-startup-id $editor
-bindsym $mod+Shift+Return exec --no-startup-id $editor --name __scratchpad
+bindsym $mod+Return exec --no-startup-id $HOME/scripts/fullscreen_wrap.sh $editor
+bindsym $mod+Shift+Return exec --no-startup-id $HOME/scripts/fullscreen_wrap.sh $editor --name __scratchpad
 
 bindsym $mod+q kill
 
