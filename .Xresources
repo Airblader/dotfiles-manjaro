@@ -18,6 +18,12 @@ rofi.width: 100
 rofi.lines: 5
 rofi.columns: 1
 rofi.opacity: 80
+! rofi.color-enabled: true
+!              bg       fg      altbg    hlbg     hlfg
+! rofi.normal: #1d2021, #ebdbb2, #1d2021, #ebdbb2, #1d2021
+! rofi.urgent: #1d2021, #ebdbb2, #1d2021, #ebdbb2, #1d2021
+! rofi.active: #1d2021, #ebdbb2, #1d2021, #ebdbb2, #1d2021
+! rofi.color-window: #1d2021, #1d2021
 rofi.fg: #ebdbb2
 rofi.bg: #1d2021
 rofi.hlfg: #1d2021
