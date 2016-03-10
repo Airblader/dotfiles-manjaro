@@ -49,11 +49,6 @@ set clipboard=unnamed
 " toggle search highlights
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
-" NERDTree
-:noremap <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.o$']
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
 " colorscheme airblader
 

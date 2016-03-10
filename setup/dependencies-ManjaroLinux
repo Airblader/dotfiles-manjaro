@@ -77,7 +77,6 @@ apacman --noconfirm --noedit -S \
   gvfs-mtp \
   vim-airline \
   vim-fugitive \
-  vim-nerdtree \
   vim-gruvbox-git \
   vim-airline-gruvbox-git \
   vim-youcompleteme-git \
