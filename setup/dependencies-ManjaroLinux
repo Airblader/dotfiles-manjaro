@@ -97,7 +97,8 @@ apacman --noconfirm --noedit -S \
   bluez \
   bluez-utils \
   pulseaudio-bluetooth \
-  blueman
+  blueman \
+  redshift
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
