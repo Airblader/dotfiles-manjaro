@@ -161,6 +161,10 @@ mode --pango_markup "$mode_resize" {
 
     bindsym s mode "default", exec --no-startup-id $HOME/scripts/slopsize.sh
 
+    bindsym 1 mode "default", resize set 1000 600
+    bindsym 2 mode "default", resize set 1500 600
+    bindsym 3 mode "default", resize set 1200 1000
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
