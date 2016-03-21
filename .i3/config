@@ -114,7 +114,7 @@ bindsym $mod+Shift+plus scratchpad show
 
 bindsym $mod+Shift+s sticky toggle
 # put YouTube into fullscreen and execute this for media mode
-bindsym $mod+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 1515 20
+bindsym $mod+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 2140 20
 
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
