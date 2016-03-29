@@ -21,7 +21,6 @@ echo "Installing Python dependencies..."
 apacman --noconfirm --noedit -S \
   python-basiciw \
   python-netifaces \
-  python-jsonpath-rw \
   python-yaml \
   python-pillow \
   python-urllib3 \
@@ -43,12 +42,14 @@ apacman --noconfirm --noedit -S \
   gsimplecal \
   thunderbird \
   thunderbird-enigmail \
+  thunderbird-lightning-bin \
   feh \
   acpi \
   xdotool \
   pulseaudio-ctl \
   pavucontrol \
   network-manager-applet \
+  networkmanager-openvpn \
   imagemagick \
   dunst \
   python \
@@ -96,7 +97,10 @@ apacman --noconfirm --noedit -S \
   bluez-utils \
   pulseaudio-bluetooth \
   blueman \
-  redshift
+  redshift \
+  google-chrome \
+  firefox \
+  lm_sensors
 
 echo "Installing some python stuff..."
 apacman --noconfirm --noedit -S \
