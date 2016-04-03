@@ -21,7 +21,7 @@ xset r rate 200 20
 
 setxkbmap de
 setxkbmap -option ctrl:nocaps
-# make caps a forward slash
-xmodmap -e 'keycode 66 = slash'
+xmodmap -e 'clear lock'
+xmodmap -e 'keycode 66 = Hyper_L'
 
 exec i3

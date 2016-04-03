@@ -108,6 +108,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+Tab workspace back_and_forth
+bindsym Hyper_L [con_mark=last] focus
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+plus scratchpad show
@@ -316,5 +317,6 @@ exec --no-startup-id blueman-applet &
 exec --no-startup-id nm-applet &
 exec --no-startup-id xedgewarp -b
 exec --no-startup-id redshift &
+exec --no-startup-id $HOME/scripts/last.sh
 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
