@@ -58,8 +58,8 @@ font pango:Hack, FontAwesome 12
 
 #                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
 client.focused          $yellow     $yellow     $black $yellow     $yellow
-client.unfocused        $black      $black      $white $black      $darkyellow
-client.focused_inactive $black      $black      $white $black      $darkyellow
+client.unfocused        $black      $black      $white $black      $black
+client.focused_inactive $black      $black      $white $black      $black
 client.urgent           $darkred    $darkred    $black $darkred    $darkred
 client.background       $black
 
