@@ -1,2 +1,2 @@
 # File suffixes to be ignored in autocompletion
-export FIGNORE=".o"
+export FIGNORE=".o:.trs:~"
