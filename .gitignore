@@ -4,6 +4,8 @@
 */__pycache__
 *.pyc
 
+.vim/colors/eclm_wombat.vim
+
 .config/*
 !.config/dunst
 !.config/gsimplecal
