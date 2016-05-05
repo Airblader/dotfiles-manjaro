@@ -42,7 +42,6 @@ apacman --noconfirm --noedit -S \
   gsimplecal \
   thunderbird \
   thunderbird-enigmail \
-  thunderbird-lightning-bin \
   feh \
   acpi \
   xdotool \
