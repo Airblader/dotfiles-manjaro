@@ -5,24 +5,26 @@ set $editor termite
 
 # fake-outputs 1280x1440+0+0,1280x1440+1280+0
 
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+set_from_resource $mode_pre    i3wm.modepre
+set_from_resource $mode_post   i3wm.modepost
+# Use custom colors for black
 set $black       #212121
 set $darkblack   #000000
-set $red         #fb4934
-set $darkred     #cc241d
-set $green       #b8bb26
-set $darkgreen   #98971a
-set $yellow      #fabd2f
-set $darkyellow  #d79921
-set $blue        #83a598
-set $darkblue    #458588
-set $magenta     #d3869b
-set $darkmagenta #b16286
-set $cyan        #8ec07c
-set $darkcyan    #689d6a
-set $white       #ebdbb2
-set $darkwhite   #a89984
-# set $background  #000000
-set $transparent #1d202100
+set $transparent #00000000
 
 set $ws1  "1:  "
 set $ws2  "2:  "
@@ -148,9 +150,9 @@ bindsym --release Shift+Print exec --no-startup-id "maim -s -p 0 -c 0.96,0.5,0.0
 
 bindsym $mod+n exec --no-startup-id thunar
 
-set $mode_resize <span>        </span><span background='#fabd2f' foreground='#000000'> resize </span> <span foreground='#ebdbb2'>l</span>eft <span foreground='#ebdbb2'>r</span>ight <span foreground='#ebdbb2'>u</span>p <span foreground='#ebdbb2'>d</span>own
-bindsym $mod+r mode "$mode_resize"
-mode --pango_markup "$mode_resize" {
+set $mode_resize resize
+bindsym $mod+r mode "$mode_pre $mode_resize $mode_post"
+mode --pango_markup "$mode_pre $mode_resize $mode_post" {
     bindsym Left resize shrink width 10 px or 1 ppt
     bindsym Down resize grow height 10 px or 1 ppt
     bindsym Up resize shrink height 10 px or 1 ppt
@@ -171,8 +173,9 @@ mode --pango_markup "$mode_resize" {
     bindsym Escape mode "default"
 }
 
-set $mode_power <span>        </span><span background='#fabd2f' foreground='#000000'> power </span> <span foreground='#ebdbb2'>l</span>ock <span foreground='#ebdbb2'>e</span>xit <span foreground='#ebdbb2'>s</span>uspend <span foreground='#ebdbb2'>r</span>eboot <span foreground='#ebdbb2'>p</span>oweroff
-mode --pango_markup "$mode_power" {
+set $mode_power power
+bindsym Mod1+Control+l mode "$mode_pre $mode_power $mode_post"
+mode --pango_markup "$mode_pre $mode_power $mode_post" {
     bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
     bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
     bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
@@ -183,17 +186,14 @@ mode --pango_markup "$mode_power" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Control+l mode "$mode_power"
-bindsym Mod1+Control+l mode "$mode_power"
 
-set $mode_gaps <span>        </span><span background='#fabd2f' foreground='#000000'> gaps </span> <span foreground='#ebdbb2'>i</span>nner <span foreground='#ebdbb2'>o</span>uter <span foreground='#ebdbb2'>0 d</span>
-set $mode_gaps_outer <span>        </span><span background='#fabd2f' foreground='#000000'> outer gaps </span> <span foreground='#ebdbb2'>+ - 0 d</span>
-set $mode_gaps_inner <span>        </span><span background='#fabd2f' foreground='#000000'> inner gaps </span> <span foreground='#ebdbb2'>+ - 0 d</span>
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode --pango_markup "$mode_gaps" {
-    bindsym o      mode "$mode_gaps_outer"
-    bindsym i      mode "$mode_gaps_inner"
+set $mode_gaps gaps
+set $mode_gaps_outer outer gaps
+set $mode_gaps_inner inner gaps
+bindsym $mod+Shift+g mode "$mode_pre $mode_gaps $mode_post"
+mode --pango_markup "$mode_pre $mode_gaps $mode_post" {
+    bindsym o      mode "$mode_pre $mode_gaps_outer $mode_post"
+    bindsym i      mode "$mode_pre $mode_gaps_inner $mode_post"
 
     bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
     bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
@@ -202,7 +202,7 @@ mode --pango_markup "$mode_gaps" {
     bindsym Escape mode "default"
 }
 
-mode --pango_markup "$mode_gaps_inner" {
+mode --pango_markup "$mode_pre $mode_gaps_inner $mode_post" {
     bindsym plus  gaps inner current plus 5
     bindsym minus gaps inner current minus 5
     bindsym 0     mode "default", gaps inner current set 0
@@ -216,7 +216,8 @@ mode --pango_markup "$mode_gaps_inner" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-mode --pango_markup "$mode_gaps_outer" {
+
+mode --pango_markup "$mode_pre $mode_gaps_outer $mode_post" {
     bindsym plus  gaps outer current plus 5
     bindsym minus gaps outer current minus 5
     bindsym 0     mode "default", gaps outer current set 0
@@ -231,9 +232,9 @@ mode --pango_markup "$mode_gaps_outer" {
     bindsym Escape mode "default"
 }
 
-set $mode_brightness <span>        </span><span background='#fabd2f' foreground='#000000'> brightness </span> <span foreground='#ebdbb2'>+</span> increase <span foreground='#ebdbb2'>-</span> decrease
-bindsym $mod+Shift+b mode "$mode_brightness"
-mode --pango_markup "$mode_brightness" {
+set $mode_brightness brightness
+bindsym $mod+Shift+b mode "$mode_pre $mode_brightness $mode_post"
+mode --pango_markup "$mode_pre $mode_brightness $mode_post" {
     bindsym plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 10
     bindsym minus exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -dec 10
     bindsym Shift+plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 1
@@ -271,7 +272,7 @@ for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 for_window [class="(?i)blueman"] floating enable
 
-for_window [instance="sun-awt-X11-XFramePeer"] floating enable
+#for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 for_window [instance="__nmtui"] floating enable
 
@@ -307,17 +308,17 @@ bar {
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
         urgent_workspace   $darkred     $darkred     $black
-        binding_mode       $transparent $transparent $yellow
+        binding_mode       $transparent $transparent $white
     }
 }
 
 # AUTOSTART
-
-exec --no-startup-id compton -b
-exec --no-startup-id dunst &
-exec --no-startup-id blueman-applet &
-exec --no-startup-id nm-applet &
-exec --no-startup-id xedgewarp -b
-exec --no-startup-id redshift &
-
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
+exec --no-startup-id compton -b
+
+exec --no-startup-id nm-applet &
+exec --no-startup-id blueman-applet &
+exec --no-startup-id redshift-gtk &
+
+exec --no-startup-id dunst &
+exec --no-startup-id xedgewarp -b

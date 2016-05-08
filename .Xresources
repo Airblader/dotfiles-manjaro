@@ -6,11 +6,6 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*Menu.background: Black
-*Menu.foreground: White
-
-*cursorColor: #F3F3F3
-
 ! rofi
 rofi.modi: run
 rofi.font: Hack 15
@@ -27,6 +22,9 @@ rofi.bw: 0
 rofi.location: 2
 rofi.padding: 100
 rofi.fuzzy: false
+
+i3wm.modepre: <span foreground='#000000' background='#ebdbb2'>
+i3wm.modepost: </span>
 
 ! === gruvbox color scheme ===
 *background: #1d2021
