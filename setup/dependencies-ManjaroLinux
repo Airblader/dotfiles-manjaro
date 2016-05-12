@@ -41,7 +41,7 @@ apacman --noconfirm --noedit -S \
   i3blocks-gaps-git \
   gsimplecal \
   thunderbird \
-  thunderbird-enigmail \
+  thunderbird-enigmail-bin \
   feh \
   acpi \
   xdotool \
