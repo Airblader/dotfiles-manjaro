@@ -52,7 +52,7 @@ set clipboard=unnamed
 " for code in {0..255}; do echo -e "\e[38;05;${code}m $code: Test"; done
 " colorscheme airblader
 
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='neutral'
 colorscheme gruvbox
 set background=dark
 
