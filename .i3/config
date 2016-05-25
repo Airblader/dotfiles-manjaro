@@ -19,8 +19,6 @@ set_from_resource $darkcyan    color6  #000000
 set_from_resource $cyan        color14 #000000
 set_from_resource $darkwhite   color7  #000000
 set_from_resource $white       color15 #000000
-set_from_resource $mode_pre    i3wm.modepre
-set_from_resource $mode_post   i3wm.modepost
 # Use custom colors for black
 set $black       #212121
 set $darkblack   #000000
@@ -151,8 +149,8 @@ bindsym --release Shift+Print exec --no-startup-id "maim -s -p 0 -c 0.96,0.5,0.0
 bindsym $mod+n exec --no-startup-id thunar
 
 set $mode_resize resize
-bindsym $mod+r mode "$mode_pre $mode_resize $mode_post"
-mode --pango_markup "$mode_pre $mode_resize $mode_post" {
+bindsym $mod+r mode "$mode_resize"
+mode "$mode_resize" {
     bindsym Left resize shrink width 10 px or 1 ppt
     bindsym Down resize grow height 10 px or 1 ppt
     bindsym Up resize shrink height 10 px or 1 ppt
@@ -174,8 +172,8 @@ mode --pango_markup "$mode_pre $mode_resize $mode_post" {
 }
 
 set $mode_power power
-bindsym Mod1+Control+l mode "$mode_pre $mode_power $mode_post"
-mode --pango_markup "$mode_pre $mode_power $mode_post" {
+bindsym Mod1+Control+l mode "$mode_power"
+mode "$mode_power" {
     bindsym l mode "default", exec --no-startup-id $HOME/.i3/i3exit lock
     bindsym e mode "default", exec --no-startup-id $HOME/.i3/i3exit logout
     bindsym s mode "default", exec --no-startup-id $HOME/.i3/i3exit suspend
@@ -190,10 +188,10 @@ mode --pango_markup "$mode_pre $mode_power $mode_post" {
 set $mode_gaps gaps
 set $mode_gaps_outer outer gaps
 set $mode_gaps_inner inner gaps
-bindsym $mod+Shift+g mode "$mode_pre $mode_gaps $mode_post"
-mode --pango_markup "$mode_pre $mode_gaps $mode_post" {
-    bindsym o      mode "$mode_pre $mode_gaps_outer $mode_post"
-    bindsym i      mode "$mode_pre $mode_gaps_inner $mode_post"
+bindsym $mod+Shift+g mode "$mode_gaps"
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
 
     bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
     bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
@@ -202,7 +200,7 @@ mode --pango_markup "$mode_pre $mode_gaps $mode_post" {
     bindsym Escape mode "default"
 }
 
-mode --pango_markup "$mode_pre $mode_gaps_inner $mode_post" {
+mode "$mode_gaps_inner" {
     bindsym plus  gaps inner current plus 5
     bindsym minus gaps inner current minus 5
     bindsym 0     mode "default", gaps inner current set 0
@@ -217,7 +215,7 @@ mode --pango_markup "$mode_pre $mode_gaps_inner $mode_post" {
     bindsym Escape mode "default"
 }
 
-mode --pango_markup "$mode_pre $mode_gaps_outer $mode_post" {
+mode "$mode_gaps_outer" {
     bindsym plus  gaps outer current plus 5
     bindsym minus gaps outer current minus 5
     bindsym 0     mode "default", gaps outer current set 0
@@ -233,8 +231,8 @@ mode --pango_markup "$mode_pre $mode_gaps_outer $mode_post" {
 }
 
 set $mode_brightness brightness
-bindsym $mod+Shift+b mode "$mode_pre $mode_brightness $mode_post"
-mode --pango_markup "$mode_pre $mode_brightness $mode_post" {
+bindsym $mod+Shift+b mode "$mode_brightness"
+mode "$mode_brightness" {
     bindsym plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 10
     bindsym minus exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -dec 10
     bindsym Shift+plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 1
@@ -308,7 +306,7 @@ bar {
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
         urgent_workspace   $darkred     $darkred     $black
-        binding_mode       $transparent $transparent $white
+        binding_mode       $darkred     $darkred     $black
     }
 }
 
