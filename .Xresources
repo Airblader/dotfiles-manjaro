@@ -23,9 +23,6 @@ rofi.location: 2
 rofi.padding: 100
 rofi.fuzzy: false
 
-i3wm.modepre: <span foreground='#000000' background='#ebdbb2'>
-i3wm.modepost: </span>
-
 ! === gruvbox color scheme ===
 *background: #1d2021
 *foreground: #ebdbb2
