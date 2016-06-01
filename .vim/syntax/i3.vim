@@ -22,7 +22,7 @@ syn match   i3QuotedString '"[^"]\+"' contained
 syn cluster i3String contains=i3SimpleString,i3QuotedString
 
 " Config commands
-syn keyword i3ConfigCommand bind bindcode bindsym assign new_window popup_during_fullscreen font floating_modifier default_orientation workspace_layout for_window focus_follows_mouse bar position colors output tray_output tray_padding workspace_buttons workspace_auto_back_and_forth binding_mode_indicator debuglog floating_minimum_size floating_maximum_size force_focus_wrapping force_xinerama force_display_urgency_hint hidden_state modifier new_float shmlog socket_path verbose mouse_warping strip_workspace_numbers gaps inner outer plus minus set smart_borders no_gaps separator_symbol no_focus focus_on_window_activation title_alignment set_from_resource wheel_up_cmd wheel_down_cmd
+syn keyword i3ConfigCommand bind bindcode bindsym assign new_window popup_during_fullscreen font floating_modifier default_orientation workspace_layout for_window focus_follows_mouse bar position colors output tray_output tray_padding workspace_buttons workspace_auto_back_and_forth binding_mode_indicator debuglog floating_minimum_size floating_maximum_size force_focus_wrapping force_xinerama force_display_urgency_hint hidden_state modifier new_float shmlog socket_path verbose mouse_warping strip_workspace_numbers gaps inner outer plus minus set smart_gaps smart_borders no_gaps separator_symbol no_focus focus_on_window_activation title_alignment set_from_resource wheel_up_cmd wheel_down_cmd
 syn match   i3IpcSocket "ipc[-_]socket" nextgroup=@i3String skipwhite
 
 " Command keywords
