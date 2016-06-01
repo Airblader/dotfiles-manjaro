@@ -39,6 +39,7 @@ set $default_gaps_inner 10
 set $default_gaps_outer 5
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
+smart_gaps on
 
 workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
