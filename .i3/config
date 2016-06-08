@@ -3,8 +3,6 @@
 set $mod Mod4
 set $editor termite
 
-# fake-outputs 1280x1440+0+0,1280x1440+1280+0
-
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
 set_from_resource $darkgreen   color2  #000000
@@ -20,8 +18,8 @@ set_from_resource $cyan        color14 #000000
 set_from_resource $darkwhite   color7  #000000
 set_from_resource $white       color15 #000000
 # Use custom colors for black
-set $black       #212121
-set $darkblack   #000000
+set $black       #282828
+set $darkblack   #1d2021
 set $transparent #00000000
 
 set $ws1  "1:  "
@@ -35,11 +33,10 @@ set $ws8  "8:  "
 set $ws9  "9:  "
 set $ws10 "10:  "
 
-set $default_gaps_inner 10
-set $default_gaps_outer 5
+set $default_gaps_inner 0
+set $default_gaps_outer 0
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
-smart_gaps on
 
 workspace $ws1 gaps inner 0
 workspace $ws1 gaps outer 0
@@ -51,17 +48,18 @@ workspace $ws10 gaps outer 0
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
+smart_borders no_gaps
 
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
 font pango:Hack, FontAwesome 12
 
-#                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
-client.focused          $yellow     $yellow     $black $yellow     $yellow
-client.unfocused        $black      $black      $white $black      $black
-client.focused_inactive $black      $black      $white $black      $black
-client.urgent           $darkred    $darkred    $black $darkred    $darkred
+#                       BORDER      BACKGROUND  TEXT        INDICATOR   CHILD_BORDER
+client.focused          $black      $black      $darkwhite  $darkblack  $darkblack
+client.unfocused        $black      $black      $white      $darkblack  $darkblack
+client.focused_inactive $black      $black      $white      $darkblack  $darkblack
+client.urgent           $darkred    $darkred    $black      $darkred    $darkred
 client.background       $black
 
 floating_modifier $mod
@@ -256,7 +254,7 @@ mode "$mode_brightness" {
 
 # fix graphics glitch
 new_window none
-for_window [class=(?i)termite] border normal 5
+#for_window [class=(?i)termite] border pixel 3
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -275,7 +273,7 @@ for_window [class="(?i)blueman"] floating enable
 for_window [instance="__scratchpad"] floating enable
 for_window [instance="__nmtui"] floating enable
 
-for_window [class="(?i)pavucontrol"] floating enable, border normal, move position mouse
+for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
 
 assign [class="(?i)chrome"]                       $ws1
@@ -300,19 +298,19 @@ bar {
     colors {
         statusline         $white
         background         $transparent
-        separator          $yellow
+        separator          $transparent
 
 #                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $transparent $transparent $yellow
+        focused_workspace  $transparent $transparent $darkwhite
         inactive_workspace $transparent $transparent $white
         active_workspace   $transparent $transparent $white
-        urgent_workspace   $darkred     $darkred     $black
-        binding_mode       $darkred     $darkred     $black
+        urgent_workspace   $darkred     $darkred     $transparent
+        binding_mode       $darkred     $darkred     $transparent
     }
 }
 
 # AUTOSTART
-exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/simple.png
 exec --no-startup-id compton -b
 
 exec --no-startup-id nm-applet &

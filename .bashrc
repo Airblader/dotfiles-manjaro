@@ -50,6 +50,9 @@ END_WRAP="$END_ESC$END_NOPRINT"
 RESET="${WRAP}0${END_WRAP}"
 RESET_BG="${WRAP}49${END_WRAP}"
 
+NORMAL="${WRAP}21${END_WRAP}"
+BOLD="${WRAP}1${END_WRAP}"
+
 function __fg_color {
     printf "%s" "${WRAP}38;5;${1}${END_WRAP}"
 }
