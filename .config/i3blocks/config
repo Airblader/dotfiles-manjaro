@@ -8,7 +8,7 @@ border_bottom=4
 [updates]
 command=$HOME/scripts/updates.sh
 interval=60
-signal=2
+signal=3
 urgent=true
 
 #[window]
