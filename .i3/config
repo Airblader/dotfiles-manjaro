@@ -319,3 +319,5 @@ exec --no-startup-id redshift-gtk &
 
 exec --no-startup-id dunst &
 exec --no-startup-id xedgewarp -b
+
+exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
