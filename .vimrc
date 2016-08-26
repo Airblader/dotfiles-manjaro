@@ -37,6 +37,7 @@ set ttimeoutlen=0
 
 " for cross-terminal clipboard support
 set clipboard=unnamed
+set clipboard^=unnamedplus
 
 :noremap / :set hlsearch<CR>/
 
