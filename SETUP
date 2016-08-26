@@ -42,7 +42,7 @@ https://wiki.archlinux.org/index.php/Silent_boot
 THUNDERBIRD
 ===========
 
-Plugins: "Disable reply-list", "Seturgent", "Lightning"
+Plugins: "Disable reply-list", "Seturgent", "Lightning", "No Message Pane Sort by Mouse"
 
 SYSTEMD
 =======
