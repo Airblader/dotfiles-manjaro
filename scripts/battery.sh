@@ -7,7 +7,7 @@ i3status -c $HOME/.config/i3blocks/i3status.conf | while IFS= read -r line; do
     CHARGE="${CHARGE%\%*}"
 
     STATE=""
-    [[ "${PARTS[0]}" = "CHR" ]] || {
+    [[ "${PARTS[0]}" = "BAT" ]] && {
         STATE="${PARTS[2]}"
         [[ -z "${STATE}" ]] && STATE="??:??:00"
 
