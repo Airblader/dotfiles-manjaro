@@ -52,7 +52,7 @@ border=#98971a
 
 [battery]
 command=$HOME/scripts/battery.sh
-interval=10
+interval=persist
 border=#458588
 
 [time]

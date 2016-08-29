@@ -1,24 +1,26 @@
 #!/usr/bin/env bash
 
-ACPI=$(acpi -b)
-CHARGE=$(echo -n "${ACPI}" | egrep -o "[0-9]+%" | sed -e "s,%,,g")
+i3status -c $HOME/.config/i3blocks/i3status.conf | while IFS= read -r line; do
+    PARTS=($line)
 
-STATE=""
-if grep -q "Charging\|Full" <(echo "${ACPI}" | awk '{ gsub("Unknown","Charging",$3); print $3}'); then
+    CHARGE="${PARTS[1]}"
+    CHARGE="${CHARGE%\%*}"
+
     STATE=""
-else
-    STATE=$(echo "${ACPI}" | awk -F' ' '{print $5}' | awk -F':' '{print $1":"$2}')
-    STATE=" (${STATE}h)"
-fi
+    [[ "${PARTS[0]}" = "CHR" ]] || {
+        STATE="${PARTS[2]}"
+        [[ -z "${STATE}" ]] && STATE="??:??:00"
 
-LEVEL=$(( (CHARGE - 1) / 20 ))
-ICON="f$(( 244 - LEVEL ))"
+        STATE="${STATE:0:-3}"
+        STATE=" (${STATE})"
+    }
 
-echo -e "  \u${ICON}  ${CHARGE}${STATE} "
+    LEVEL=$(( (CHARGE - 1) / 20 ))
+    ICON="f$(( 244 - LEVEL ))"
 
-[[ "${LEVEL}" = "0" ]] && {
-    [[ -z "${STATE}" ]] || i3-msg "fullscreen disable"
-    exit 33
-}
+    echo -e "  \u${ICON}  ${CHARGE}${STATE} "
 
-exit 0
+    [[ "${LEVEL}" = "0" ]] && {
+        [[ -z "${STATE}" ]] || i3-msg "fullscreen disable"
+    }
+done
