@@ -1,7 +1,9 @@
 export PPIT_ROOT="${HOME}/repos/prepaid/repo"
 export PPIT_HOME="${HOME}/repos/prepaid/repo"
+export DEPLOY_WORKSPACE="${HOME}/repos/prepaid/repo/"
+export PPIT_JAVA_HOME="/usr/lib/jvm/java-6-jdk"
 
-export PPIT_VMS="${PPIT_ROOT}/../boxes"
+export VAGRANT_HOME="${PPIT_ROOT}/../devimage/vagrant.d"
 
 export PPIT_CHECK_TEST_DB_CLEANUP=1
 export PPIT_CANCELLABLE_TEST_RULE=1
@@ -10,6 +12,5 @@ alias bpp="ant clean-ivy && ./build.sh buildAll; bell"
 alias fbpp="ant clean-ivy && ./build.sh -DforceBuild=true buildAll; bell"
 
 alias cdppit="cd ${PPIT_ROOT}"
-alias cdtb="cd ${PPIT_ROOT}/../timebooking/`date +'%Y/%m'`"
-
-alias cdb="${PPIT_ROOT}/tools/bin/create_db_installer_script.py"
+#alias cdtb="cd ${PPIT_ROOT}/../timebooking/`date +'%Y/%m'`"
+#alias cdb="${PPIT_ROOT}/tools/bin/create_db_installer_script.py"
