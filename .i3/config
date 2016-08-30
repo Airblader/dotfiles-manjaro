@@ -48,7 +48,6 @@ workspace $ws10 gaps outer 0
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
-smart_borders no_gaps
 
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
@@ -272,6 +271,7 @@ for_window [class="(?i)blueman"] floating enable
 #for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 for_window [instance="__nmtui"] floating enable
+for_window [class="(?i)recordmydesktop"] floating enable
 
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
