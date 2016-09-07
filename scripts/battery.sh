@@ -5,6 +5,9 @@ i3status -c $HOME/.config/i3blocks/i3status.conf | while IFS= read -r line; do
 
     CHARGE="${PARTS[1]}"
     CHARGE="${CHARGE%\%*}"
+    [[ "${CHARGE}" -gt 100 ]] && {
+        CHARGE="100"
+    }
 
     STATE=""
     [[ "${PARTS[0]}" = "BAT" ]] && {
