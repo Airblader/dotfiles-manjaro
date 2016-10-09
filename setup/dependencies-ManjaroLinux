@@ -61,7 +61,6 @@ apacman --noconfirm --noedit -S \
   ttf-hack \
   powerline-fonts-git \
   thunar \
-  weechat \
   thunar-archive-plugin \
   file-roller \
   tumbler \
