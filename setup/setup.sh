@@ -60,6 +60,7 @@ ask "Install symlink for .Xresources?" Y && ln -sfn ${dir}/.Xresources ${HOME}/.
 ask "Install symlink for .xinitrc?" Y && ln -sfn ${dir}/.xinitrc ${HOME}/.xinitrc
 ask "Install symlink for .compton.conf?" Y && ln -sfn ${dir}/.compton.conf ${HOME}/.compton.conf
 ask "Install symlink for .gtkrc-2.0?" Y && ln -sfn ${dir}/.gtkrc-2.0 ${HOME}/.gtkrc-2.0
+ask "Install symlink for .npmrc?" Y && ln -sfn ${dir}/.npmrc ${HOME}/.npmrc
 
 ask "Install symlink for .i3/?" Y && ln -sfn ${dir}/.i3 ${HOME}/.i3
 ask "Install symlink for .vim/?" Y && ln -sfn ${dir}/.vim ${HOME}/.vim
