@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Installing prerequisites for apacman..."
+echo "Installing prerequisites for pacaur..."
 sudo pacman -S base-devel fakeroot jshon expac
 
-echo "Installing apacman..."
-mkdir /tmp/tmp-apacman
-cd /tmp/tmp-apacman
-wget https://aur.archlinux.org/packages/ap/apacman/PKGBUILD
+echo "Installing pacaur..."
+mkdir /tmp/tmp-pacaur
+cd /tmp/tmp-pacaur
+wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur
 makepkg
 sudo pacman --noconfirm -U *.tar.xz
 cd -
 
 echo "Installing base packages..."
-apacman --noconfirm --noedit -S \
+pacaur --noconfirm --noedit -S \
   termite-git \
   bash-completion
 
 echo "Installing Python dependencies..."
-apacman --noconfirm --noedit -S \
+pacaur --noconfirm --noedit -S \
   python-basiciw \
   python-netifaces \
   python-yaml \
@@ -27,7 +27,7 @@ apacman --noconfirm --noedit -S \
   python2-suds
 
 echo "Installing window manager dependencies..."
-apacman --noconfirm --noedit -S \
+pacaur --noconfirm --noedit -S \
   xcb-util-keysyms \
   xcb-util-wm \
   xcb-util-cursor \
@@ -36,7 +36,7 @@ apacman --noconfirm --noedit -S \
   libev
 
 echo "Installing tools..."
-apacman --noconfirm --noedit -S \
+pacaur --noconfirm --noedit -S \
   i3lock \
   i3blocks-gaps-git \
   i3status-git \
@@ -102,11 +102,11 @@ apacman --noconfirm --noedit -S \
   lm_sensors
 
 echo "Installing some python stuff..."
-apacman --noconfirm --noedit -S \
+pacaur --noconfirm --noedit -S \
   python-pillow \
   python-urllib3
 
 echo "Installing some perl stuff..."
-apacman --noconfirm --noedit -S \
+pacaur --noconfirm --noedit -S \
   perl-anyevent-i3 \
   perl-json-xs \

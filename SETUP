@@ -4,6 +4,11 @@ Autologin
 vim /etc/systemd/system/getty.target.wants/getty\@tty1.service
 - ExecStart=-/sbin/agetty --autologin ingo --noclear %I $TERM
 
+Pacman
+======
+
+Enable »Color« in /etc/pacman.conf.
+
 
 NetworkManager
 ==============
