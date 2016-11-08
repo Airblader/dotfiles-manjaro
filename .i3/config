@@ -22,6 +22,8 @@ set $black       #282828
 set $darkblack   #1d2021
 set $transparent #00000000
 
+set $height 34
+
 set $ws1  "1:  "
 set $ws2  "2:  "
 set $ws3  "3:  "
@@ -263,7 +265,7 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
-for_window [class="(?i)gsimplecal"] floating enable, move position mouse
+for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down $height px
 for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 for_window [class="(?i)blueman"] floating enable
@@ -274,7 +276,7 @@ for_window [instance="__nmtui"] floating enable
 for_window [class="(?i)recordmydesktop"] floating enable
 
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
-for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
+for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 
 #assign [class="(?i)chrome"]                       $ws1
 assign [class="(?i)eclipse" window_type="splash"] $ws3
@@ -294,7 +296,7 @@ bar {
     tray_output eDP1
     tray_output LVDS-0
     tray_padding 0
-    height 34
+    height $height
     colors {
         statusline         $white
         background         $transparent
