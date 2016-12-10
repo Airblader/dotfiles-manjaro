@@ -4,7 +4,7 @@ fi
 
 xhost +local:root > /dev/null 2>&1
 if [ -z "$DISPLAY" -a $XDG_VTNR -eq 1 ]; then
-    ssh-agent startx -- -dpi 96
+    ssh-agent startx
 fi
 
 complete -cf sudo
