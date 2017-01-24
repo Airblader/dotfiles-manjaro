@@ -2,6 +2,7 @@ export PPIT_ROOT="${HOME}/repos/prepaid/repo"
 export PPIT_HOME="${HOME}/repos/prepaid/repo"
 export DEPLOY_WORKSPACE="${HOME}/repos/prepaid/repo/"
 export PPIT_JAVA_HOME="/usr/lib/jvm/java-6-jdk"
+export PPIT_JAVA7_HOME="/usr/lib/jvm/java-7-openjdk"
 
 export VAGRANT_HOME="${PPIT_ROOT}/../devimage/vagrant.d"
 

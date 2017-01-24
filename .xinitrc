@@ -25,3 +25,4 @@ xmodmap -e 'clear lock'
 xmodmap -e 'keycode 66 = Hyper_L'
 
 exec i3
+#exec VirtualBox --startvm Tizen --fullscreen
