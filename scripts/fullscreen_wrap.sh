@@ -10,9 +10,6 @@
 # +
 # +   If the focused window is currently not in fullscreen mode, it will
 # +   simply run the command and exit.
-# +
-# + 2015 Ingo Bürk
-# + Released under public domain.
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 COMMAND="$@"

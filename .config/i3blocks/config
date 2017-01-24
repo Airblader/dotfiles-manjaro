@@ -16,13 +16,6 @@ interval=60
 signal=3
 urgent=true
 
-#[window]
-#command=xtitle -s
-#interval=persist
-#separator=true
-#separator_block_width=45
-#border=#ebdbb2
-
 [volume]
 label=    
 command=[[ -z "${BLOCK_BUTTON}" ]] || ( [[ "${BLOCK_BUTTON}" == "1" ]] && ((/usr/bin/pavucontrol -t 3 --name "pavucontrol-bar" || true) && $HOME/scripts/volume_control.py signal) || $HOME/scripts/volume_control.py toggle ); $HOME/scripts/volume_control.py i3blocks
