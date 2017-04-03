@@ -34,7 +34,7 @@ ask() {
 }
 
 dir=`pwd`
-if [ ! -e "${dir}/${0}" ]; then
+if [ ! -e "${dir}/$(basename $0)" ]; then
   echo "Script not called from within repository directory. Aborting."
   exit 2
 fi
