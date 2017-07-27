@@ -280,8 +280,8 @@ for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 
 #assign [class="(?i)chrome"]                       $ws1
-assign [class="(?i)eclipse" window_type="splash"] $ws3
-assign [class="(?i)eclipse" window_type="normal"] $ws3
+#assign [class="(?i)eclipse" window_type="splash"] $ws3
+#assign [class="(?i)eclipse" window_type="normal"] $ws3
 assign [class="(?i)thunderbird"]                  $ws9
 
 bar {
