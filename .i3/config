@@ -270,6 +270,7 @@ for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 for_window [class="(?i)VirtualBox"] floating enable
 for_window [class="(?i)blueman"] floating enable
+for_window [class="(?i)pinentry"] floating enable
 
 #for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
