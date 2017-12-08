@@ -1,17 +1,36 @@
+" =============================================================================
+if &compatible
+    set nocompatible
+endif
+set runtimepath+=/home/ingo/.vim/dein.vim/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('/home/ingo/.vim/dein.vim')
+    call dein#begin('/home/ingo/.vim/dein.vim')
+
+    call dein#add('/home/ingo/.vim/dein.vim/repos/github.com/Shougo/dein.vim')
+    call dein#add('Shougo/deoplete.nvim')
+    if !has('nvim')
+	call dein#add('roxma/nvim-yarp')
+	call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+let g:deoplete#enable_at_startup=1
+inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<TAB>"
+" =============================================================================
+
 filetype on
 filetype plugin indent on
 filetype plugin on
 syntax on
 
-execute pathogen#infect()
-" let g:airline_theme='airblader'
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1
 
-let g:ycm_confirm_extra_conf=0
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
-let g:ycm_server_python_interpreter='/usr/bin/python2'
-let g:ycm_add_preview_to_completeopt=0
 set completeopt-=preview
 
 set laststatus=2
