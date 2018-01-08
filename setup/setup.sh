@@ -46,13 +46,6 @@ if [ ! -f "dependencies-${distro}" ]; then
   exit 2
 fi
 
-if [ ! -d "${HOME}/.vim/dein.vim" ]; then
-  echo "Installing dein.vim..."
-  echo "Please run :call dein#install() from vim after this!"
-  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/deinvim-installer.sh
-  sh /tmp/deinvim-installer.sh ${HOME}/.vim/dein.vim
-fi
-
 ask "Install packages?" Y && bash ./dependencies-${distro}
 
 ask "Install python2 modules?" Y && {
@@ -75,3 +68,11 @@ ask "Install symlink for .bash.d/?" Y && ln -sfn ${dir}/.bash.d ${HOME}/.bash.d
 ask "Install symlink for .config/?" Y && ln -sfn ${dir}/.config ${HOME}/.config
 
 ask "Install symlink for scripts/?" Y && ln -sfn ${dir}/scripts ${HOME}/scripts
+
+# After .vim has been symlinked!
+if [ ! -d "${HOME}/.vim/dein.vim" ]; then
+  echo "Installing dein.vim..."
+  echo "Please run :call dein#install() from vim after this!"
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/deinvim-installer.sh
+  sh /tmp/deinvim-installer.sh ${HOME}/.vim/dein.vim
+fi

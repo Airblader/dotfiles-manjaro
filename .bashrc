@@ -35,7 +35,8 @@ alias np='nano PKGBUILD'
 alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  && 
 sudo pacman -Suu'
 
-BROWSER=/usr/bin/xdg-open
+#export BROWSER=/usr/bin/xdg-open
+export BROWSER=
 
 
 ESC=$'['
