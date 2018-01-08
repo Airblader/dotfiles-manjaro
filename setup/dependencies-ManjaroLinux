@@ -7,7 +7,7 @@ sudo pacman -S base-devel fakeroot jshon expac wget
 echo "Installing pacaur..."
 mkdir /tmp/tmp-pacaur
 cd /tmp/tmp-pacaur
-wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur
+wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur -O PKGBUILD
 makepkg
 sudo pacman --noconfirm -U *.tar.xz
 cd -
