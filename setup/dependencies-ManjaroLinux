@@ -2,7 +2,7 @@
 set -e
 
 echo "Installing prerequisites for pacaur..."
-sudo pacman -S base-devel fakeroot jshon expac wget
+sudo pacman -S base-devel fakeroot jshon expac cower wget
 
 echo "Installing pacaur..."
 mkdir /tmp/tmp-pacaur
