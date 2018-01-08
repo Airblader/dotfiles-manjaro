@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
-set -e
-
+#vim:ts=2:sw=2:expandtab
 echo "Installing prerequisites for pacaur..."
 sudo pacman -S base-devel fakeroot jshon expac cower wget
 
 echo "Installing pacaur..."
-mkdir /tmp/tmp-pacaur
-cd /tmp/tmp-pacaur
-wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur -O PKGBUILD
-makepkg
-sudo pacman --noconfirm -U *.tar.xz
-cd -
+if ! command -v "pacaur" >/dev/null 2>&1; then
+    mkdir /tmp/tmp-pacaur
+    cd /tmp/tmp-pacaur
+    wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur -O PKGBUILD
+    makepkg
+    sudo pacman --noconfirm -U *.tar.xz
+    cd -
+fi
 
 echo "Installing base packages..."
 pacaur --noconfirm --noedit -S \
