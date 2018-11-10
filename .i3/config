@@ -291,7 +291,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango:Hack, FontAwesome 11
+    font pango:Hack, FontAwesome 8
     strip_workspace_numbers yes
     separator_symbol "■"
     bindsym button4 nop
