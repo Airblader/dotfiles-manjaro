@@ -43,7 +43,7 @@ pacaur --noconfirm --noedit -S \
   i3status-git \
   gsimplecal \
   thunderbird \
-  thunderbird-enigmail-bin \
+  thunderbird-extension-enigmail \
   feh \
   acpi \
   xdotool \
