@@ -7,7 +7,7 @@
     c = commit
     st = status
     co = checkout
-    up = pull --rebase=preserve
+    up = pull --rebase=merges
     g = grep --break --heading --line-number
     fa = fetch --all
     p = push
