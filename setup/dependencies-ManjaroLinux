@@ -56,7 +56,7 @@ pacaur --noconfirm --noedit -S \
   python \
   python-pip \
   python2-pip \
-  compton-git \
+  compton \
   ttf-font-awesome-4 \
   ohsnap \
   ttf-hack \
