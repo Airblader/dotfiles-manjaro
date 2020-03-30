@@ -12,6 +12,8 @@
     fa = fetch --all
     p = push
     pf = push -f
+    copy-diff = !git diff | xclip -selection c
+    paste-diff = !xclip -selection c -o | git apply -3
 
 [color]
     diff = auto
