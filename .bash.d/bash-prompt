@@ -50,7 +50,7 @@ function __prompt_ps1 {
     local sep=""
     local alt_sep=""
 
-    printf "%s" "${WHITE_BG}${BLACK} ${BOLD}\u${NORMAL} $(__bg_color 241)${WHITE}${sep}$(__fg_color 248) \w "
+    printf "%s" "${WHITE_BG}${BLACK} \u $(__bg_color 241)${WHITE}${sep}$(__fg_color 248) \w "
 
     local stat
     if stat=$(__parse_git_branch); then
