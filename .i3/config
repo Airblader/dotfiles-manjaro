@@ -297,8 +297,8 @@ bar {
     separator_symbol "■"
     bindsym button4 nop
     bindsym button5 nop
-    tray_output eDP1
-    tray_output LVDS-0
+    tray_output primary
+#    tray_output eDP1
     tray_padding 0
     height $height
     colors {
