@@ -31,7 +31,7 @@ set $ws4  "4:  "
 set $ws5  "5:  "
 set $ws6  "6:  "
 set $ws7  "7:  "
-set $ws8  "8:  "
+set $ws8  "8:  "
 set $ws9  "9:  "
 set $ws10 "10:  "
 
@@ -282,17 +282,15 @@ for_window [class="(?i)recordmydesktop"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $height px
 
-#assign [class="(?i)chrome"]                       $ws1
-#assign [class="(?i)eclipse" window_type="splash"] $ws3
-#assign [class="(?i)eclipse" window_type="normal"] $ws3
-assign [class="(?i)thunderbird"]                  $ws9
+assign [class="(?i)zoom"]        $ws8
+assign [class="(?i)thunderbird"] $ws9
 
 bar {
 #    verbose yes
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango:Hack, FontAwesome 8
+    font pango:Hack, FontAwesome 12
     strip_workspace_numbers yes
     separator_symbol "■"
     bindsym button4 nop
@@ -317,7 +315,7 @@ bar {
 
 # AUTOSTART
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/wallpaper_heihei.png
-exec --no-startup-id compton -b
+exec --no-startup-id picom -b
 
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &

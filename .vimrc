@@ -2,23 +2,23 @@
 if &compatible
     set nocompatible
 endif
-set runtimepath+=/home/ingo/.vim/dein.vim/repos/github.com/Shougo/dein.vim
-
-if dein#load_state('/home/ingo/.vim/dein.vim')
-    call dein#begin('/home/ingo/.vim/dein.vim')
-
-    call dein#add('/home/ingo/.vim/dein.vim/repos/github.com/Shougo/dein.vim')
-    call dein#add('Shougo/deoplete.nvim')
-    if !has('nvim')
-	call dein#add('roxma/nvim-yarp')
-	call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
-
-    call dein#end()
-    call dein#save_state()
-endif
-
-let g:deoplete#enable_at_startup=1
+"set runtimepath+=/home/ingo/.vim/dein.vim/repos/github.com/Shougo/dein.vim
+"
+"if dein#load_state('/home/ingo/.vim/dein.vim')
+"    call dein#begin('/home/ingo/.vim/dein.vim')
+"
+"    call dein#add('/home/ingo/.vim/dein.vim/repos/github.com/Shougo/dein.vim')
+"    call dein#add('Shougo/deoplete.nvim')
+"    if !has('nvim')
+"	call dein#add('roxma/nvim-yarp')
+"	call dein#add('roxma/vim-hug-neovim-rpc')
+"    endif
+"
+"    call dein#end()
+"    call dein#save_state()
+"endif
+"
+"let g:deoplete#enable_at_startup=1
 inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><s-tab> pumvisible() ? "\<C-p>" : "\<TAB>"
 " =============================================================================
