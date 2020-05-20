@@ -70,9 +70,9 @@ ask "Install symlink for .config/?" Y && ln -sfn ${dir}/.config ${HOME}/.config
 ask "Install symlink for scripts/?" Y && ln -sfn ${dir}/scripts ${HOME}/scripts
 
 # After .vim has been symlinked!
-if [ ! -d "${HOME}/.vim/dein.vim" ]; then
-  echo "Installing dein.vim..."
-  echo "Please run :call dein#install() from vim after this!"
-  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/deinvim-installer.sh
-  sh /tmp/deinvim-installer.sh ${HOME}/.vim/dein.vim
-fi
+#if [ ! -d "${HOME}/.vim/dein.vim" ]; then
+#  echo "Installing dein.vim..."
+#  echo "Please run :call dein#install() from vim after this!"
+#  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/deinvim-installer.sh
+#  sh /tmp/deinvim-installer.sh ${HOME}/.vim/dein.vim
+#fi
