@@ -39,7 +39,7 @@ pacaur --noconfirm --noedit -S \
 echo "Installing tools..."
 pacaur --noconfirm --noedit -S \
   i3lock \
-  i3blocks-gaps-git \
+  i3blocks-git \
   i3status-git \
   gsimplecal \
   thunderbird \
