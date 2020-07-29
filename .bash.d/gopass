@@ -1,0 +1,1 @@
+source <(gopass completion bash)
