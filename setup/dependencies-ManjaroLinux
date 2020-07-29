@@ -1,25 +1,17 @@
 #!/usr/bin/env bash
 #vim:ts=2:sw=2:expandtab
-echo "Installing prerequisites for pacaur..."
+echo "Installing prerequisites for yay..."
 sudo pacman -S base-devel fakeroot jshon expac cower wget
 
-echo "Installing pacaur..."
-if ! command -v "pacaur" >/dev/null 2>&1; then
-    mkdir /tmp/tmp-pacaur
-    cd /tmp/tmp-pacaur
-    wget https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur -O PKGBUILD
-    makepkg
-    sudo pacman --noconfirm -U *.tar.xz
-    cd -
-fi
-
 echo "Installing base packages..."
-pacaur --noconfirm --noedit -S \
+yay --noconfirm -S \
   termite-git \
-  bash-completion
+  bash-completion \
+  xorg-xinit \
+  xorg-xset
 
 echo "Installing Python dependencies..."
-pacaur --noconfirm --noedit -S \
+yay --noconfirm -S \
   python-basiciw \
   python-netifaces \
   python-yaml \
@@ -28,7 +20,7 @@ pacaur --noconfirm --noedit -S \
   python2-suds
 
 echo "Installing window manager dependencies..."
-pacaur --noconfirm --noedit -S \
+yay --noconfirm -S \
   xcb-util-keysyms \
   xcb-util-wm \
   xcb-util-cursor \
@@ -37,10 +29,12 @@ pacaur --noconfirm --noedit -S \
   libev
 
 echo "Installing tools..."
-pacaur --noconfirm --noedit -S \
+yay --noconfirm -S \
   i3lock \
-  i3blocks-git \
   i3-gaps \
+  i3stauts \
+  wireless_tools \
+  xorg-xbacklight \
   gsimplecal \
   thunderbird \
   thunderbird-extension-enigmail \
@@ -57,10 +51,10 @@ pacaur --noconfirm --noedit -S \
   python-pip \
   python2-pip \
   picom \
+  gopass \
   ttf-font-awesome-4 \
   ohsnap \
   ttf-hack \
-  powerline-fonts-git \
   thunar \
   thunar-archive-plugin \
   file-roller \
@@ -102,11 +96,11 @@ pacaur --noconfirm --noedit -S \
   lm_sensors
 
 echo "Installing some python stuff..."
-pacaur --noconfirm --noedit -S \
+yay --noconfirm -S \
   python-pillow \
   python-urllib3
 
 echo "Installing some perl stuff..."
-pacaur --noconfirm --noedit -S \
+yay --noconfirm -S \
   perl-anyevent-i3 \
   perl-json-xs \
