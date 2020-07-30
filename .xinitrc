@@ -11,6 +11,7 @@ fi
 xrdb -load ~/.Xresources
 
 xset s off
+xset b off
 xset -dpms
 xset s noblank
 
@@ -22,4 +23,3 @@ xmodmap -e 'clear lock'
 xmodmap -e 'keycode 66 = Hyper_L'
 
 exec i3
-#exec /home/ingo/repos/i3-original/build/i3 -c /home/ingo/.i3/config.vanilla
