@@ -9,14 +9,7 @@ fi
 
 complete -cf sudo
 
-shopt -s cdspell
-shopt -s checkwinsize
-shopt -s cmdhist
-shopt -s dotglob
-shopt -s expand_aliases
-shopt -s extglob
-shopt -s histappend
-shopt -s hostcomplete
+shopt -s cdspell checkwinsize cmdhist dotglob expand_aliases extglob histappend hostcomplete
 
 export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
@@ -32,7 +25,7 @@ alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
-alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  && 
+alias fixit='sudo rm -f /var/lib/pacman/db.lck && sudo pacman-mirrors -g && sudo pacman -Syyuu  &&
 sudo pacman -Suu'
 
 #export BROWSER=/usr/bin/xdg-open
