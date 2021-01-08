@@ -267,7 +267,6 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down $height px
-for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 for_window [class="(?i)VirtualBox"] floating enable
 for_window [class="(?i)blueman"] floating enable
@@ -276,7 +275,7 @@ for_window [class="(?i)nm-connection-editor"] floating enable
 for_window [class=zoom] floating enable
 
 #for_window [instance="sun-awt-X11-XFramePeer"] floating enable
-for_window [instance="__scratchpad"] floating enable
+for_window [instance="__scratchpad"] floating enable, resize set 900 px 500 px, move position center
 for_window [instance="__nmtui"] floating enable
 for_window [class="(?i)recordmydesktop"] floating enable
 
