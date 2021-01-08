@@ -50,3 +50,9 @@ rofi.fuzzy: false
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+! === git-gui ===
+git-gui*background: #ffffff
+git-gui*foreground: #000000
+git-gui*Menu*background: #000000
+git-gui*Menu*foreground: #ffffff
