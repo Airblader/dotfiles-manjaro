@@ -19,4 +19,14 @@ error_symbol = "[✗](bold red)"
 
 [username]
 show_always = true
-format = "[$user]($style) :: "
+format = '[$user]($style) :: '
+
+[git_branch]
+format = '[$symbol$branch]($style) '
+
+[git_status]
+format = '([\[$deleted$renamed$modified$untracked$ahead_behind\]]($style)) '
+
+[cmd_duration]
+format = '[ $duration]($style)'
+style = "bold green"
