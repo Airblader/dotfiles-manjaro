@@ -5,7 +5,7 @@ sudo pacman -S base-devel fakeroot jshon expac cower wget
 
 echo "Installing base packages..."
 yay --noconfirm -S \
-  termite-git \
+  termite \
   bash-completion \
   xorg-xinit \
   xorg-xset
@@ -94,7 +94,10 @@ yay --noconfirm -S \
   redshift \
   google-chrome \
   firefox \
-  lm_sensors
+  lm_sensors \
+  ttf-windows \
+  gopass \
+  authy
 
 echo "Installing some python stuff..."
 yay --noconfirm -S \
