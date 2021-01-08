@@ -1,5 +1,5 @@
 [options]
-font = Hack 12
+font = Hack 10
 browser = google-chrome-stable
 clickable_url = false
 dynamic_title = true
