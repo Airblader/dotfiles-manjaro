@@ -70,6 +70,7 @@ bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wra
 bindsym $mod+q kill
 
 bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+p exec --no-startup-id $HOME/scripts/gopass.sh
 
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
