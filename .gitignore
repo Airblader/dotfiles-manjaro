@@ -15,6 +15,7 @@
 !.config/i3lock
 !.config/termite
 !.config/wallpapers
+!.config/starship.toml
 
 !.config/htop
 !.config/htop/htoprc

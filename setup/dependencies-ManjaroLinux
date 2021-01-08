@@ -97,7 +97,8 @@ yay --noconfirm -S \
   lm_sensors \
   ttf-windows \
   gopass \
-  authy
+  authy \
+  starship-bin
 
 echo "Installing some python stuff..."
 yay --noconfirm -S \

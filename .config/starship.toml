@@ -1,0 +1,22 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$status\
+$character"""
+
+add_newline = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[✗](bold red)"
+
+[username]
+show_always = true
+format = "[$user]($style) :: "
