@@ -5,8 +5,6 @@
 */__pycache__
 *.pyc
 
-.vim/colors/eclm_wombat.vim
-
 .config/*
 !.config/dunst
 !.config/gsimplecal
@@ -23,7 +21,4 @@
 !.config/i3blocks
 !.config/i3blocks/config
 
-.weechat/*
-!.weechat/weechat.conf
-!.weechat/plugins.conf
-!.weechat/perl/beep.pl
+!.config/evolution/accels
