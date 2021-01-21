@@ -57,6 +57,7 @@ yay --noconfirm -S \
   ttf-font-awesome-4 \
   ohsnap \
   ttf-hack \
+  ttf-roboto \
   thunar \
   thunar-archive-plugin \
   file-roller \
