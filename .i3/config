@@ -284,6 +284,7 @@ for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down $heigh
 
 assign [class="(?i)zoom"]        $ws8
 assign [class="(?i)thunderbird"] $ws9
+assign [class="(?i)evolution"]   $ws9
 
 bar {
 #    verbose yes

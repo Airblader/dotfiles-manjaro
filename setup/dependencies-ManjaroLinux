@@ -36,8 +36,10 @@ yay --noconfirm -S \
   wireless_tools \
   xorg-xbacklight \
   gsimplecal \
-  thunderbird \
-  thunderbird-extension-enigmail \
+  evolution \
+  gnome-keyring \
+  libsecret \
+  seahorse \
   feh \
   acpi \
   xdotool \
@@ -98,7 +100,8 @@ yay --noconfirm -S \
   ttf-windows \
   gopass \
   authy \
-  starship-bin
+  starship-bin \
+  wmctrl
 
 echo "Installing some python stuff..."
 yay --noconfirm -S \

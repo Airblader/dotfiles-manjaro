@@ -39,6 +39,7 @@
     browser = /usr/bin/google-chrome-beta
     icon_position = off
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    always_run_script = yes
 
 [frame]
     width = 5
@@ -62,3 +63,9 @@
     background = "#282828"
     foreground = "#ebdbb2"
     timeout = 3
+
+[evolution]
+    appname = evolution-mail-notification
+    summary = "*"
+    script = ~/scripts/evolution_urgency.sh
+    format = ""

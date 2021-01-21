@@ -22,4 +22,7 @@ setxkbmap -option ctrl:nocaps
 xmodmap -e 'clear lock'
 xmodmap -e 'keycode 66 = Hyper_L'
 
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 exec i3
