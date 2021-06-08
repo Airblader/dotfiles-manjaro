@@ -94,7 +94,6 @@ yay --noconfirm -S \
   bluez-utils \
   pulseaudio-bluetooth \
   blueman \
-  redshift \
   google-chrome \
   firefox \
   lm_sensors \
