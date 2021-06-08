@@ -20,7 +20,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "300x5-30+50"
+    geometry = "400x5-30+50"
     shrink = no
     transparency = 0
     idle_threshold = 120
@@ -47,7 +47,6 @@
 
 [shortcuts]
     close = ctrl+space
-    close_all = ctrl+shift+space
 
 [urgency_low]
     background = "#282828"
@@ -68,4 +67,4 @@
     appname = evolution-mail-notification
     summary = "*"
     script = ~/scripts/evolution_urgency.sh
-    format = ""
+#    format = ""
