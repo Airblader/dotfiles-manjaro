@@ -272,7 +272,7 @@ for_window [class="(?i)VirtualBox"] floating enable
 for_window [class="(?i)blueman"] floating enable
 for_window [class="(?i)pinentry"] floating enable
 for_window [class="(?i)nm-connection-editor"] floating enable
-for_window [class=zoom] floating enable
+for_window [class=zoom] floating enable, move position center
 
 #for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable, resize set 900 px 500 px, move position center
