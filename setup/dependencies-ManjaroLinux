@@ -36,7 +36,7 @@ yay --noconfirm -S \
   wireless_tools \
   xorg-xbacklight \
   gsimplecal \
-  evolution \
+  thunderbird \
   gnome-keyring \
   libsecret \
   seahorse \
