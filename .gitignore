@@ -12,6 +12,7 @@
 !.config/gtk-3.0
 !.config/i3lock
 !.config/termite
+!.config/alacritty
 !.config/wallpapers
 !.config/starship.toml
 

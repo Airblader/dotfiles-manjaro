@@ -5,7 +5,7 @@ sudo pacman -S base-devel fakeroot jshon expac cower wget
 
 echo "Installing base packages..."
 yay --noconfirm -S \
-  termite \
+  alacritty \
   bash-completion \
   xorg-xinit \
   xorg-xset

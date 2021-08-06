@@ -1,7 +1,7 @@
 # vim:filetype=i3
 # i3 config file (v4)
 set $mod Mod4
-set $editor termite
+set $editor alacritty
 
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
@@ -65,7 +65,7 @@ client.background       $black
 
 floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wrap.sh $editor
-bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wrap.sh $editor --name __scratchpad
+bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wrap.sh $editor --class __scratchpad
 
 bindsym $mod+q kill
 
@@ -254,9 +254,7 @@ mode "$mode_brightness" {
     bindsym Escape mode "default"
 }
 
-# fix graphics glitch
 new_window none
-#for_window [class=(?i)termite] border pixel 3
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
