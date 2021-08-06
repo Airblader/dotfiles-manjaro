@@ -1,1 +1,1 @@
-alias beerme="pacaur --noedit -Syyu ; pkill -RTMIN+3 i3blocks"
+alias beerme="yay --answerclean None --answerdiff None --answeredit None -Syyu ; pkill -RTMIN+3 i3blocks"
