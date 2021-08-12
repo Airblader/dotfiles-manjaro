@@ -75,7 +75,7 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  #title: Alacritty
+  title: Terminal
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
