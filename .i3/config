@@ -138,7 +138,7 @@ bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fu
 bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 10
 bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 10
 
-bindsym $mod+Shift+w exec --no-startup-id $editor --name "__nmtui" -e "nmtui-connect"
+bindsym $mod+Shift+w exec --no-startup-id $editor --class "__nmtui" -e "nmtui-connect"
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
