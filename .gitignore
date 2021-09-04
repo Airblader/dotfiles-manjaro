@@ -15,6 +15,7 @@
 !.config/alacritty
 !.config/wallpapers
 !.config/starship.toml
+!.config/rofi
 
 !.config/htop
 !.config/htop/htoprc
