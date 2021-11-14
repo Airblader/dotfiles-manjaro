@@ -32,7 +32,7 @@ echo "Installing tools..."
 yay --noconfirm -S \
   i3lock \
   i3-gaps \
-  i3stauts \
+  i3status \
   wireless_tools \
   xorg-xbacklight \
   gsimplecal \
