@@ -298,7 +298,7 @@ bar {
     bindsym button5 nop
     tray_output primary
 #    tray_output eDP1
-    tray_padding 0
+    tray_padding 6
     height $height
     colors {
         statusline         $white
