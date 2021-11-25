@@ -258,6 +258,7 @@ mode "$mode_brightness" {
 }
 
 new_window none
+new_float none
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
