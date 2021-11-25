@@ -5,10 +5,10 @@ border_left=0
 border_right=0
 border_bottom=2
 
-[output]
-command=$HOME/scripts/monitor.sh
-interval=60
-signal=4
+#[output]
+#command=$HOME/scripts/monitor.sh
+#interval=60
+#signal=4
 
 [updates]
 command=$HOME/scripts/updates.sh
