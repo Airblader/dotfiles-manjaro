@@ -1,0 +1,1 @@
+alias fixwc="v4l2-ctl --set-ctrl power_line_frequency=1 --device /dev/video4"
