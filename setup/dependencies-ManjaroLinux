@@ -99,6 +99,7 @@ yay --noconfirm -S \
   lm_sensors \
   ttf-windows \
   gopass \
+  xss-lock \
   authy \
   starship-bin \
   wmctrl

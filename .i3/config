@@ -325,5 +325,6 @@ exec --no-startup-id blueman-applet &
 
 exec --no-startup-id dunst &
 exec --no-startup-id xedgewarp -b
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $HOME/.i3/i3exit lock
 
 exec_always --no-startup-id "pgrep --exact xev || xev -root -event randr | grep --line-buffered ScreenChangeNotify | while read change; do pkill -RTMIN+4 i3blocks; done"
