@@ -1,6 +1,7 @@
 [user]
     name = Ingo Bürk
     email = ingo.buerk@tngtech.com
+    useConfigOnly = true
 
 [alias]
     a = add --all
@@ -11,7 +12,9 @@
     g = grep --break --heading --line-number
     fa = fetch --all
     p = push
-    pf = push -f
+    pf = push --force-with-lease
+    rbc = rebase --continue
+    mt = mergetool
     copy-diff = !git diff | xclip -selection c
     paste-diff = !xclip -selection c -o | git apply -3
 
@@ -19,12 +22,22 @@
     diff = auto
     status = auto
     branch = auto
+
 [push]
     default = simple
+
+[pull]
+    ff = only
+
 [merge]
     tool = vimdiff
+
 [mergetool]
     keepBackup = false
+
 [gui]
-	fontui = -family Hack -size 11 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family Hack -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+    fontui = -family Hack -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+    fontdiff = -family Hack -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+
+[init]
+    defaultBranch = master

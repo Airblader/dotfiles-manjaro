@@ -16,6 +16,7 @@
 !.config/wallpapers
 !.config/starship.toml
 !.config/rofi
+!.config/git
 
 !.config/htop
 !.config/htop/htoprc
